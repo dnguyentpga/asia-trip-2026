@@ -56,18 +56,19 @@
     align-items:baseline;
     gap:10px;
     margin:2px 0 10px;
-    padding:6px 16px;
+    padding:8px 18px;
     border:1.5px solid var(--accent-red);
     border-radius:999px;
     background:rgba(174,59,52,0.06);
-    font-size:14px;
+    font-size:16px;
     color:var(--accent-red);
     flex-wrap:wrap;
     justify-content:center;
   }
   .countdown .cd-num{
     font-weight:700;
-    font-size:17px;
+    font-size:28px;
+    line-height:1;
   }
   .countdown .cd-label{
     font-size:10px;
