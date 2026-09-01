@@ -2,66 +2,66 @@ const DATA = [
   {
     label: "Sat Dec 5", sub: "Houston → Saigon", city: "Saigon", stamp: "SGN\nARR",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", badges:["~28 hrs"]}
+      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"]}
     ]
   },
   {
-    label: "Mon Dec 7", sub: "Saigon (Landmark 81)", city: "Saigon", stamp: "SAIGON",
+    label: "Mon Dec 7", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"1:00 AM", type:"activity", name:"Check in Service Apartment and Rest", blurb:"Landmark 81.", badges:["8 hrs"]},
-      {t:"11:00 AM", type:"activity", name:"Visit Independence Palace & Ride Metro to Thao Dien", blurb:"", badges:["5 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Landmark 81. Continues to 1:00 AM Tue."}
+      {t:"1:00 AM", type:"activity", name:"Check in Service Apartment and Rest", blurb:"", badges:["8 hrs"]},
+      {t:"11:00 AM", type:"activity", name:"Visit Independence Palace & Ride Metro to Thao Dien", blurb:"", badges:["5 hrs"], photo:"images/indpalace.png"},
+      {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Online to 1:00 AM Tue."}
     ]
   },
   {
-    label: "Tue Dec 8", sub: "Saigon (Landmark 81)", city: "Saigon", stamp: "SAIGON",
+    label: "Tue Dec 8", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Notre Dame & Central Post & Opera House", blurb:"Notre Dame Cathedral of Saigon.", badges:["6 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Landmark 81. Continues to 1:00 AM Wed."}
+      {t:"10:00 AM", type:"activity", name:"Notre Dame & Central Post & Opera House", blurb:"Notre Dame Cathedral of Saigon.", badges:["6 hrs"], photo:"images/hcmccathedral.png"},
+      {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Online to 1:00 AM Wed."}
     ]
   },
   {
-    label: "Wed Dec 9", sub: "Saigon (Landmark 81)", city: "Saigon", stamp: "SAIGON",
+    label: "Wed Dec 9", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"10:00 AM", type:"activity", name:"War Remnants Museum & Ben Thanh Market", blurb:"", badges:["6 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote & Pho Di Bo & City Bus", blurb:"Landmark 81. Continues to 1:00 AM Thu."}
+      {t:"5:00 PM", type:"activity", name:"Don works remote & Pho Di Bo & City Bus", blurb:"Online to 1:00 AM Thu."}
     ]
   },
   {
-    label: "Thu Dec 10", sub: "Saigon (Landmark 81)", city: "Saigon", stamp: "SAIGON",
+    label: "Thu Dec 10", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"10:00 AM", type:"activity", name:"Cu Chi Tunnel", blurb:"", badges:["6 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote", blurb:"Landmark 81. Continues to 1:00 AM Fri."}
+      {t:"5:00 PM", type:"activity", name:"Don works remote", blurb:"Online to 1:00 AM Fri."}
     ]
   },
   {
-    label: "Fri Dec 11", sub: "Saigon → Trị An Lake", city: "Saigon / Trị An Lake", stamp: "TRI AN",
+    label: "Fri Dec 11", sub: "Saigon → Trị An", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"transit", name:"Check out & Depart to Tri An", blurb:"Trị An Lake.", badges:["5 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote & Visit Family", blurb:"Trị An Lake. Continues to 1:00 AM Sat."}
+      {t:"10:00 AM", type:"transit", name:"Check out & Depart to Tri An", blurb:"Trị An.", badges:["5 hrs"]},
+      {t:"5:00 PM", type:"activity", name:"Don works remote & Visit Family", blurb:"Online to 1:00 AM Sat."}
     ]
   },
   {
-    label: "Sat Dec 12", sub: "Trị An Lake — Family Visit", city: "Trị An Lake", stamp: "TRI AN",
+    label: "Sat Dec 12", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An Lake."}
+      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An."}
     ]
   },
   {
-    label: "Sun Dec 13", sub: "Trị An Lake — Family Visit", city: "Trị An Lake", stamp: "TRI AN",
+    label: "Sun Dec 13", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An Lake."}
+      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An."}
     ]
   },
   {
-    label: "Mon Dec 14", sub: "Saigon → Phu Quoc", city: "Saigon / Phu Quoc", stamp: "PHU\nQUOC",
+    label: "Mon Dec 14", sub: "Saigon → Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
       {t:"7:20 AM", type:"transit", name:"SGN → PQC (with Uncle Luc)", blurb:"Pick up rental car. VietJet VJ 329."},
-      {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga."},
+      {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
       {t:"12:00 PM", type:"activity", name:"Lunch", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương."},
+      {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg"},
       {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:""},
-      {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town."}
+      {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
     ]
   },
   {
@@ -73,7 +73,7 @@ const DATA = [
     ]
   },
   {
-    label: "Wed Dec 16", sub: "Phu Quoc → Hue", city: "Phu Quoc / Hue", stamp: "HUE",
+    label: "Wed Dec 16", sub: "Phu Quoc → Hue", city: "Hue", stamp: "HUE",
     stops: [
       {t:"8:30 AM", type:"activity", name:"Check out Hotel", blurb:""},
       {t:"12:10 PM", type:"transit", name:"PQC → DAD", blurb:"Danang International Airport."},
@@ -83,7 +83,7 @@ const DATA = [
     ]
   },
   {
-    label: "Thu Dec 17", sub: "Hue", city: "Hue / Quang Tri", stamp: "HUE",
+    label: "Thu Dec 17", sub: "Hue → Quang Tri", city: "Hue / Quang Tri", stamp: "HUE",
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour.", note:"Keep luggage at hotel after checking out."},
       {t:"4:30 PM", type:"activity", name:"Dong Ba Market", blurb:"", note:"Buy Kẹo Mè Xửng."},
@@ -92,7 +92,7 @@ const DATA = [
     ]
   },
   {
-    label: "Fri Dec 18", sub: "Quang Tri / DMZ", city: "Quang Tri", stamp: "QUANG\nTRI",
+    label: "Fri Dec 18", sub: "Quang Tri", city: "Quang Tri", stamp: "QUANG\nTRI",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Hien Luong Bridge and Vinh Moc Tunnel (if time permits)", blurb:"17th Parallel — Historic Hiền Lương Bridge."},
       {t:"12:00 PM", type:"transit", name:"Vinh Moc → Dong Ha & Lunch", blurb:""},
@@ -101,7 +101,7 @@ const DATA = [
     ]
   },
   {
-    label: "Sat Dec 19", sub: "Quang Tri → Hanoi (overnight train)", city: "Quang Tri / Hanoi", stamp: "QUANG\nTRI",
+    label: "Sat Dec 19", sub: "Quang Tri → Hanoi", city: "Quang Tri / Hanoi", stamp: "QUANG\nTRI",
     stops: [
       {t:"7:00 AM", type:"activity", name:"Check out hotel & Dai Hao Village (Uncle Tho)", blurb:"", note:"Keep luggage at Uncle Tho's."},
       {t:"11:30 AM", type:"activity", name:"Lunch", blurb:""},
@@ -110,7 +110,7 @@ const DATA = [
     ]
   },
   {
-    label: "Sun Dec 20", sub: "Arrival Day", city: "Hanoi / Tokyo", stamp: "TOKYO\nARR",
+    label: "Sun Dec 20", sub: "Tokyo Arrival Day", city: "Tokyo", stamp: "TOKYO\nARR",
     stops: [
       {t:"5:30 AM", type:"transit", name:"Hanoi train station → HAN airport", blurb:""},
       {t:"8:20 AM", type:"activity", name:"HAN → NRT (Don & Giang)", blurb:"Lands 3:25 PM JST", badges:["$217"]},
@@ -122,7 +122,7 @@ const DATA = [
     ]
   },
   {
-    label: "Mon Dec 21", sub: "Harajuku · Shinjuku · Shibuya", city: "Tokyo", stamp: "TOKYO",
+    label: "Mon Dec 21", sub: "Harajuku · Shinjuku · Shibuya", city: "Shinjuku / Shibuya", stamp: "TOKYO",
     stops: [
       {t:"8:30 AM", type:"transit", name:"Hotel → Meiji Jingu", blurb:"Oedo Line direct.", badges:["~13 min","¥180 (~$1)"]},
       {t:"9:00 AM", type:"activity", name:"Visit Meiji Jingu", blurb:""},
@@ -137,7 +137,7 @@ const DATA = [
     ]
   },
   {
-    label: "Tue Dec 22", sub: "Toyosu · Skytree · Bay Cruise", city: "Tokyo", stamp: "TOKYO", icon: `<svg viewBox="0 0 40 26" class="tab-icon" aria-hidden="true"><ellipse cx="18" cy="13" rx="14" ry="6" fill="currentColor"/><polygon points="32,13 40,6 40,20" fill="currentColor"/><circle cx="8" cy="11" r="1.4" fill="#F8F6F0"/></svg><svg viewBox="0 0 40 26" class="tab-icon" aria-hidden="true"><rect x="6" y="14" width="28" height="9" fill="currentColor"/><polygon points="6,14 20,5 34,14" fill="currentColor"/><rect x="17" y="1" width="6" height="5" fill="currentColor"/><polygon points="17,1 20,-3 23,1" fill="currentColor" opacity="0"/></svg><svg viewBox="0 0 20 40" class="tab-icon tab-icon-tall" aria-hidden="true"><polygon points="8,40 12,40 11,10 9,10" fill="currentColor"/><rect x="7" y="4" width="6" height="6" fill="currentColor"/><rect x="8.5" y="0" width="3" height="5" fill="currentColor"/></svg>`,
+    label: "Tue Dec 22", sub: "Toyosu · Skytree · Bay Cruise", city: "Toyosu / Akasuka", stamp: "TOKYO", 
     stops: [
       {t:"4:15 AM", type:"transit", name:"→ Toyosu Market", blurb:"Too early for trains — taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
       {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
@@ -154,7 +154,7 @@ const DATA = [
     ]
   },
   {
-    label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Tokyo", stamp: "TOKYO", icon: `<svg viewBox="0 0 40 26" class="tab-icon" aria-hidden="true"><polygon points="4,24 20,3 36,24" fill="currentColor"/><polygon points="14,24 20,3 26,24" fill="currentColor" opacity="0.5"/><polygon points="20,3 15,13 25,13" fill="#F8F6F0"/></svg>`,
+    label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Mt. Fuji", stamp: "TOKYO", 
     photo: "images/fuji.jpg",
     stops: [
       {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Hotel pickup/drop-off included in tour price."},
@@ -163,7 +163,7 @@ const DATA = [
     ]
   },
   {
-    label: "Thu Dec 24", sub: "Osaka", city: "Osaka", stamp: "OSAKA",
+    label: "Thu Dec 24", sub: "Osaka", city: "Osaka / Sakai", stamp: "OSAKA",
     stops: [
       {t:"5:30 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"7:00 AM", type:"transit", name:"→ Tokyo Station", blurb:"Walk or Marunouchi Line 1 stop.", badges:[]},
@@ -180,7 +180,7 @@ const DATA = [
     ]
   },
   {
-    label: "Fri Dec 25", sub: "Kyoto", city: "Kyoto", stamp: "KYOTO",
+    label: "Fri Dec 25", sub: "Kyoto", city: "Nara / Kyoto", stamp: "KYOTO",
     stops: [
       {t:"8:00 AM", type:"transit", name:"Namba → Nara", blurb:"Kintetsu Nara Line Rapid Express, direct.", badges:["~40 min","¥680 pp (~$4)"]},
       {t:"9:00 AM", type:"activity", name:"Tōdai-ji & Nara Deer Park", blurb:"Full daylight for the deer park. Get the goshuin stamp at the Great Buddha Hall (open until 5 PM) whenever suits — no need to rush."},
@@ -196,7 +196,7 @@ const DATA = [
     ]
   },
   {
-    label: "Sat Dec 26", sub: "Osaka → Hanoi", city: "Osaka / Hanoi", stamp: "HANOI\nARR",
+    label: "Sat Dec 26", sub: "Osaka → Hanoi", city: "Hanoi", stamp: "HANOI\nARR",
     stops: [
       {t:"5:30 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
       {t:"6:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Underground walk from Namba Sta., follow signs for Nankai Line, Nankai Limited Express Rapi.", badges:["~15 min walk"], note:"Ticket must be purchased online in advance."},
@@ -243,7 +243,7 @@ const DATA = [
     ]
   },
   {
-    label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Sapa / Hanoi", stamp: "HANOI",
+    label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
       {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
       {t:"7:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour."},
@@ -251,13 +251,13 @@ const DATA = [
     ]
   },
   {
-    label: "Fri Jan 1", sub: "Hanoi → Halong Bay", city: "Hanoi / Halong Bay", stamp: "HALONG\nBAY",
+    label: "Fri Jan 1", sub: "Hanoi → Halong Bay", city: "Halong Bay", stamp: "HALONG\nBAY",
     stops: [
       {t:"7:00 AM", type:"activity", name:"Check out hotel Hanoi, Halong Bay Cruise", blurb:"Picked up by cruise shuttle, Hanoi → Quảng Ninh."}
     ]
   },
   {
-    label: "Sat Jan 2", sub: "Halong Bay → Hanoi", city: "Halong Bay / Da Nang", stamp: "DA NANG",
+    label: "Sat Jan 2", sub: "Halong Bay → Hanoi", city: "Halong Bay / Hanoi", stamp: "HANOI",
     stops: [
       {t:"7:00 AM", type:"activity", name:"Halong Bay Cruise", blurb:"Dropped off by cruise shuttle, Quảng Ninh → Hanoi."},
       {t:"4:30 PM", type:"activity", name:"Coffee & Relax in train station", blurb:"Tonkin Lounge."},
@@ -394,7 +394,7 @@ DATA.forEach((day, i) => {
       <div class="ticket-head">
         <div>
           <div class="daylabel">${day.label}</div>
-          <div class="daysub">${day.sub}${day.city ? ' · ' + day.city : ''}</div>
+          <div class="daysub">${day.sub}</div>
         </div>
         <div class="stamp mono">${day.stamp}</div>
       </div>
