@@ -23,14 +23,14 @@ const DATA = [
   {
     label: "Wed Dec 9", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"War Remnants Museum & Ben Thanh Market", blurb:"", badges:["6 hrs"]},
-      {t:"5:00 PM", type:"activity", name:"Don works remote & Pho Di Bo & City Bus", blurb:"Online to 1:00 AM Thu."}
+      {t:"10:00 AM", type:"activity", name:"War Remnants Museum & Ben Thanh Market", blurb:"", photo:"images/warrem.jpg", badges:["6 hrs"]},
+      {t:"5:00 PM", type:"activity", name:"Don works remote & Pho Di Bo & City Bus", blurb:"Online to 1:00 AM Thu.", photo:"images/phodibohcmc.jpg"}
     ]
   },
   {
     label: "Thu Dec 10", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Cu Chi Tunnel", blurb:"", badges:["6 hrs"]},
+      {t:"10:00 AM", type:"activity", name:"Cu Chi Tunnel", blurb:"", photo:["images/cuchi.jpg"], badges:["6 hrs"]},
       {t:"5:00 PM", type:"activity", name:"Don works remote", blurb:"Online to 1:00 AM Fri."}
     ]
   },
@@ -67,8 +67,8 @@ const DATA = [
   {
     label: "Tue Dec 15", sub: "Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Private Coral Snorkel Trip", blurb:""},
-      {t:"5:00 PM", type:"activity", name:"Khai Hoan Fish Sauce Barrel House", blurb:"Doanh Nghiệp Tư Nhân Hải Sản Khải Hoàn."},
+      {t:"10:00 AM", type:"activity", name:"Private Coral Snorkel Trip", blurb:"", photo:["images/phuquoccoral.jpg"]},
+      {t:"5:00 PM", type:"activity", name:"Khai Hoan Fish Sauce Barrel House", blurb:"Doanh Nghiệp Tư Nhân Hải Sản Khải Hoàn.", photo:["images/fishsauce.jpg"]},
       {t:"7:30 PM", type:"activity", name:"Grand World Show (Optional) & Night Market & Rest", blurb:""}
     ]
   },
@@ -114,25 +114,25 @@ const DATA = [
     stops: [
       {t:"5:30 AM", type:"transit", name:"Hanoi train station → HAN airport", blurb:""},
       {t:"8:20 AM", type:"activity", name:"HAN → NRT (Don & Giang)", blurb:"Lands 3:25 PM JST", badges:["$217"]},
-      {t:"Fri 8:16 PM", type:"activity", name:"HOU → HND (Zack)", blurb:"~28 hrs incl. layover, lands 3:05 PM JST"},
+      {t:"Fri 8:16 PM", type:"activity", name:"HOU → HND (Zack)", blurb:"~28 hrs incl. layover, lands 3:05 PM JST", photo:["images/tokyo.jpg"]},
       {t:"5:00 PM", type:"transit", name:"NRT → Shimbashi (hotel)", blurb:"Keisei Skyliner → Nippori, JR Yamanote → Shimbashi, 10 min walk. Shimbashi is closer to the hotel than Hamamatsuchō.", badges:["~75 min","¥2,780 (~$17)"]},
       {t:"5:00 PM", type:"transit", name:"HND → Hamamatsuchō (hotel)", blurb:"Tokyo Monorail northbound to the last stop, 10 min walk to hotel.", badges:["~13–20 min","¥500 (~$3)"]},
-      {t:"7:00 PM", type:"activity", name:"Zack checks in first", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", badges:["¥143,298 (~$896)"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", badges:["~12–15 min","¥180–210 (~$1)"]}
+      {t:"7:00 PM", type:"activity", name:"Zack checks in first", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
+      {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", photo:["images/kabukicho.jpg"], badges:["~12–15 min","¥180–210 (~$1)"]}
     ]
   },
   {
     label: "Mon Dec 21", sub: "Harajuku · Shinjuku · Shibuya", city: "Shinjuku / Shibuya", stamp: "TOKYO",
     stops: [
       {t:"8:30 AM", type:"transit", name:"Hotel → Meiji Jingu", blurb:"Oedo Line direct.", badges:["~13 min","¥180 (~$1)"]},
-      {t:"9:00 AM", type:"activity", name:"Visit Meiji Jingu", blurb:""},
+      {t:"9:00 AM", type:"activity", name:"Visit Meiji Jingu", blurb:"", photo:["images/meiji-shrine1.jpg"]},
       {t:"11:15 AM", type:"transit", name:"→ Zauo Shinjuku", blurb:"JR Yamanote, 2 stops.", badges:["~5 min","¥150 (~$1)"]},
-      {t:"11:30 AM", type:"activity", name:"Lunch at Zauo Shinjuku", blurb:""},
-      {t:"1:30 PM", type:"activity", name:"Shinjuku Samurai Museum + shopping", blurb:"Don Quijote / LOFT — walking distance."},
+      {t:"11:30 AM", type:"activity", name:"Lunch at Zauo Shinjuku", blurb:"", photo:["images/zauo.jpg"]},
+      {t:"1:30 PM", type:"activity", name:"Shinjuku Samurai Museum + shopping", blurb:"Don Quijote / LOFT — walking distance.", photo:["images/samurai.jpg"]},
       {t:"4:45 PM", type:"transit", name:"→ Shibuya Sky", blurb:"JR Yamanote Line direct, 2 stops.", badges:["~7 min","¥170 (~$1)"]},
-      {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top."},
-      {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit."},
-      {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here."},
+      {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top.", photo:["images/shibuyasky.jpg"]},
+      {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit.", photo:["images/crossing.avif"]},
+      {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here.", photo:["images/yokocho.jpg"]},
       {t:"8:00 PM", type:"transit", name:"Shibuya → Shiodome, rest early", blurb:"Ginza Line direct.", badges:["~17 min","¥210 (~$1)"]}
     ]
   },
@@ -142,14 +142,14 @@ const DATA = [
       {t:"4:15 AM", type:"transit", name:"→ Toyosu Market", blurb:"Too early for trains — taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
       {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
       {t:"8:00 AM", type:"transit", name:"→ Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
-      {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:"images/palace.jpg"},
+      {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
       {t:"11:40 AM", type:"transit", name:"→ Skytree", blurb:"Hanzomon Line direct.", badges:["~20 min","¥210–240 (~$1–2)"]},
       {t:"12:00 PM", type:"activity", name:"Lunch near Tokyo Skytree", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Tokyo Skytree Observation", blurb:"", photo:"images/skytree.jpg"},
       {t:"3:45 PM", type:"transit", name:"→ Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
-      {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:""},
+      {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:"", photo:"images/sensoji.jpg"},
       {t:"5:30 PM", type:"transit", name:"→ Cruise Pier (Daimon Sta.)", blurb:"Toei Asakusa Line direct from Asakusa Sta. — no transfer, and Daimon is right by your hotel.", badges:["~15 min","¥210 (~$1)"]},
-      {t:"5:45 PM", type:"activity", name:"Tokyo Bay Cruise (optional) + Dinner", blurb:""},
+      {t:"5:45 PM", type:"activity", name:"Tokyo Bay Cruise (optional) + Dinner", blurb:"", photo:"images/nightcruise.jpg"},
       {t:"9:45 PM", type:"transit", name:"Back to Shiodome, rest early", blurb:"Short walk — Daimon Sta. is right by the hotel.", badges:["~5 min"]}
     ]
   },
@@ -167,15 +167,15 @@ const DATA = [
     stops: [
       {t:"5:30 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"7:00 AM", type:"transit", name:"→ Tokyo Station", blurb:"Walk or Marunouchi Line 1 stop.", badges:[]},
-      {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Reserve the free oversized-luggage seat if bags exceed 160cm combined dimensions.", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"]},
+      {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Reserve the free oversized-luggage seat if bags exceed 160cm combined dimensions.", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"]},
       {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Osaka Metro Midosuji Line, bound for Nakamozu — direct, no transfer.", badges:["~20–24 min","¥290 pp (~$2)"]},
-      {t:"10:25 AM", type:"activity", name:"Drop off luggage at Toyoko Inn Osaka Namba", blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive."},
-      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time."},
+      {t:"10:25 AM", type:"activity", name:"Drop off luggage at Toyoko Inn Osaka Namba", photo:["images/tokyoinn.webp"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive."},
+      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time."},
       {t:"12:30 PM", type:"activity", name:"Lunch in Sakai", blurb:""},
       {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"Nankai Main Line back to Namba, then Osaka Metro Tanimachi Line to Tanimachi 4-chōme, short walk to the park.", badges:["~30–35 min total"]},
-      {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", blurb:""},
+      {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", photo:["images/osakasunset.jpeg"], blurb:""},
       {t:"7:00 PM", type:"transit", name:"→ Umeda Sky Building", blurb:"JR Osaka Loop Line, direct.", badges:["~15–18 min"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner, Umeda Sky Building", blurb:"Observation deck typically open until ~10:30 PM."},
+      {t:"7:30 PM", type:"activity", name:"Dinner, Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
       {t:"9:30 PM", type:"activity", name:"Check in Toyoko Inn Osaka Namba", blurb:"Luggage already dropped off this morning — check in whenever suits, no rush."}
     ]
   },
@@ -183,16 +183,16 @@ const DATA = [
     label: "Fri Dec 25", sub: "Kyoto", city: "Nara / Kyoto", stamp: "KYOTO",
     stops: [
       {t:"8:00 AM", type:"transit", name:"Namba → Nara", blurb:"Kintetsu Nara Line Rapid Express, direct.", badges:["~40 min","¥680 pp (~$4)"]},
-      {t:"9:00 AM", type:"activity", name:"Tōdai-ji & Nara Deer Park", blurb:"Full daylight for the deer park. Get the goshuin stamp at the Great Buddha Hall (open until 5 PM) whenever suits — no need to rush."},
+      {t:"9:00 AM", type:"activity", name:"Tōdai-ji & Nara Deer Park", photo:["images/nara.jpg"], blurb:"Full daylight for the deer park. Get the goshuin stamp at the Great Buddha Hall (open until 5 PM) whenever suits — no need to rush."},
       {t:"12:00 PM", type:"transit", name:"Nara → Kyoto (Aoniyoshi)", blurb:"Kintetsu's dedicated sightseeing limited express — retro purple interior, big windows, on-board snack counter. Same Kintetsu-Nara Station, direct to Kyoto.", badges:["~35 min","¥1,960 full-route fare (~$12) — confirm exact Nara–Kyoto segment price"], note:"Runs daily except Thursdays — fine for your Friday. Only 84 seats total and it's popular, so reserve online or at a Kintetsu counter in advance rather than same-day. Double-check the exact midday departure time on the official Kintetsu site before finalizing, since it can shift."},
       {t:"1:20 PM", type:"activity", name:"Lunch near Kyoto Station", blurb:""},
       {t:"1:45 PM", type:"transit", name:"→ Nanzen-ji", blurb:"Karasuma Line → transfer to Tozai Line at Karasuma-Oike → Keage Sta., then a 10-min walk.", badges:["~25 min","¥260 pp (~$2)"]},
-      {t:"2:20 PM", type:"activity", name:"Nanzen-ji Temple", blurb:"Zen temple grounds with the famous Sanmon gate and aqueduct. Open until 4:30 PM in winter (last admission ~4:10 PM) — plan to leave by then."},
+      {t:"2:20 PM", type:"activity", name:"Nanzen-ji Temple", photo:["images/nanzenji.jpg"], blurb:"Zen temple grounds with the famous Sanmon gate and aqueduct. Open until 4:30 PM in winter (last admission ~4:10 PM) — plan to leave by then."},
       {t:"3:40 PM", type:"transit", name:"→ Fushimi Inari Taisha", blurb:"Walk back to Keage Sta., Tozai Line one stop to Sanjo-Keihan, transfer directly to the Keihan Main Line south to Fushimi-Inari Sta.", badges:["~25–30 min","¥330 pp (~$2)"]},
-      {t:"4:15 PM", type:"activity", name:"Fushimi Inari Taisha", blurb:"The torii gate trail into dusk/evening — sunset is ~4:47 PM this time of year, so plan on evening lighting rather than full daylight here."},
+      {t:"4:15 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.webp"], blurb:"The torii gate trail into dusk/evening — sunset is ~4:47 PM this time of year, so plan on evening lighting rather than full daylight here."},
       {t:"6:00 PM", type:"transit", name:"→ Kyoto Station", blurb:"JR Nara Line, 2 stops, direct.", badges:["~8 min","¥150 pp (~$1)"]},
       {t:"6:15 PM", type:"transit", name:"Kyoto → Osaka", blurb:"JR Special Rapid, direct.", badges:["~29 min","¥580 pp (~$4)"]},
-      {t:"7:00 PM", type:"activity", name:"Dinner at Kuromon Ichiba, walk Dotonbori & Shinsaibashi", blurb:"~10–15 min from Osaka Sta. to Namba/Dotonbori.", note:"Reserve the Tombori River Cruise ahead of time."}
+      {t:"7:00 PM", type:"activity", name:"Dinner at Kuromon Ichiba, walk Dotonbori & Shinsaibashi", photo:["images/kuromon.jpg", "images/dotonbori.jpg"], blurb:"~10–15 min from Osaka Sta. to Namba/Dotonbori.", note:"Reserve the Tombori River Cruise ahead of time."}
     ]
   },
   {
@@ -358,6 +358,12 @@ const DATA = [
 const tabsEl = document.getElementById('tabs');
 const daysEl = document.getElementById('days');
 
+function renderPhotos(photo, alt, className) {
+  if (!photo) return '';
+  const photos = Array.isArray(photo) ? photo : [photo];
+  return `<div class="${className}">${photos.map(src => `<img src="${src}" alt="${alt}">`).join('')}</div>`;
+}
+
 DATA.forEach((day, i) => {
   const btn = document.createElement('button');
   btn.innerHTML = `<span class="tab-date">${day.label}${day.icon ? ' ' + day.icon : ''}</span><span class="tab-city">${day.city || ''}</span>`;
@@ -374,7 +380,7 @@ DATA.forEach((day, i) => {
       ? `<div class="badges">${s.badges.map(b => `<span class="badge${/min|hr/.test(b) ? ' time-badge':''}">${b}</span>`).join('')}</div>`
       : '';
     const noteHtml = s.note ? `<div class="note"><b>Note —</b> ${s.note}</div>` : '';
-    const photoHtml = s.photo ? `<div class="stop-photo"><img src="${s.photo}" alt="${s.name}"></div>` : '';
+    const photoHtml = renderPhotos(s.photo, s.name, 'stop-photo');
     return `
       <div class="stop${s.type === 'transit' ? ' transit' : ''}">
         <div class="time mono">${s.t}</div>
@@ -398,7 +404,7 @@ DATA.forEach((day, i) => {
         </div>
         <div class="stamp mono">${day.stamp}</div>
       </div>
-      ${day.photo ? `<div class="day-photo"><img src="${day.photo}" alt="${day.label} photo"></div>` : ''}
+      ${renderPhotos(day.photo, `${day.label} photo`, 'day-photo')}
       <div class="stops">${stopsHtml}</div>
     </div>`;
 
