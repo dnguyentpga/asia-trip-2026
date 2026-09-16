@@ -127,6 +127,25 @@
     padding:0 18px;
   }
 
+  .section-tabs{
+    max-width:960px;
+    margin:22px auto 0;
+    padding:0 18px;
+    display:flex;
+    gap:8px;
+  }
+  .section-tabs button{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    padding:9px 14px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--card);
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .section-tabs button.active{background:var(--ink); color:var(--card); border-color:var(--ink);}
+
   nav.tabs{
     position:sticky;
     top:20px;
@@ -139,6 +158,7 @@
     max-height:calc(100vh - 40px);
     overflow-y:auto;
   }
+  nav.tabs[hidden]{display:none !important;}
   nav.tabs button{
     flex:0 0 auto;
     font-family:'JetBrains Mono', monospace;
@@ -195,7 +215,41 @@
     color:var(--ink);
   }
 
-  main{flex:1; min-width:0; max-width:600px; margin:0; padding:28px 0 36px;}
+  main{flex:1; min-width:0; max-width:700px; margin:0; padding:28px 0 36px;}
+
+  .content-section{display:none;}
+  .content-section.active{display:block;}
+  .itinerary-section{max-width:600px;}
+  .section-heading{margin:0 0 12px;}
+  .section-kicker{
+    color:var(--accent-red);
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .section-heading h2{font-family:'Shippori Mincho', serif; font-size:30px; margin:2px 0 0;}
+  .todo-panel{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 20px 14px;
+    margin-bottom:18px;
+    box-shadow:0 1px 0 rgba(30,42,68,0.04);
+  }
+  .todo-heading{display:flex; justify-content:space-between; align-items:flex-start; gap:12px;}
+  .todo-kicker{
+    color:var(--accent-red);
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .todo-panel h3{font-family:'Shippori Mincho', serif; font-size:24px; margin:0;}
+  .todo-count{color:var(--accent-gold); font-size:13px; padding-top:4px;}
+  .todo-list{display:grid; gap:9px; margin-top:14px;}
+  .todo-item{display:flex; align-items:flex-start; gap:10px; color:var(--ink-soft); font-size:15px; line-height:1.35; cursor:pointer;}
+  .todo-item input{accent-color:var(--accent-red); flex:0 0 auto; width:17px; height:17px; margin:0;}
+  .todo-item:has(input:checked) span{text-decoration:line-through; color:var(--rail);}
+  .todo-more{color:var(--ink-soft); font-size:14px; font-style:italic; padding-left:27px;}
 
   @media (max-width:760px){
     .layout{
@@ -203,6 +257,8 @@
       gap:8px;
       padding:0 8px;
     }
+    .section-tabs{padding:0 8px; margin-top:12px;}
+    .section-tabs button{flex:1; padding:8px 6px; font-size:12px;}
     nav.tabs{
       flex:0 0 118px;
       top:8px;
@@ -217,6 +273,7 @@
     nav.tabs button .tab-date{font-size:13px;}
     nav.tabs button .tab-city{font-size:11px;}
     main{min-width:0; padding:10px 0 24px;}
+    .todo-panel{padding:16px 14px 13px;}
   }
 
   .day{display:none;}

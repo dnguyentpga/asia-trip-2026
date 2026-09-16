@@ -40,9 +40,43 @@
   </div>
 </header>
 
+<nav class="section-tabs" aria-label="Trip sections">
+  <button class="active" type="button" data-section="prep">Trip Prep</button>
+  <button type="button" data-section="itinerary">Trip Itinerary</button>
+</nav>
+
 <div class="layout">
-  <nav class="tabs" id="tabs"></nav>
-  <main id="days"></main>
+  <nav class="tabs" id="tabs" hidden></nav>
+  <main>
+    <section class="content-section active" aria-labelledby="prep-title">
+      <div class="section-heading">
+        <div class="section-kicker mono"></div>
+        <h2 id="prep-title"></h2>
+      </div>
+      <div class="todo-panel" aria-labelledby="todo-title">
+        <div class="todo-heading">
+          <h3 id="todo-title">Todo</h3>
+          <span class="todo-count mono" id="todo-count">0 / 0</span>
+        </div>
+        <div class="todo-list" id="todo-list">
+          <label class="todo-item"><input type="checkbox" data-todo="passports"><span>Check passport validity, travel insurance, and visa/customs form requirements</span></label>
+          <label class="todo-item"><input type="checkbox" data-todo="funds"><span>Confirm how to access funds while traveling</span></label>
+          <label class="todo-item"><input type="checkbox" data-todo="cellular"><span>Purchase pre-arrival eSIM plan</span></label>
+          <label class="todo-item"><input type="checkbox" data-todo="electronics"><span>Purchase power plug adapter. Local voltage: VIE: 220V, JAP: 100V</span></label>
+          <label class="todo-item"><input type="checkbox" data-todo="luggage"><span>Pack appropriately for VIE/JAP weather and strict carry-on weight limits</span></label>
+
+          <div class="todo-more">and more...</div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section itinerary-section" aria-labelledby="itinerary-title">
+      <div class="section-heading">
+        <div class="section-kicker mono"></div>
+        <h2 id="itinerary-title"></h2>
+      </div>
+      <div id="days"></div>
+    </section>
+  </main>
 </div>
 
 <footer>Times &amp; fares are estimates — verify against live schedules before travel · IC card (Suica / ICOCA) recommended throughout · USD conversions at ¥160/$1, rate as of Aug 31, 2026 — not live</footer>

@@ -357,6 +357,46 @@ const DATA = [
 
 const tabsEl = document.getElementById('tabs');
 const daysEl = document.getElementById('days');
+const sectionTabs = document.querySelectorAll('[data-section]');
+const contentSections = {
+  prep: document.querySelector('.todo-panel').closest('.content-section'),
+  itinerary: document.querySelector('.itinerary-section')
+};
+const todoItems = document.querySelectorAll('[data-todo]');
+const todoCount = document.getElementById('todo-count');
+const todoStorageKey = 'asia-trip-2026-todos';
+
+function updateTodoCount() {
+  const completed = [...todoItems].filter(item => item.checked).length;
+  todoCount.textContent = `${completed} / ${todoItems.length}`;
+}
+
+try {
+  const savedTodos = JSON.parse(localStorage.getItem(todoStorageKey) || '{}');
+  todoItems.forEach(item => {
+    item.checked = savedTodos[item.dataset.todo] === true;
+    item.addEventListener('change', () => {
+      const currentTodos = JSON.parse(localStorage.getItem(todoStorageKey) || '{}');
+      currentTodos[item.dataset.todo] = item.checked;
+      localStorage.setItem(todoStorageKey, JSON.stringify(currentTodos));
+      updateTodoCount();
+    });
+  });
+} catch (error) {
+  todoItems.forEach(item => item.addEventListener('change', updateTodoCount));
+}
+updateTodoCount();
+
+sectionTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const selectedSection = tab.dataset.section;
+    sectionTabs.forEach(item => item.classList.toggle('active', item === tab));
+    Object.entries(contentSections).forEach(([name, section]) => {
+      section.classList.toggle('active', name === selectedSection);
+    });
+    tabsEl.hidden = selectedSection !== 'itinerary';
+  });
+});
 
 function renderPhotos(photo, alt, className) {
   if (!photo) return '';
