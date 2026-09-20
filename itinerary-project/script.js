@@ -2,14 +2,15 @@ const DATA = [
   {
     label: "Sat Dec 5", sub: "Houston → Saigon", city: "Saigon", stamp: "SGN\nARR",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"]}
+      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"], mapLink:"https://maps.app.goo.gl/XU3XtWifTQuBfFcFA", mapLabel:"Rest at Thanh Long Bach Dang Hotel (Reserved Expedia Confirm #: 73548618531876"}
     ]
   },
   {
     label: "Mon Dec 7", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"1:00 AM", type:"activity", name:"Check in Service Apartment and Rest", blurb:"", badges:["8 hrs"]},
-      {t:"11:00 AM", type:"activity", name:"Visit Independence Palace & Ride Metro to Thao Dien", blurb:"", badges:["5 hrs"], photo:"images/indpalace.png"},
+      {t:"10:00 AM", type:"activity", name:"Check out Thanh Long Hotel", blurb:""},
+      {t:"2:00 PM", type:"activity", name:"Check in Service Apartment", blurb:"", mapLink:"https://maps.app.goo.gl/8VN6HkrqQnFzD7qw7", mapLabel:"Stay at Masteri Thao Dien (Reserved Expedia Confirm #: 73548621935496"},        
+      {t:"3:00 PM", type:"activity", name:"Ride Metro & Visit Independence Palace", blurb:"", photo:"images/indpalace.png"},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Online to 1:00 AM Tue."}
     ]
   },
@@ -421,6 +422,9 @@ DATA.forEach((day, i) => {
       : '';
     const noteHtml = s.note ? `<div class="note"><b>Note —</b> ${s.note}</div>` : '';
     const photoHtml = renderPhotos(s.photo, s.name, 'stop-photo');
+    const mapLinkHtml = s.mapLink
+      ? `<a class="map-link" href="${s.mapLink}" target="_blank" rel="noopener noreferrer">${s.mapLabel || 'Open in Google Maps'}</a>`
+      : '';
     return `
       <div class="stop${s.type === 'transit' ? ' transit' : ''}">
         <div class="time mono">${s.t}</div>
@@ -431,6 +435,7 @@ DATA.forEach((day, i) => {
           ${badgesHtml}
           ${noteHtml}
           ${photoHtml}
+          ${mapLinkHtml}
         </div>
       </div>`;
   }).join('');
