@@ -211,11 +211,11 @@ const DATA = [
   {
     label: "Sun Dec 27", sub: "Hanoi Sightseeing", city: "Hanoi", stamp: "HANOI",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:""},
+      {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:"", photo:["images/hcmmau.jpg"]},
       {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:""},
-      {t:"5:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:""},
-      {t:"8:00 PM", type:"activity", name:"Walk Ta Hien Street and Rest", blurb:""}
+      {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:"", photo:["images/qtg.jpg"]},
+      {t:"5:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:"", photo:["images/traincoffee.jpg"]},
+      {t:"8:00 PM", type:"activity", name:"Water puppet show, walk Ta Hien Street and Rest", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]}
     ]
   },
   {
