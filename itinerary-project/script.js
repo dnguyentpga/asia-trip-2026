@@ -170,14 +170,14 @@ const DATA = [
       {t:"7:00 AM", type:"transit", name:"→ Tokyo Station", blurb:"Walk or Marunouchi Line 1 stop.", badges:[]},
       {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Reserve the free oversized-luggage seat if bags exceed 160cm combined dimensions.", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"]},
       {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Osaka Metro Midosuji Line, bound for Nakamozu — direct, no transfer.", badges:["~20–24 min","¥290 pp (~$2)"]},
-      {t:"10:25 AM", type:"activity", name:"Drop off luggage at Toyoko Inn Osaka Namba", photo:["images/tokyoinn.webp"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive."},
+      {t:"10:25 AM", type:"activity", name:"Drop off luggage at APA Namba Hotel", photo:["images/apa.jpg"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive. Reserved, confirmation # 261003006936.", badges:["¥46,200 (~$300)"]},
       {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time."},
       {t:"12:30 PM", type:"activity", name:"Lunch in Sakai", blurb:""},
       {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"Nankai Main Line back to Namba, then Osaka Metro Tanimachi Line to Tanimachi 4-chōme, short walk to the park.", badges:["~30–35 min total"]},
       {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", photo:["images/osakasunset.jpeg"], blurb:""},
       {t:"7:00 PM", type:"transit", name:"→ Umeda Sky Building", blurb:"JR Osaka Loop Line, direct.", badges:["~15–18 min"]},
       {t:"7:30 PM", type:"activity", name:"Dinner, Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
-      {t:"9:30 PM", type:"activity", name:"Check in Toyoko Inn Osaka Namba", blurb:"Luggage already dropped off this morning — check in whenever suits, no rush."}
+      {t:"9:30 PM", type:"activity", name:"Check in APA Namba Hotel", blurb:"Luggage already dropped off this morning — check in whenever suits, no rush."}
     ]
   },
   {
@@ -199,13 +199,13 @@ const DATA = [
   {
     label: "Sat Dec 26", sub: "Osaka → Hanoi", city: "Hanoi", stamp: "HANOI\nARR",
     stops: [
-      {t:"5:30 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
-      {t:"6:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Underground walk from Namba Sta., follow signs for Nankai Line, Nankai Limited Express Rapi.", badges:["~15 min walk"], note:"Ticket must be purchased online in advance."},
-      {t:"7:00 AM", type:"transit", name:"Osaka to Kansai Airport", blurb:"", badges:["$500"]},
-      {t:"10:00 AM", type:"transit", name:"KIX → HAN", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Lunch at Airport & Check in hotel in Hanoi", blurb:"Near the Old Quarter."},
-      {t:"5:00 PM", type:"activity", name:"Walk Hoan Kiem Lake, Dinner, Water Puppet Show", blurb:"Last show 8pm."},
-      {t:"9:00 PM", type:"activity", name:"Walk Hanoi Cathedral & Opera House, Rest", blurb:""}
+      {t:"9:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
+      {t:"10:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Walk to Kintetsu Nambaekinishiguchi bus stop. Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
+      {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View"},
+      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931", blurb:"", badges:["$500"]},
+      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Old Quarter, Hanoi. Check in hotel."},
+      {t:"9:00 PM", type:"activity", name:"Dinner", blurb:""},
+      {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake, Hanoi Cathedral & Opera House, Rest", blurb:""}
     ]
   },
   {
