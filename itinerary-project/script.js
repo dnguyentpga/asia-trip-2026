@@ -2,7 +2,7 @@ const DATA = [
   {
     label: "Sat Dec 5", sub: "Houston → Saigon", city: "Saigon", stamp: "SGN\nARR",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"], mapLink:"https://maps.app.goo.gl/XU3XtWifTQuBfFcFA", mapLabel:"Rest at Thanh Long Bach Dang Hotel (Expedia Confirm #: 73548618531876"}
+      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"], mapLink:"https://maps.app.goo.gl/XU3XtWifTQuBfFcFA", mapLabel:"Rest at Thanh Long Bach Dang Hotel (Expedia Confirm #: 73548618531876)"}
     ]
   },
   {
@@ -39,7 +39,7 @@ const DATA = [
     label: "Fri Dec 11", sub: "Saigon → Trị An", city: "Trị An", stamp: "TRI AN",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out rental apartment", blurb:""},
-      {t:"10:15 AM", type:"transit", name:"Saigon → Bien Hoa on train", blurb:"SE22 train. Arrives Bien Hoa station 11:00 AM."},
+      {t:"10:15 AM", type:"transit", name:"Saigon → Bien Hoa on train", blurb:"SE22 train. Arrives Bien Hoa station 11:00 AM.", photo:"images/bhtrain.jpg"},
       {t:"11:15 AM", type:"transit", name:"Bien Hoa → Tri An by car", blurb:"stop by MM MegaMarket"},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Visit Family", blurb:"Online to 1:00 AM Sat."}
     ]
@@ -47,30 +47,32 @@ const DATA = [
   {
     label: "Sat Dec 12", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An."}
+      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An", photo:"images/caosu.jpg"}
     ]
   },
   {
     label: "Sun Dec 13", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An."}
+      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An", photo:"images/caosu.jpg"},
+      {t:"7:00 PM", type:"activity",  name:"Tri An → Saigon (with Uncle Luc), check in hotel", blurb:"Rest in Saigon for early flight to Phu Quoc on Mon Dec 14"}
     ]
   },
   {
     label: "Mon Dec 14", sub: "Saigon → Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
-      {t:"7:20 AM", type:"transit", name:"SGN → PQC (with Uncle Luc)", blurb:"Pick up rental car. VietJet VJ 329."},
+      {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:""},
+      {t:"6:50 AM", type:"transit", name:"SGN → PQC (with Uncle Luc). VietJet VJ 329", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
       {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
       {t:"12:00 PM", type:"activity", name:"Lunch", blurb:""},
       {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg"},
-      {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042"},
+      {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)"},
       {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
     ]
   },
   {
     label: "Tue Dec 15", sub: "Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Private Coral Snorkel Trip", blurb:"", photo:["images/phuquoccoral.jpg"]},
+      {t:"10:00 AM", type:"activity", name:"Private Coral Snorkel Trip", blurb:"", photo:["images/phuquoccoral.jpg"], mapLink:"https://kiengiangtravel.vn/bang-gia-thue-cano-phu-quoc/", mapLabel:"Thuê Cano Phú Quốc", badges:["$100"]},
       {t:"5:00 PM", type:"activity", name:"Khai Hoan Fish Sauce Barrel House", blurb:"Doanh Nghiệp Tư Nhân Hải Sản Khải Hoàn.", photo:["images/fishsauce.jpg"]},
       {t:"7:30 PM", type:"activity", name:"Grand World Show (Optional) & Night Market & Rest", blurb:""}
     ]
@@ -203,11 +205,11 @@ const DATA = [
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
       {t:"10:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Walk to Kintetsu Nambaekinishiguchi bus stop. Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
-      {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View"},
-      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931. Confimred #DEFZUF: ", blurb:"", badges:["$571 pp"]},
-      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Old Quarter, Hanoi. Check in hotel."},
-      {t:"9:00 PM", type:"activity", name:"Dinner", blurb:""},
-      {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake, Hanoi Cathedral & Opera House, Rest", blurb:""}
+      {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"]},
+      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
+      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Old Quarter, Hanoi."},
+      {t:"9:00 PM", type:"activity", name:"Check-in Hanoi hotel and Dinner", blurb:""},
+      {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
     ]
   },
   {
@@ -216,22 +218,26 @@ const DATA = [
       {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:"", photo:["images/hcmmau.jpg"]},
       {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
       {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:"", photo:["images/qtg.jpg"]},
-      {t:"5:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:"", photo:["images/traincoffee.jpg"]},
-      {t:"8:00 PM", type:"activity", name:"Water puppet show, walk Ta Hien Street and Rest", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]}
+      {t:"5:20 PM", type:"activity", name:"Water puppet show", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]},        
+      {t:"7:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:"", photo:["images/traincoffee.jpg"]},
+      {t:"8:00 PM", type:"activity", name:"City Walk (stop by Opera House) and Rest", blurb:""}
+      
     ]
   },
   {
     label: "Mon Dec 28", sub: "Hanoi → Sapa (overnight train)", city: "Hanoi / Sapa", stamp: "SAPA",
     stops: [
-      {t:"10:30 AM", type:"activity", name:"Visit Hỏa Lò Prison Relic and Lunch", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Relax or Hanoi Train Street, Dinner, head to rail station for Sapa", blurb:"", note:"Keep luggage at Hanoi hotel — just pack enough for 2 nights in Sapa."},
-      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi → Lao Cai", blurb:"Tonkin Heritage Train. Arrives Tue Dec 29, 6:00 AM."}
+      {t:"8:30 AM", type:"activity", name:"Tour Central Cathedral Interior", blurb:"", photo:["images/hanoicath.jpg"]},
+      {t:"10:30 AM", type:"activity", name:"Check out Hanoi hotel and lunch", note:"Use luggage storage service (most hotels offer) in Hanoi, avoid carrying heavy to Sapa."},
+      {t:"2:00 PM", type:"activity", name:"Visit Hoa Lo Prison relic and shopping", blurb:"", photo:["images/hoalo.jpg"]},
+      {t:"7:00 PM", type:"activity", name:"Dinner, head to rail station for Sapa", blurb:"", note:"Pick up light baggage for overnight train. Leave heavy luggage at storage service."},      
+      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi → Lao Cai", blurb:"Tonkin Heritage Train. Arrives Tue Dec 29, 6:00 AM.", photo:["images/tonkin.jpg"]}
     ]
   },
   {
     label: "Tue Dec 29", sub: "Sapa", city: "Sapa", stamp: "SAPA",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Check in Shom Li's Homestay", blurb:"Contact to customize itinerary."},
+      {t:"8:00 AM", type:"activity", name:"Check in Shom Li's Homestay", blurb:"Contact to customize itinerary.", note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Taxi from Sapa town to homestay or get picked up by host."},
       {t:"11:00 AM", type:"activity", name:"Guided Cultural Activities and Trekking", blurb:""},
       {t:"6:30 PM", type:"activity", name:"Dinner at homestay", blurb:""},
       {t:"9:00 PM", type:"activity", name:"Homestay Activities or Sapa Night Market & Rest", blurb:""}
@@ -240,17 +246,18 @@ const DATA = [
   {
     label: "Wed Dec 30", sub: "Sapa → Hanoi (overnight train)", city: "Sapa / Hanoi", stamp: "HANOI",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Cat Cat Village & Fansipan Summit 1-Day Tour", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car."},
-      {t:"5:00 PM", type:"activity", name:"Shopping & Dinner at homestay", blurb:""},
-      {t:"9:30 PM", type:"transit", name:"Lao Cai → Hanoi Train", blurb:"Tonkin Heritage Train. Arrives Thu Dec 31, 5:30 AM."}
+      {t:"8:00 AM", type:"activity", name:"Cat Cat Village & Fansipan Summit 1-Day Tour", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"], note:"Leave backpack at homestay, take only light daypack for the tour."},
+      {t:"5:00 PM", type:"activity", name:"Shopping & Dinner at homestay", blurb:"", note:"Taxi from homestay to Lao Cai station. Ride shuttle (booked with train tickets) from Sapa town to Lao Cai station."},
+      {t:"9:30 PM", type:"transit", name:"Lao Cai → Hanoi Train", blurb:"Tonkin Heritage Train. Arrives Thu Dec 31, 5:30 AM.", photo:["images/tonkin.jpg"]}
     ]
   },
   {
     label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
       {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
-      {t:"7:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour."},
-      {t:"9:00 PM", type:"activity", name:"NYE in Hanoi", blurb:""}
+      {t:"6:00 AM", type:"activity", name:"Check in Hanoi hotel early and breakfast", blurb:"", note:"Make sure to book same hotel as before for free luggage storage."},
+      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], mapLink:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", mapLabel:"Custom Private Ninh Binh Tour"},     
+      {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
   {
