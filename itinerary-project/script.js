@@ -2,14 +2,14 @@ const DATA = [
   {
     label: "Sat Dec 5", sub: "Houston → Saigon", city: "Saigon", stamp: "SGN\nARR",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"], mapLink:"https://maps.app.goo.gl/XU3XtWifTQuBfFcFA", mapLabel:"Rest at Thanh Long Bach Dang Hotel (Reserved Expedia Confirm #: 73548618531876"}
+      {t:"7:00 AM", type:"transit", name:"IAH → SGN", blurb:"AS 453, AS 119, KE 479 (booked & confirmed). Arrives Sun Dec 6, 11:20 PM.", photo:"images/hcmc.jpg", badges:["~28 hrs"], mapLink:"https://maps.app.goo.gl/XU3XtWifTQuBfFcFA", mapLabel:"Rest at Thanh Long Bach Dang Hotel (Expedia Confirm #: 73548618531876"}
     ]
   },
   {
     label: "Mon Dec 7", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"10:00 AM", type:"activity", name:"Check out Thanh Long Hotel", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Check in Service Apartment", blurb:"", mapLink:"https://maps.app.goo.gl/8VN6HkrqQnFzD7qw7", mapLabel:"Stay at Masteri Thao Dien (Reserved Expedia Confirm #: 73548621935496"},        
+      {t:"2:00 PM", type:"activity", name:"Check in Service Apartment", blurb:"", mapLink:"https://maps.app.goo.gl/8VN6HkrqQnFzD7qw7", mapLabel:"Stay at Masteri Thao Dien (Expedia Confirm #: 73548621935496"},        
       {t:"3:00 PM", type:"activity", name:"Ride Metro & Visit Independence Palace", blurb:"", photo:"images/indpalace.png"},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Online to 1:00 AM Tue."}
     ]
@@ -38,7 +38,9 @@ const DATA = [
   {
     label: "Fri Dec 11", sub: "Saigon → Trị An", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"transit", name:"Check out & Depart to Tri An", blurb:"Trị An.", badges:["5 hrs"]},
+      {t:"9:00 AM", type:"activity", name:"Check out rental apartment", blurb:""},
+      {t:"10:15 AM", type:"transit", name:"Saigon → Bien Hoa on train", blurb:"SE22 train. Arrives Bien Hoa station 11:00 AM."},
+      {t:"11:15 AM", type:"transit", name:"Bien Hoa → Tri An by car", blurb:"stop by MM MegaMarket"},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Visit Family", blurb:"Online to 1:00 AM Sat."}
     ]
   },
@@ -61,7 +63,7 @@ const DATA = [
       {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
       {t:"12:00 PM", type:"activity", name:"Lunch", blurb:""},
       {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg"},
-      {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:""},
+      {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042"},
       {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
     ]
   },
@@ -202,7 +204,7 @@ const DATA = [
       {t:"9:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
       {t:"10:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Walk to Kintetsu Nambaekinishiguchi bus stop. Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
       {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View"},
-      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931", blurb:"", badges:["$500"]},
+      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931. Confimred #DEFZUF: ", blurb:"", badges:["$571 pp"]},
       {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Old Quarter, Hanoi. Check in hotel."},
       {t:"9:00 PM", type:"activity", name:"Dinner", blurb:""},
       {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake, Hanoi Cathedral & Opera House, Rest", blurb:""}
