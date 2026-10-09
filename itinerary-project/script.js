@@ -9,7 +9,7 @@ const DATA = [
     label: "Mon Dec 7", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"10:00 AM", type:"activity", name:"Check out Thanh Long Hotel", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Check in Service Apartment", blurb:"", mapLink:"https://maps.app.goo.gl/8VN6HkrqQnFzD7qw7", mapLabel:"Stay at Masteri Thao Dien (Expedia Confirm #: 73548621935496"},        
+      {t:"2:00 PM", type:"activity", name:"Check in Service Apartment", blurb:"", mapLink:"https://maps.app.goo.gl/8VN6HkrqQnFzD7qw7", mapLabel:"Stay at Masteri Thao Dien (Expedia Confirm #: 73548621935496)"},        
       {t:"3:00 PM", type:"activity", name:"Ride Metro & Visit Independence Palace", blurb:"", photo:"images/indpalace.png"},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Dinner with uncle", blurb:"Online to 1:00 AM Tue."}
     ]
@@ -61,7 +61,7 @@ const DATA = [
     label: "Mon Dec 14", sub: "Saigon → Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
       {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:""},
-      {t:"6:50 AM", type:"transit", name:"SGN → PQC (with Uncle Luc). VietJet VJ 329", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
+      {t:"6:50 AM", type:"transit", name:"SGN → PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
       {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
       {t:"12:00 PM", type:"activity", name:"Lunch", blurb:""},
       {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg"},
