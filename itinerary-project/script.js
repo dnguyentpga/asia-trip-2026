@@ -47,14 +47,14 @@ const DATA = [
   {
     label: "Sat Dec 12", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An", photo:"images/caosu.jpg"}
+      {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Family Reunion", photo:"images/caosu.jpg"}
     ]
   },
   {
     label: "Sun Dec 13", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
       {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An", photo:"images/caosu.jpg"},
-      {t:"7:00 PM", type:"activity",  name:"Tri An → Saigon (with Uncle Luc), check in hotel", blurb:"Rest in Saigon for early flight to Phu Quoc on Mon Dec 14"}
+      {t:"7:00 PM", type:"activity",  name:"Tri An → Saigon (with Uncle Luc), check in hotel", blurb:"Rest in Saigon for early flight to Phu Quoc on Mon Dec 14", note:"Pack luggage, bring all necessary items. Wont return till Jan 9, 2027."}
     ]
   },
   {
@@ -82,44 +82,45 @@ const DATA = [
     stops: [
       {t:"8:30 AM", type:"activity", name:"Check out Hotel", blurb:""},
       {t:"12:10 PM", type:"transit", name:"PQC → DAD", blurb:"Danang International Airport."},
-      {t:"3:20 PM", type:"transit", name:"Da Nang → Hue on Train", blurb:"Train HD4."},
+      {t:"3:20 PM", type:"transit", name:"Da Nang → Hue on Train", blurb:"Train HD4.", photo:["images/trainhue.jpg"]},
       {t:"7:00 PM", type:"activity", name:"Check in Hotel Hue & Dinner", blurb:""},
-      {t:"9:00 PM", type:"activity", name:"Truong Tien - Phu Xuan Walk & Rest", blurb:""}
+      {t:"9:00 PM", type:"activity", name:"Truong Tien - Phu Xuan Walk & Rest", blurb:"", photo:["images/truongtien.webp"]}
     ]
   },
   {
     label: "Thu Dec 17", sub: "Hue → Quang Tri", city: "Hue / Quang Tri", stamp: "HUE",
     stops: [
-      {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour.", note:"Keep luggage at hotel after checking out."},
-      {t:"4:30 PM", type:"activity", name:"Dong Ba Market", blurb:"", note:"Buy Kẹo Mè Xửng."},
-      {t:"7:30 PM", type:"transit", name:"Pick up luggage, Hue → Quang Tri (Dong Ha)", blurb:""},
-      {t:"10:00 PM", type:"activity", name:"Check in Hotel Quang Tri & Rest", blurb:""}
+      {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour (Full Day, Dong Ba Market included).", mapLink:"https://www.klook.com/en-US/activity/1560-hue-discovery-half-full-day-tour-hue/", mapLabel:"Hue City Tour", note:"Luggage storage service at hotel after checking out."},
+      {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue → Quang Tri (Dong Ha) by car", blurb:"", note:"Contracted Transportation Service"},
+      {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:""}
     ]
   },
   {
     label: "Fri Dec 18", sub: "Quang Tri", city: "Quang Tri", stamp: "QUANG\nTRI",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Hien Luong Bridge and Vinh Moc Tunnel (if time permits)", blurb:"17th Parallel — Historic Hiền Lương Bridge."},
+      {t:"9:00 AM", type:"activity", name:"Hien Luong Bridge and Vinh Moc Tunnel (if time permits)", blurb:"17th Parallel — Historic Hiền Lương Bridge", photo:["images/hienluong.webp"], note:"Contracted Transportation Service"},
       {t:"12:00 PM", type:"transit", name:"Vinh Moc → Dong Ha & Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Quang Tri Citadel", blurb:""},
-      {t:"5:30 PM", type:"activity", name:"Back to Dong Ha & Rest", blurb:""}
+      {t:"2:30 PM", type:"activity", name:"Quang Tri Citadel", blurb:"", photo:["images/citadel.jpg"]},
+      {t:"5:30 PM", type:"activity", name:"Back to Dong Ha & Rest", blurb:"", note:"Contracted Transportation Service"}
     ]
   },
   {
     label: "Sat Dec 19", sub: "Quang Tri → Hanoi", city: "Quang Tri / Hanoi", stamp: "QUANG\nTRI",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Check out hotel & Dai Hao Village (Uncle Tho)", blurb:"", note:"Keep luggage at Uncle Tho's."},
+      {t:"7:00 AM", type:"activity", name:"Check out hotel & Dai Hao Village (Uncle Tho)", blurb:"", note:"Contracted Transportation Service. Keep luggage at Uncle Tho."},
       {t:"11:30 AM", type:"activity", name:"Lunch", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Dai Hao Village (Family Cemetery)", blurb:""},
-      {t:"4:25 PM", type:"transit", name:"Pick up luggage, Quang Tri → Hanoi Night Train", blurb:"SE4 train, Car 6. Arrives Sun Dec 20, 4:36 AM."}
+      {t:"4:00 PM", type:"transit", name:"Pick up luggage, Quang Tri → Da Nang. Arrives Da Nang ~8:00 PM", blurb:"Dinner, drop off Uncle Luc at train station first, then proceed to airport", note:"Contracted Transportation Service."},
+      {t:"10:30 PM", type:"transit", name:"Uncle Luc Da Nang --> Bien Hoa on SE7 train", blurb:"Arriving Dec 20 at 4:00 PM"},
+      {t:"10:45 PM", type:"transit", name:"Don & Giang DAD --> HAN", blurb:"Vietjet VJ 506. Arriving Dec 20 at 12:05 AM", note:"No need to pick up checked bags at Hanoi airport, proceed to sleeping pods on Terminal 2 (international)."}
     ]
   },
   {
     label: "Sun Dec 20", sub: "Tokyo Arrival Day", city: "Tokyo", stamp: "TOKYO\nARR",
     stops: [
-      {t:"5:30 AM", type:"transit", name:"Hanoi train station → HAN airport", blurb:""},
-      {t:"8:20 AM", type:"activity", name:"HAN → NRT (Don & Giang)", blurb:"Lands 3:25 PM JST", badges:["$217"]},
-      {t:"Fri 8:16 PM", type:"activity", name:"HOU → HND (Zack)", blurb:"~28 hrs incl. layover, lands 3:05 PM JST", photo:["images/tokyo.jpg"]},
+      {t:"6:30 AM", type:"activity", name:"Check out sleeping pods", blurb:"", note:"Collect all belongings, make sure all travel documents are ready and accurate, proceed to check in counter for international flights."},
+      {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Arriving 3:25 PM JST", badges:["$200 pp"]},
+      {t:"Fri 8:16 PM", type:"transit", name:"HOU → HND (Zack)", blurb:"~28 hrs incl. layover, lands 3:05 PM JST", photo:["images/tokyo.jpg"]},
       {t:"5:00 PM", type:"transit", name:"NRT → Shimbashi (hotel)", blurb:"Keisei Skyliner → Nippori, JR Yamanote → Shimbashi, 10 min walk. Shimbashi is closer to the hotel than Hamamatsuchō.", badges:["~75 min","¥2,780 (~$17)"]},
       {t:"5:00 PM", type:"transit", name:"HND → Hamamatsuchō (hotel)", blurb:"Tokyo Monorail northbound to the last stop, 10 min walk to hotel.", badges:["~13–20 min","¥500 (~$3)"]},
       {t:"7:00 PM", type:"activity", name:"Zack checks in first", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
@@ -159,11 +160,10 @@ const DATA = [
     ]
   },
   {
-    label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Mt. Fuji", stamp: "TOKYO", 
-    photo: "images/fuji.jpg",
+    label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Mt. Fuji", stamp: "TOKYO",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Hotel pickup/drop-off included in tour price."},
-      {t:"7:30 PM", type:"activity", name:"Dinner & Shopping in Akihabara", blurb:"Yodobashi Akiba"},
+      {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Pickup & drop-off included in tour price. Select Small Group Tour (Max 9) option on Klook.", mapLink:"https://www.klook.com/en-US/activity/100747-mount-fuji-arakurayama-park-oshino-hakkai-kawaguchiko-bus-tour-tokyo/", mapLabel:"Mt Fuji Full Day Tour", photo:["images/fuji.jpg"], badges:["$70 pp"]},
+      {t:"7:30 PM", type:"activity", name:"Dinner & Shopping in Akihabara", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]},
       {t:"9:45 PM", type:"transit", name:"Akihabara → Shiodome, rest", blurb:"Hibiya Line direct.", badges:["~12 min","¥180–200 (~$1)"]}
     ]
   },
@@ -175,7 +175,7 @@ const DATA = [
       {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Reserve the free oversized-luggage seat if bags exceed 160cm combined dimensions.", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"]},
       {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Osaka Metro Midosuji Line, bound for Nakamozu — direct, no transfer.", badges:["~20–24 min","¥290 pp (~$2)"]},
       {t:"10:25 AM", type:"activity", name:"Drop off luggage at APA Namba Hotel", photo:["images/apa.jpg"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive. Reserved, confirmation # 261003006936.", badges:["¥46,200 (~$300)"]},
-      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time."},
+      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time. Contact Instagram @mizunotanrenjo."},
       {t:"12:30 PM", type:"activity", name:"Lunch in Sakai", blurb:""},
       {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"Nankai Main Line back to Namba, then Osaka Metro Tanimachi Line to Tanimachi 4-chōme, short walk to the park.", badges:["~30–35 min total"]},
       {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", photo:["images/osakasunset.jpeg"], blurb:""},
@@ -256,7 +256,7 @@ const DATA = [
     stops: [
       {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
       {t:"6:00 AM", type:"activity", name:"Check in Hanoi hotel early and breakfast", blurb:"", note:"Make sure to book same hotel as before for free luggage storage."},
-      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], mapLink:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", mapLabel:"Custom Private Ninh Binh Tour"},     
+      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Youtube"}]},     
       {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
@@ -431,8 +431,9 @@ DATA.forEach((day, i) => {
       : '';
     const noteHtml = s.note ? `<div class="note"><b>Note —</b> ${s.note}</div>` : '';
     const photoHtml = renderPhotos(s.photo, s.name, 'stop-photo');
-    const mapLinkHtml = s.mapLink
-      ? `<a class="map-link" href="${s.mapLink}" target="_blank" rel="noopener noreferrer">${s.mapLabel || 'Open in Google Maps'}</a>`
+    const links = s.links || (s.mapLink ? [{url: s.mapLink, label: s.mapLabel || 'Open in Google Maps'}] : []);
+    const linksHtml = links.length
+      ? `<ul class="activity-links">${links.map(link => `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a></li>`).join('')}</ul>`
       : '';
     return `
       <div class="stop${s.type === 'transit' ? ' transit' : ''}">
@@ -444,7 +445,7 @@ DATA.forEach((day, i) => {
           ${badgesHtml}
           ${noteHtml}
           ${photoHtml}
-          ${mapLinkHtml}
+          ${linksHtml}
         </div>
       </div>`;
   }).join('');
