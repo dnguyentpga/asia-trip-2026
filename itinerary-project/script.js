@@ -207,8 +207,7 @@ const DATA = [
       {t:"10:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Walk to Kintetsu Nambaekinishiguchi bus stop. Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
       {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"]},
       {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
-      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Old Quarter, Hanoi."},
-      {t:"9:00 PM", type:"activity", name:"Check-in Hanoi hotel and Dinner", blurb:""},
+      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service."},
       {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
     ]
   },
@@ -255,15 +254,15 @@ const DATA = [
     label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
       {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
-      {t:"6:00 AM", type:"activity", name:"Check in Hanoi hotel early and breakfast", blurb:"", note:"Make sure to book same hotel as before for free luggage storage."},
-      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Youtube"}]},     
+      {t:"6:00 AM", type:"activity", name:"Check in La Santé Hotel hotel early, leave bags (if needed) and breakfast", blurb:"", note:"Book same hotel as before for convenient luggage storage. Need to contact for early check in."},
+      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax in Hanoi", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Youtube"}]},     
       {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
   {
     label: "Fri Jan 1", sub: "Hanoi → Halong Bay", city: "Halong Bay", stamp: "HALONG\nBAY",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Check out hotel Hanoi, Halong Bay Cruise", blurb:"Picked up by cruise shuttle, Hanoi → Quảng Ninh."}
+      {t:"6:00 AM", type:"activity", name:"Check out hotel Hanoi, Halong Bay Cruise ", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi → Quảng Ninh.", photo:["images/lanha.webp"]}
     ]
   },
   {
@@ -277,9 +276,12 @@ const DATA = [
   {
     label: "Sun Jan 3", sub: "Da Nang · Hoi An", city: "Da Nang", stamp: "DA NANG",
     stops: [
-      {t:"12:00 PM", type:"activity", name:"Check in hotel Da Nang", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Lunch & Walk Da Nang Beach", blurb:""},
-      {t:"5:00 PM", type:"activity", name:"Hoi An, Dinner, Dragon Bridge & Night Market, Rest", blurb:""}
+      {t:"12:00 PM", type:"transit", name:"Da Nange strain station --> hotel", blurb:""},
+      {t:"1:00 PM", type:"activity", name:"Check in hotel Da Nang & Lunch", blurb:"Contact hotel for early check in", photo:["images/danang.webp"]},
+      {t:"2:30 PM", type:"transit", name:"Da Nang → Hoi An (grab or taxi)", blurb:"", badges:["~1hr"]},
+      {t:"3:30 PM", type:"activity", name:"Visit Hoi An Ancient Town, Dinner", blurb:"yellow merchant houses, Japanese Covered Bridge, iconic silk lanterns (6:00-6:30 PM)", photo:["images/hoian.jpg"]},
+      {t:"7:30 PM", type:"transit", name:"Hoi An → Da Nang", blurb:""},
+      {t:"8:30 PM", type:"activity", name:"Dragon Bridge & Night Market, Rest", blurb:"Dragon Bridge fire show starts at 9:00 PM for 15 mins", photo:["images/dragon.jpg"]}
     ]
   },
   {
