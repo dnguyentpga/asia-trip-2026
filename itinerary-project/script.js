@@ -172,32 +172,39 @@ const DATA = [
     stops: [
       {t:"5:30 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"7:00 AM", type:"transit", name:"→ Tokyo Station", blurb:"Walk or Marunouchi Line 1 stop.", badges:[]},
-      {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Reserve the free oversized-luggage seat if bags exceed 160cm combined dimensions.", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"]},
+      {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Arriving Shin-Osaka ~10:00 AM", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"], note:"Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
       {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Osaka Metro Midosuji Line, bound for Nakamozu — direct, no transfer.", badges:["~20–24 min","¥290 pp (~$2)"]},
       {t:"10:25 AM", type:"activity", name:"Drop off luggage at APA Namba Hotel", photo:["images/apa.jpg"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive. Reserved, confirmation # 261003006936.", badges:["¥46,200 (~$300)"]},
-      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run forge, not a standard retail shop — confirm hours/availability ahead of time. Contact Instagram @mizunotanrenjo."},
+      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run shops, forging takes place between 9:30 AM and 11:30 AM. Contact Instagram @mizunotanrenjo to confirm hours."},
       {t:"12:30 PM", type:"activity", name:"Lunch in Sakai", blurb:""},
       {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"Nankai Main Line back to Namba, then Osaka Metro Tanimachi Line to Tanimachi 4-chōme, short walk to the park.", badges:["~30–35 min total"]},
       {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", photo:["images/osakasunset.jpeg"], blurb:""},
-      {t:"7:00 PM", type:"transit", name:"→ Umeda Sky Building", blurb:"JR Osaka Loop Line, direct.", badges:["~15–18 min"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner, Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
-      {t:"9:30 PM", type:"activity", name:"Check in APA Namba Hotel", blurb:"Luggage already dropped off this morning — check in whenever suits, no rush."}
+      {t:"4:30 PM", type:"activity", name:"Check in APA Namba Hotel", blurb:"Luggage already dropped off this morning"},
+      {t:"6:00 PM", type:"transit", name:"Namba Sta → Umeda Sky Building", blurb:"Ride Midosuji Line from Namba Subway Sta --> Umeda Sta. Walk ~15min to Umeda Sky Building", badges:["~40 min"]},
+      {t:"6:45 PM", type:"activity", name:"Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
+      {t:"7:30 PM", type:"transit", name:"Umeda --> Namba", blurb:"Ride Midosuji Line from Umeda Sta --> Namba Subway Sta. Walk ~10min to hotel.", badges:["~40 min"]},      
+      {t:"8:30 PM", type:"activity", name:"Walk Dotonbori & Shinsaibashi, dinner at Kuromon Ichiba", photo:["images/kuromon.jpg", "images/dotonbori.jpg"], blurb:"~10–15 min from hotel to Dotonbori.", note:"Reserve the Tombori River Cruise ahead of time. Last cruise at 9:00PM"},
+      {t:"10:30 PM", type:"activity", name:"Back to hotel & Rest", blurb:""}
     ]
   },
   {
-    label: "Fri Dec 25", sub: "Kyoto", city: "Nara / Kyoto", stamp: "KYOTO",
+    label: "Fri Dec 25", sub: "Kyoto - Nara", city: "Kyoto / Nara", stamp: "KYOTO/NARA",
     stops: [
-      {t:"8:00 AM", type:"transit", name:"Namba → Nara", blurb:"Kintetsu Nara Line Rapid Express, direct.", badges:["~40 min","¥680 pp (~$4)"]},
-      {t:"9:00 AM", type:"activity", name:"Tōdai-ji & Nara Deer Park", photo:["images/nara.jpg"], blurb:"Full daylight for the deer park. Get the goshuin stamp at the Great Buddha Hall (open until 5 PM) whenever suits — no need to rush."},
-      {t:"12:00 PM", type:"transit", name:"Nara → Kyoto (Aoniyoshi)", blurb:"Kintetsu's dedicated sightseeing limited express — retro purple interior, big windows, on-board snack counter. Same Kintetsu-Nara Station, direct to Kyoto.", badges:["~35 min","¥1,960 full-route fare (~$12) — confirm exact Nara–Kyoto segment price"], note:"Runs daily except Thursdays — fine for your Friday. Only 84 seats total and it's popular, so reserve online or at a Kintetsu counter in advance rather than same-day. Double-check the exact midday departure time on the official Kintetsu site before finalizing, since it can shift."},
-      {t:"1:20 PM", type:"activity", name:"Lunch near Kyoto Station", blurb:""},
-      {t:"1:45 PM", type:"transit", name:"→ Nanzen-ji", blurb:"Karasuma Line → transfer to Tozai Line at Karasuma-Oike → Keage Sta., then a 10-min walk.", badges:["~25 min","¥260 pp (~$2)"]},
-      {t:"2:20 PM", type:"activity", name:"Nanzen-ji Temple", photo:["images/nanzenji.jpg"], blurb:"Zen temple grounds with the famous Sanmon gate and aqueduct. Open until 4:30 PM in winter (last admission ~4:10 PM) — plan to leave by then."},
-      {t:"3:40 PM", type:"transit", name:"→ Fushimi Inari Taisha", blurb:"Walk back to Keage Sta., Tozai Line one stop to Sanjo-Keihan, transfer directly to the Keihan Main Line south to Fushimi-Inari Sta.", badges:["~25–30 min","¥330 pp (~$2)"]},
-      {t:"4:15 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.webp"], blurb:"The torii gate trail into dusk/evening — sunset is ~4:47 PM this time of year, so plan on evening lighting rather than full daylight here."},
-      {t:"6:00 PM", type:"transit", name:"→ Kyoto Station", blurb:"JR Nara Line, 2 stops, direct.", badges:["~8 min","¥150 pp (~$1)"]},
-      {t:"6:15 PM", type:"transit", name:"Kyoto → Osaka", blurb:"JR Special Rapid, direct.", badges:["~29 min","¥580 pp (~$4)"]},
-      {t:"7:00 PM", type:"activity", name:"Dinner at Kuromon Ichiba, walk Dotonbori & Shinsaibashi", photo:["images/kuromon.jpg", "images/dotonbori.jpg"], blurb:"~10–15 min from Osaka Sta. to Namba/Dotonbori.", note:"Reserve the Tombori River Cruise ahead of time."}
+      {t:"7:30 AM", type:"transit", name:"Namba → Arashiyama", blurb:"Walk ~10 mins from hotel to Namba Subway Station. Ride Midosuji Line to Umeda Sta (9 mins, 4 stops) --> Walk ~4 mins to Osaka Sta --> Ride Rapid Tokaido Line to Kyoto Sta (~30 mins, 3 stops) --> Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~9:00AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
+      {t:"9:00 AM", type:"transit", name:"Saga Torokko Sta --> Kameoka Sta", blurb:"Saga Torokko Sta is right next to Saga-Arashiyama Sta. Ride Sagano Scenic Railway to Kameoka Sta (upstream Katsuka River). Arriving ~09:25AM", badges:["~20 mins","¥880 pp (~$6)"], photo:["images/sagano.jpg"]},          
+      {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"]},
+      {t:"12:30 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},      
+      {t:"2:00 PM", type:"transit", name:"Saga-Arashiyama Sta --> Kyoto Sta", blurb:"Ride San-In Line back to Kyoto Sta (~20 mins, 7 stops) --> Ride Nara Line to Inari Sta (~5 mins, 2 stops). Arriving ~4:30PM", badges:["~35 mins","¥240 pp (~$2)"]},   
+      {t:"2:55 PM", type:"transit", name:" Kyoto Sta --> Nara", blurb:"Ride Aoniyoshi train from Kyoto Sta to Kintetsu-Nara Sta. Arriving ~3:30PM.", badges:["~35 min","¥1,960 full-route fare (~$12)"], photo:["images/aoniyoshi.jpg"], note:"Runs daily except Thursdays — fine for your Friday. Only 84 seats total and it's popular, so reserve online or at a Kintetsu counter in advance rather than same-day. Double-check the exact midday departure time on the official Kintetsu site before finalizing, since it can shift."},      
+      {t:"3:30 PM", type:"activity", name:"Todai-Ji & Nara Park", blurb:"Ride taxi or Nara City Loop Bus (Yellow Bus) outside Kintetsu Sta to Tōdai-ji Daibutsuden stop. Head directly to Great Buddha Hall to get goshuin stamp. Then explore Nara Park and feed the deer.", photo:["images/nara.jpg"]},          
+      {t:"6:00 PM", type:"transit", name:"Nara Park --> Inari Sta", blurb:"Walk from Nara Park to Kintetsu-Nara Sta. Ride Kintetsu Limited Express to Kyoto Sta (~35 mins, 3 stops). Ride Nara Line to Inari Sta (~5 mins, 2 stops).", badges:["~60 min","¥1430 pp (~$10)"]},        
+      {t:"6:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills. Fushiminari Shrine --> Senbon Torii --> Bamboo Forest --> Kojingamine Observation Deck", badges:["~2hrs min"]},      
+      {t:"9:00 PM", type:"transit", name:"Dinner near Inari Station. Inari Sta --> Kyoto Sta", blurb:"JR Nara Line, 2 stops, direct.", badges:["~8 min","¥150 pp (~$1)"]},
+      {t:"9:30 PM", type:"transit", name:"Kyoto Sta -->  Namba", blurb:"Ride Rapid Tokaido Line to Umeda Sta. (~30 mins, 3 stops) --> Walk ~4 mins to Osaka Sta. --> Ride Midosuji Line to Namba Subway Sta. Arriving hotel ~7:30 PM.", badges:["~50 min","¥820 pp (~$6)"]},    
+      {t:"10:30 PM", type:"activity", name:"Pack luggage and rest", note:"Make sure all travel documents ready and accurate for next day flight to Hanoi."},      
+
+
+
     ]
   },
   {
