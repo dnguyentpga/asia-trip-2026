@@ -82,8 +82,8 @@ const DATA = [
     stops: [
       {t:"8:30 AM", type:"activity", name:"Check out Hotel", blurb:""},
       {t:"12:10 PM", type:"transit", name:"PQC → DAD", blurb:"Danang International Airport."},
-      {t:"3:20 PM", type:"transit", name:"Da Nang → Hue on Train", blurb:"Train HD4.", photo:["images/trainhue.jpg"]},
-      {t:"7:00 PM", type:"activity", name:"Check in Hotel Hue & Dinner", blurb:""},
+      {t:"3:20 PM", type:"transit", name:"Da Nang --> Hue on Train", blurb:"Heritage Train HD4. Arriving 6:30PM. Booked, confirm # EQZ951.", photo:["images/trainhue.jpg"], badges:["3 hrs, $15 pp"]},
+      {t:"7:00 PM", type:"activity", name:"Check in Hotel Hue & Dinner", blurb:"", mapLink:"https://maps.app.goo.gl/45KG26wvCAMge8ZGA", mapLabel:"Stay at Kly Boutique Hue (Expedia Confirm #: 73565481234639)"},
       {t:"9:00 PM", type:"activity", name:"Truong Tien - Phu Xuan Walk & Rest", blurb:"", photo:["images/truongtien.webp"]}
     ]
   },
@@ -267,15 +267,15 @@ const DATA = [
     ]
   },
   {
-    label: "Fri Jan 1", sub: "Hanoi → Halong Bay", city: "Halong Bay", stamp: "HALONG\nBAY",
+    label: "Fri Jan 1", sub: "Hanoi → Quang Ninh", city: "Halong Bay", stamp: "HALONG\nBAY",
     stops: [
-      {t:"6:00 AM", type:"activity", name:"Check out hotel Hanoi, Halong Bay Cruise ", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi → Quảng Ninh.", photo:["images/lanha.webp"]}
+      {t:"6:00 AM", type:"activity", name:"Check out hotel Hanoi, Lan Ha Bay Cruise ", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi → Quảng Ninh.", photo:["images/lanha.webp"]}
     ]
   },
   {
     label: "Sat Jan 2", sub: "Halong Bay → Hanoi", city: "Halong Bay / Hanoi", stamp: "HANOI",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Halong Bay Cruise", blurb:"Dropped off by cruise shuttle, Quảng Ninh → Hanoi."},
+      {t:"7:00 AM", type:"activity", name:"Lan Ha Bay Cruise", blurb:"Dropped off by cruise shuttle, Quảng Ninh → Hanoi."},
       {t:"4:30 PM", type:"activity", name:"Coffee & Relax in train station", blurb:"Tonkin Lounge."},
       {t:"7:20 PM", type:"transit", name:"Hanoi → Da Nang Train", blurb:"Tonkin Heritage Train. Arrives Sun Jan 3, 11:35 AM."}
     ]
