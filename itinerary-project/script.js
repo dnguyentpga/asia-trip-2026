@@ -121,7 +121,7 @@ const DATA = [
       {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Arriving 3:25 PM JST", badges:["$200 pp"]},
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
-      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Keisei Skyliner --> Nippori Sta.\n• Ride JR Yamanote to Shimbashi Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
+      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Keisei Skyliner --> Nippori Sta.\n• Ride JR Yamanote to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
       {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
       {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", photo:["images/kabukicho.jpg"], badges:["~12–15 min","¥180–210 (~$1)"]}
     ]
