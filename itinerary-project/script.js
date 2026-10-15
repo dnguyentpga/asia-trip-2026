@@ -62,10 +62,9 @@ const DATA = [
     stops: [
       {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"6:50 AM", type:"transit", name:"SGN → PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
-      {t:"10:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
-      {t:"12:00 PM", type:"activity", name:"Lunch", blurb:""},
-      {t:"2:00 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg"},
-      {t:"5:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)"},
+      {t:"9:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
+      {t:"11:00 AM", type:"activity", name:"Hon Thom Island Cable Car, Lunch buffet", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg", note:"Cable car midday break 11:30 AM - 1:30 PM. Buffet Hours: 11:00 AM – 02:30 PM."},
+      {t:"4:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)"},
       {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
     ]
   },
@@ -120,10 +119,10 @@ const DATA = [
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out sleeping pods", blurb:"", note:"Collect all belongings, make sure all travel documents are ready and accurate, proceed to check in counter for international flights."},
       {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Arriving 3:25 PM JST", badges:["$200 pp"]},
-      {t:"Fri 8:16 PM", type:"transit", name:"HOU → HND (Zack)", blurb:"~28 hrs incl. layover, lands 3:05 PM JST", photo:["images/tokyo.jpg"]},
-      {t:"5:00 PM", type:"transit", name:"NRT → Shimbashi (hotel)", blurb:"Keisei Skyliner → Nippori, JR Yamanote → Shimbashi, 10 min walk. Shimbashi is closer to the hotel than Hamamatsuchō.", badges:["~75 min","¥2,780 (~$17)"]},
-      {t:"5:00 PM", type:"transit", name:"HND → Hamamatsuchō (hotel)", blurb:"Tokyo Monorail northbound to the last stop, 10 min walk to hotel.", badges:["~13–20 min","¥500 (~$3)"]},
-      {t:"7:00 PM", type:"activity", name:"Zack checks in first", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
+      {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
+      {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
+      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Keisei Skyliner --> Nippori Sta.\n• Ride JR Yamanote to Shimbashi Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
+      {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
       {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", photo:["images/kabukicho.jpg"], badges:["~12–15 min","¥180–210 (~$1)"]}
     ]
   },
@@ -190,36 +189,33 @@ const DATA = [
   {
     label: "Fri Dec 25", sub: "Kyoto - Nara", city: "Kyoto / Nara", stamp: "KYOTO/NARA",
     stops: [
-      {t:"7:30 AM", type:"transit", name:"Namba → Arashiyama", blurb:"Walk ~10 mins from hotel to Namba Subway Station. Ride Midosuji Line to Umeda Sta (9 mins, 4 stops) --> Walk ~4 mins to Osaka Sta --> Ride Rapid Tokaido Line to Kyoto Sta (~30 mins, 3 stops) --> Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~9:00AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"9:00 AM", type:"transit", name:"Saga Torokko Sta --> Kameoka Sta", blurb:"Saga Torokko Sta is right next to Saga-Arashiyama Sta. Ride Sagano Scenic Railway to Kameoka Sta (upstream Katsuka River). Arriving ~09:25AM", badges:["~20 mins","¥880 pp (~$6)"], photo:["images/sagano.jpg"]},          
+      {t:"7:00 AM", type:"transit", name:"Namba → Arashiyama", blurb:"• Walk ~10 mins from hotel to Namba Subway Station.\n• Ride Midosuji Line to Umeda Sta (9 mins, 4 stops).\n• Walk ~4 mins to Osaka Sta.\n• Ride Rapid Tokaido Line to Kyoto Sta (~30 mins, 3 stops).\n• Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~8:30AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
+      {t:"9:00 AM", type:"transit", name:"Saga Torokko Sta --> Kameoka Sta", blurb:"• Saga Torokko Sta is right next to Saga-Arashiyama Sta.\n• Ride Sagano Scenic Railway to Kameoka Sta (upstream Katsuka River). Arriving ~09:25AM", badges:["~20 mins","¥880 pp (~$6)"], photo:["images/sagano.jpg"]},          
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"]},
       {t:"12:30 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},      
-      {t:"2:00 PM", type:"transit", name:"Saga-Arashiyama Sta --> Kyoto Sta", blurb:"Ride San-In Line back to Kyoto Sta (~20 mins, 7 stops) --> Ride Nara Line to Inari Sta (~5 mins, 2 stops). Arriving ~4:30PM", badges:["~35 mins","¥240 pp (~$2)"]},   
-      {t:"2:55 PM", type:"transit", name:" Kyoto Sta --> Nara", blurb:"Ride Aoniyoshi train from Kyoto Sta to Kintetsu-Nara Sta. Arriving ~3:30PM.", badges:["~35 min","¥1,960 full-route fare (~$12)"], photo:["images/aoniyoshi.jpg"], note:"Runs daily except Thursdays — fine for your Friday. Only 84 seats total and it's popular, so reserve online or at a Kintetsu counter in advance rather than same-day. Double-check the exact midday departure time on the official Kintetsu site before finalizing, since it can shift."},      
-      {t:"3:30 PM", type:"activity", name:"Todai-Ji & Nara Park", blurb:"Ride taxi or Nara City Loop Bus (Yellow Bus) outside Kintetsu Sta to Tōdai-ji Daibutsuden stop. Head directly to Great Buddha Hall to get goshuin stamp. Then explore Nara Park and feed the deer.", photo:["images/nara.jpg"]},          
-      {t:"6:00 PM", type:"transit", name:"Nara Park --> Inari Sta", blurb:"Walk from Nara Park to Kintetsu-Nara Sta. Ride Kintetsu Limited Express to Kyoto Sta (~35 mins, 3 stops). Ride Nara Line to Inari Sta (~5 mins, 2 stops).", badges:["~60 min","¥1430 pp (~$10)"]},        
+      {t:"2:00 PM", type:"transit", name:"Saga-Arashiyama Sta --> Kyoto Sta", blurb:"Ride San-In Line back to Kyoto Sta (~20 mins, 7 stops).", badges:["~20 mins","¥240 pp (~$2)"]},   
+      {t:"2:55 PM", type:"transit", name:" Kyoto Sta --> Nara", blurb:"• Ride Aoniyoshi (Purple Sightseeing) train from Kyoto Sta to Kintetsu-Nara Sta. Arriving ~3:30PM.\n• Ride taxi or Nara City Loop Bus (Yellow Bus) outside Kintetsu Sta to Tōdai-ji Daibutsuden stop.\n• Head directly to Great Buddha Hall to get goshuin stamp.", badges:["~35 min","¥1,960 full-route fare (~$12)"], photo:["images/aoniyoshi.jpg"], note:"Runs daily except Thursdays — fine for your Friday. Only 84 seats total and it's popular, so reserve online or at a Kintetsu counter in advance rather than same-day. Double-check the exact midday departure time on the official Kintetsu site before finalizing, since it can shift."},      
+      {t:"3:30 PM", type:"activity", name:"Todai-Ji & Nara Park", blurb:"Visit Nara Park and feed the deer.", photo:["images/nara.jpg"]},          
+      {t:"6:00 PM", type:"transit", name:"Nara Park --> Inari Sta", blurb:"• Walk ~10mins from Nara Park to Kintetsu-Nara Sta.\n• Ride Kintetsu Limited Express to Kintetsu-Tambabashi Sta (~30 mins, 2 stops).\n• Walk ~3 mins to Tambabashi Sta.\n• Ride Keihan Main Line to Fushimi-Inari Sta (~7 mins, 4 stops).", badges:["~45 min","¥1440 pp (~$10)"]},        
       {t:"6:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills. Fushiminari Shrine --> Senbon Torii --> Bamboo Forest --> Kojingamine Observation Deck", badges:["~2hrs min"]},      
       {t:"9:00 PM", type:"transit", name:"Dinner near Inari Station. Inari Sta --> Kyoto Sta", blurb:"JR Nara Line, 2 stops, direct.", badges:["~8 min","¥150 pp (~$1)"]},
-      {t:"9:30 PM", type:"transit", name:"Kyoto Sta -->  Namba", blurb:"Ride Rapid Tokaido Line to Umeda Sta. (~30 mins, 3 stops) --> Walk ~4 mins to Osaka Sta. --> Ride Midosuji Line to Namba Subway Sta. Arriving hotel ~7:30 PM.", badges:["~50 min","¥820 pp (~$6)"]},    
+      {t:"9:30 PM", type:"transit", name:"Kyoto Sta -->  Namba", blurb:"• Ride Rapid Tokaido Line to Umeda Sta. (~30 mins, 3 stops).\n• Walk ~4 mins to Osaka Sta. \n• Ride Midosuji Line to Namba Subway Sta. Arriving hotel ~7:30 PM.", badges:["~50 min","¥820 pp (~$6)"]},    
       {t:"10:30 PM", type:"activity", name:"Pack luggage and rest", note:"Make sure all travel documents ready and accurate for next day flight to Hanoi."},      
-
-
-
     ]
   },
   {
-    label: "Sat Dec 26", sub: "Osaka → Hanoi", city: "Hanoi", stamp: "HANOI\nARR",
+    label: "Sat Dec 26", sub: "Osaka --> Hanoi", city: "Hanoi", stamp: "HANOI\nARR",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
       {t:"10:00 AM", type:"transit", name:"→ Kansai Airport", blurb:"Walk to Kintetsu Nambaekinishiguchi bus stop. Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
       {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, check in flight and clear duty free customs.", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"]},
-      {t:"3:30 PM", type:"transit", name:"KIX → HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
+      {t:"3:30 PM", type:"transit", name:"KIX --> HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
       {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service.", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)"},
       {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
     ]
   },
   {
-    label: "Sun Dec 27", sub: "Hanoi Sightseeing", city: "Hanoi", stamp: "HANOI",
+    label: "Sun Dec 27", sub: "Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:"", photo:["images/hcmmau.jpg"]},
       {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
@@ -231,26 +227,26 @@ const DATA = [
     ]
   },
   {
-    label: "Mon Dec 28", sub: "Hanoi → Sapa (overnight train)", city: "Hanoi / Sapa", stamp: "SAPA",
+    label: "Mon Dec 28", sub: "Hanoi --> Sapa (overnight train)", city: "Hanoi / Sapa", stamp: "SAPA",
     stops: [
       {t:"8:30 AM", type:"activity", name:"Tour Central Cathedral Interior", blurb:"", photo:["images/hanoicath.jpg"]},
       {t:"10:30 AM", type:"activity", name:"Check out Hanoi hotel and lunch", note:"Use luggage storage service (most hotels offer) in Hanoi, avoid carrying heavy to Sapa."},
       {t:"2:00 PM", type:"activity", name:"Visit Hoa Lo Prison relic and shopping", blurb:"", photo:["images/hoalo.jpg"]},
       {t:"7:00 PM", type:"activity", name:"Dinner, head to rail station for Sapa", blurb:"", note:"Pick up light baggage for overnight train. Leave heavy luggage at storage service."},      
-      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi → Lao Cai", blurb:"Tonkin Heritage Train. Arrives Tue Dec 29, 6:00 AM.", photo:["images/tonkin.jpg"]}
+      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi → Lao Cai", blurb:"Tonkin Heritage Train. Arrives Tue Dec 29, 6:00 AM.", photo:["images/tonkin.jpg"], note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Arrives Sapa Town ~7:30 AM."}
     ]
   },
   {
     label: "Tue Dec 29", sub: "Sapa", city: "Sapa", stamp: "SAPA",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Check in Shom Li's Homestay", blurb:"Contact to customize itinerary.", note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Taxi from Sapa town to homestay or get picked up by host."},
-      {t:"11:00 AM", type:"activity", name:"Guided Cultural Activities and Trekking", blurb:""},
+      {t:"9:00 AM", type:"activity", name:"Check in Shom Li's Homestay", blurb:"Meet Shom Li near Catholic Church in Sapa town. Shom Li's husband takes heavy luggage to homestay. Trekking to homestay with Shom Li.", note:"~10km, 3–4 hrs trekking"},
+      {t:"12:00 PM", type:"activity", name:"Guided Cultural Activities", blurb:""},
       {t:"6:30 PM", type:"activity", name:"Dinner at homestay", blurb:""},
       {t:"9:00 PM", type:"activity", name:"Homestay Activities or Sapa Night Market & Rest", blurb:""}
     ]
   },
   {
-    label: "Wed Dec 30", sub: "Sapa → Hanoi (overnight train)", city: "Sapa / Hanoi", stamp: "HANOI",
+    label: "Wed Dec 30", sub: "Sapa --> Hanoi (overnight train)", city: "Sapa / Hanoi", stamp: "HANOI",
     stops: [
       {t:"8:00 AM", type:"activity", name:"Cat Cat Village & Fansipan Summit 1-Day Tour", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"], note:"Leave backpack at homestay, take only light daypack for the tour."},
       {t:"5:00 PM", type:"activity", name:"Shopping & Dinner at homestay", blurb:"", note:"Taxi from homestay to Lao Cai station. Ride shuttle (booked with train tickets) from Sapa town to Lao Cai station."},
@@ -262,7 +258,7 @@ const DATA = [
     stops: [
       {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
       {t:"6:00 AM", type:"activity", name:"Check in La Santé Hotel hotel early, leave bags (if needed) and breakfast", blurb:"", note:"Book same hotel as before for convenient luggage storage. Need to contact for early check in."},
-      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Relax in Hanoi", blurb:"Tràng An Landscape Complex, via Trang An 1 Day Tour.", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Youtube"}]},     
+      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Paragliding in Tam Dao", blurb:"", photo:["images/trangan.webp", "images/tamdao.jpg"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Trang An Youtube"},{url:"https://duluontamdao.vn/", label:"Tam Dao Paragliding"}]},     
       {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
@@ -323,24 +319,23 @@ const DATA = [
   {
     label: "Fri Jan 8", sub: "Zack flies home · Don & Giang → Saigon → Trị An Lake", city: "Singapore / Saigon / Trị An Lake", stamp: "TRI AN",
     stops: [
-      {t:"8:00 AM", type:"transit", name:"Zack: SIN → HND", blurb:"Singapore Airlines SQ 632."},
       {t:"9:00 AM", type:"activity", name:"Check out hotel", blurb:""},
-      {t:"1:15 PM", type:"transit", name:"Don and Giang: SIN → SGN", blurb:"Vietnam Airlines VN 650. Lands 2:30 PM."},
-      {t:"2:30 PM", type:"transit", name:"Don and Giang: SGN → Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."},
-      {t:"6:00 PM", type:"transit", name:"Zack: HND → HOU", blurb:"Connecting flight home, via LAX and DFW.", badges:["Flies home"]}
+      {t:"10:10 AM", type:"transit", name:"Zack: SIN --> SFO --> DFW", blurb:"UA2/UA2842", note:"Zack leaves early to catch the flight home. Don and Giang check out hotel and head to the airport later."},
+      {t:"1:15 PM", type:"transit", name:"Don and Giang: SIN → SGN", blurb:"Vietnam Airlines VN 650. Lands 2:30 PM.", badges:["Flies home"]},
+      {t:"2:30 PM", type:"transit", name:"Don and Giang: SGN → Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."}
     ]
   },
   {
-    label: "Sat Jan 9 – Fri Jan 15", sub: "Trị An Lake — Family Visit (7 days)", city: "Trị An Lake", stamp: "TRI AN",
+    label: "Sat Jan 9 – Thu Jan 14", sub: "Trị An Lake — Family Visit (7 days)", city: "Trị An Lake", stamp: "TRI AN",
     stops: [
-      {t:"Sat–Fri", type:"activity", name:"Visit Family", blurb:"A full week at Trị An Lake with family, starting Saturday — no fixed daily schedule."}
+      {t:"Sat–Thu", type:"activity", name:"Visit Family", blurb:"A full week at Trị An Lake with family, starting Saturday — no fixed daily schedule."}
     ]
   },
   {
-    label: "Sat Jan 16", sub: "Trị An Lake → Saigon → Fly Home", city: "Trị An Lake / Saigon", stamp: "FLY\nHOME",
+    label: "Fri Jan 15", sub: "Trị An Lake → Saigon → Fly Home", city: "Trị An Lake / Saigon", stamp: "FLY\nHOME",
     stops: [
-      {t:"Early AM", type:"transit", name:"Trị An Lake → Saigon", blurb:"Head to Saigon ahead of the flight home."},
-      {t:"TBD", type:"transit", name:"Don and Giang: SGN → IAH", blurb:"Flight TBD."}
+      {t:"3:30 AM", type:"transit", name:"Trị An Lake → Saigon", blurb:"Head to Saigon ahead of the flight home."},
+      {t:"7:55 AM", type:"transit", name:"Don and Giang: SGN --> ICN --> LAX --> IAH", blurb:"DAL7920 / DAL7833 / DAL1287."}
     ]
   }
 ];
