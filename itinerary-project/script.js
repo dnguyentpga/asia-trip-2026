@@ -121,7 +121,7 @@ const DATA = [
       {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Arriving 3:25 PM JST", badges:["$200 pp"]},
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
-      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Keisei Skyliner --> Nippori Sta.\n• Ride JR Yamanote to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
+      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Limited Express Skyliner --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
       {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
       {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", photo:["images/kabukicho.jpg"], badges:["~12–15 min","¥180–210 (~$1)"]}
     ]
@@ -148,12 +148,12 @@ const DATA = [
       {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
       {t:"8:00 AM", type:"transit", name:"→ Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
-      {t:"11:40 AM", type:"transit", name:"→ Skytree", blurb:"Hanzomon Line direct.", badges:["~20 min","¥210–240 (~$1–2)"]},
+      {t:"11:40 AM", type:"transit", name:"→ Skytree", blurb:"Exit Imperial palace via Ōte-mon Gate. Walk to Otemachi Station. Ride Hanzomon Line from Otemachi Sta --> Oshiage Sta.", badges:["~20 min","¥210–240 (~$1–2)"]},
       {t:"12:00 PM", type:"activity", name:"Lunch near Tokyo Skytree", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Tokyo Skytree Observation", blurb:"", photo:"images/skytree.jpg"},
       {t:"3:45 PM", type:"transit", name:"→ Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
       {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:"", photo:"images/sensoji.jpg"},
-      {t:"5:30 PM", type:"transit", name:"→ Cruise Pier (Daimon Sta.)", blurb:"Toei Asakusa Line direct from Asakusa Sta. — no transfer, and Daimon is right by your hotel.", badges:["~15 min","¥210 (~$1)"]},
+      {t:"5:30 PM", type:"transit", name:"→ Cruise Pier", blurb:"Toei Asakusa Line direct from Asakusa Sta --> Daimon Sta. Cruise pier is near by Daimon Station.", badges:["~15 min","¥210 (~$1)"]},
       {t:"5:45 PM", type:"activity", name:"Tokyo Bay Cruise (optional) + Dinner", blurb:"", photo:"images/nightcruise.jpg"},
       {t:"9:45 PM", type:"transit", name:"Back to Shiodome, rest early", blurb:"Short walk — Daimon Sta. is right by the hotel.", badges:["~5 min"]}
     ]
@@ -172,16 +172,16 @@ const DATA = [
       {t:"5:30 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"7:00 AM", type:"transit", name:"→ Tokyo Station", blurb:"Walk or Marunouchi Line 1 stop.", badges:[]},
       {t:"7:30 AM", type:"transit", name:"Bullet Train to Shin-Osaka", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Arriving Shin-Osaka ~10:00 AM", badges:["~2h30m","¥13,870–14,720 pp (~$87–92)"], note:"Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
-      {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Osaka Metro Midosuji Line, bound for Nakamozu — direct, no transfer.", badges:["~20–24 min","¥290 pp (~$2)"]},
+      {t:"10:00 AM", type:"transit", name:"Shin-Osaka → Namba", blurb:"Ride Osaka Metro Midosuji Line to Namba Subway Station", badges:["~20–24 min","¥290 pp (~$2)"]},
       {t:"10:25 AM", type:"activity", name:"Drop off luggage at APA Namba Hotel", photo:["images/apa.jpg"], blurb:"Most Japan hotels will hold bags at the front desk before official check-in time — confirm at the desk when you arrive. Reserved, confirmation # 261003006936.", badges:["¥46,200 (~$300)"]},
-      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Nankai Main Line, direct.", badges:["~10–15 min"], note:"Small family-run shops, forging takes place between 9:30 AM and 11:30 AM. Contact Instagram @mizunotanrenjo to confirm hours."},
+      {t:"11:00 AM", type:"transit", name:"Namba → Sakai: Mizuno Tanrenjo", photo:["images/knife.webp"], blurb:"Ride Nankai Main Line from Namba Train Sta (not Namba Subway Sta) --> Shichidō Sta. Walk ~10 mins to shop.", badges:["~10–15 min"], note:"Small family-run shops, forging takes place between 9:30 AM and 11:30 AM. Contact Instagram @mizunotanrenjo to confirm hours."},
       {t:"12:30 PM", type:"activity", name:"Lunch in Sakai", blurb:""},
-      {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"Nankai Main Line back to Namba, then Osaka Metro Tanimachi Line to Tanimachi 4-chōme, short walk to the park.", badges:["~30–35 min total"]},
+      {t:"1:30 PM", type:"transit", name:"Sakai → Osaka Castle", blurb:"• Ride Nankai Main Line from Shichidō Sta --> Shin-Imamiya Sta.\n• Ride Osaka Loop Line to Morinomiya Sta, short walk to the castle entrance.", badges:["~30–35 min total"]},
       {t:"2:30 PM", type:"activity", name:"Osaka Castle (afternoon into sunset)", photo:["images/osakasunset.jpeg"], blurb:""},
-      {t:"4:30 PM", type:"activity", name:"Check in APA Namba Hotel", blurb:"Luggage already dropped off this morning"},
-      {t:"6:00 PM", type:"transit", name:"Namba Sta → Umeda Sky Building", blurb:"Ride Midosuji Line from Namba Subway Sta --> Umeda Sta. Walk ~15min to Umeda Sky Building", badges:["~40 min"]},
-      {t:"6:45 PM", type:"activity", name:"Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
-      {t:"7:30 PM", type:"transit", name:"Umeda --> Namba", blurb:"Ride Midosuji Line from Umeda Sta --> Namba Subway Sta. Walk ~10min to hotel.", badges:["~40 min"]},      
+      {t:"4:30 PM", type:"transit", name:"Osaka Castle → Umeda Sky Building", blurb:"Ride Osaka Loop Line from Morinomiya Sta to Osaka Sta. Walk ~15min to Umeda Sky Building", badges:["~25 min"]},
+      {t:"5:30 PM", type:"activity", name:"Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
+      {t:"7:30 PM", type:"transit", name:"Umeda --> Namba", blurb:"Ride Midosuji Line from Osaka Sta (via Umeda Sta) --> Namba Subway Sta. Walk ~10min to hotel.", badges:["~20 min"]}, 
+      {t:"8:00 PM", type:"activity", name:"Check in APA Namba Hotel", blurb:"Luggage already dropped off this morning"},
       {t:"8:30 PM", type:"activity", name:"Walk Dotonbori & Shinsaibashi, dinner at Kuromon Ichiba", photo:["images/kuromon.jpg", "images/dotonbori.jpg"], blurb:"~10–15 min from hotel to Dotonbori.", note:"Reserve the Tombori River Cruise ahead of time. Last cruise at 9:00PM"},
       {t:"10:30 PM", type:"activity", name:"Back to hotel & Rest", blurb:""}
     ]
@@ -189,7 +189,7 @@ const DATA = [
   {
     label: "Fri Dec 25", sub: "Kyoto - Nara", city: "Kyoto / Nara", stamp: "KYOTO/NARA",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"Namba → Arashiyama", blurb:"• Walk ~10 mins from hotel to Namba Subway Station.\n• Ride Midosuji Line to Umeda Sta (9 mins, 4 stops).\n• Walk ~4 mins to Osaka Sta.\n• Ride Rapid Tokaido Line to Kyoto Sta (~30 mins, 3 stops).\n• Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~8:30AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
+      {t:"7:00 AM", type:"transit", name:"Namba → Arashiyama", blurb:"• Walk ~10 mins from hotel to Namba Subway Station.\n• Ride Midosuji Line to Umeda Sta (9 mins, 4 stops).\n• Walk ~4 mins to Osaka Sta.\n• Ride Special Rapid JR Kyoto Line to Kyoto Sta (~30 mins, 3 stops).\n• Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~8:30AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
       {t:"9:00 AM", type:"transit", name:"Saga Torokko Sta --> Kameoka Sta", blurb:"• Saga Torokko Sta is right next to Saga-Arashiyama Sta.\n• Ride Sagano Scenic Railway to Kameoka Sta (upstream Katsuka River). Arriving ~09:25AM", badges:["~20 mins","¥880 pp (~$6)"], photo:["images/sagano.jpg"]},          
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"]},
       {t:"12:30 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},      
@@ -199,7 +199,7 @@ const DATA = [
       {t:"6:00 PM", type:"transit", name:"Nara Park --> Inari Sta", blurb:"• Walk ~10mins from Nara Park to Kintetsu-Nara Sta.\n• Ride Kintetsu Limited Express to Kintetsu-Tambabashi Sta (~30 mins, 2 stops).\n• Walk ~3 mins to Tambabashi Sta.\n• Ride Keihan Main Line to Fushimi-Inari Sta (~7 mins, 4 stops).", badges:["~45 min","¥1440 pp (~$10)"]},        
       {t:"6:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills. Fushiminari Shrine --> Senbon Torii --> Bamboo Forest --> Kojingamine Observation Deck", badges:["~2hrs min"]},      
       {t:"9:00 PM", type:"transit", name:"Dinner near Inari Station. Inari Sta --> Kyoto Sta", blurb:"JR Nara Line, 2 stops, direct.", badges:["~8 min","¥150 pp (~$1)"]},
-      {t:"9:30 PM", type:"transit", name:"Kyoto Sta -->  Namba", blurb:"• Ride Rapid Tokaido Line to Umeda Sta. (~30 mins, 3 stops).\n• Walk ~4 mins to Osaka Sta. \n• Ride Midosuji Line to Namba Subway Sta. Arriving hotel ~7:30 PM.", badges:["~50 min","¥820 pp (~$6)"]},    
+      {t:"9:30 PM", type:"transit", name:"Kyoto Sta -->  Namba", blurb:"• Ride Special Rapid JR Kyoto Line to Osaka Sta. (~30 mins, 3 stops).\n• Walk ~4 mins to Umeda Sta. \n• Ride Midosuji Line to Namba Subway Sta. Arriving hotel ~7:30 PM.", badges:["~50 min","¥820 pp (~$6)"]},    
       {t:"10:30 PM", type:"activity", name:"Pack luggage and rest", note:"Make sure all travel documents ready and accurate for next day flight to Hanoi."},      
     ]
   },
