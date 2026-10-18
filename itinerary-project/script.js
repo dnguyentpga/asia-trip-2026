@@ -109,16 +109,16 @@ const DATA = [
       {t:"7:00 AM", type:"activity", name:"Check out hotel & Dai Hao Village (Uncle Tho)", blurb:"", note:"Contracted Transportation Service. Keep luggage at Uncle Tho."},
       {t:"11:30 AM", type:"activity", name:"Lunch", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Dai Hao Village (Family Cemetery)", blurb:""},
-      {t:"4:00 PM", type:"transit", name:"Pick up luggage, Quang Tri → Da Nang. Arrives Da Nang ~8:00 PM", blurb:"Dinner, drop off Uncle Luc at train station first, then proceed to airport", note:"Contracted Transportation Service."},
+      {t:"3:30 PM", type:"transit", name:"Pick up luggage, Quang Tri → Da Nang. Arrives Da Nang ~7:30 PM", blurb:"Dinner, drop off Uncle Luc at train station first, then proceed to airport", note:"Contracted Transportation Service."},
       {t:"10:30 PM", type:"transit", name:"Uncle Luc Da Nang --> Bien Hoa on SE7 train", blurb:"Arriving Dec 20 at 4:00 PM"},
-      {t:"10:45 PM", type:"transit", name:"Don & Giang DAD --> HAN", blurb:"Vietjet VJ 506. Arriving Dec 20 at 12:05 AM", note:"No need to pick up checked bags at Hanoi airport, proceed to sleeping pods on Terminal 2 (international)."}
+      {t:"11:30 PM", type:"transit", name:"Don & Giang DAD --> HAN", blurb:"Vietjet VJ 506. Confirm # ZE3PB2. Arriving Dec 20 at 12:50 AM. Rest at Noi Bai Boutique Hotel.", note:"No need to pick up checked bags at Hanoi airport. Contact hotel in advance for free shuttle pick up", mapLink:"https://maps.app.goo.gl/jeWmDH92fjpL3DRf6", mapLabel:"Noi Bai Boutique Hotel. Expedia Confirm #: 73568148766613"}
     ]
   },
   {
     label: "Sun Dec 20", sub: "Tokyo Arrival Day", city: "Tokyo", stamp: "TOKYO\nARR",
     stops: [
-      {t:"6:30 AM", type:"activity", name:"Check out sleeping pods", blurb:"", note:"Collect all belongings, make sure all travel documents are ready and accurate, proceed to check in counter for international flights."},
-      {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Arriving 3:25 PM JST", badges:["$200 pp"]},
+      {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:"", note:"Collect all belongings, make sure all travel documents are ready and accurate, head to airport."},
+      {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Confirm # ZE3PB2. Arriving 3:25 PM JST", badges:["$250 pp"]},
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
       {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Limited Express Skyliner --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
@@ -189,8 +189,7 @@ const DATA = [
   {
     label: "Fri Dec 25", sub: "Kyoto - Nara", city: "Kyoto / Nara", stamp: "KYOTO/NARA",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"Namba → Arashiyama", blurb:"• Walk ~10 mins from hotel to Namba Subway Station.\n• Ride Midosuji Line to Umeda Sta (9 mins, 4 stops).\n• Walk ~4 mins to Osaka Sta.\n• Ride Special Rapid JR Kyoto Line to Kyoto Sta (~30 mins, 3 stops).\n• Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~8:30AM", badges:["~1hr 20 mins","¥1200 pp (~$8)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"9:00 AM", type:"transit", name:"Saga Torokko Sta --> Kameoka Sta", blurb:"• Saga Torokko Sta is right next to Saga-Arashiyama Sta.\n• Ride Sagano Scenic Railway to Kameoka Sta (upstream Katsuka River). Arriving ~09:25AM", badges:["~20 mins","¥880 pp (~$6)"], photo:["images/sagano.jpg"]},          
+      {t:"7:30 AM", type:"transit", name:"Namba → Kameoka", blurb:"• Walk ~10 mins from hotel to Namba Subway Station.\n• Ride Midosuji Line to Umeda Sta (9 mins, 4 stops).\n• Walk ~4 mins to Osaka Sta.\n• Ride Special Rapid JR Kyoto Line to Kyoto Sta (~30 mins, 3 stops).\n• Ride San-In Line to Saga-Arashiyama Sta (~20 mins, 7 stops). Arriving ~9:15AM", badges:["~1hr 45 mins","¥1400 pp (~$10)"], note:"Bring flashlight for Fushimi Inari Taisha hike later evening."},
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"]},
       {t:"12:30 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},      
       {t:"2:00 PM", type:"transit", name:"Saga-Arashiyama Sta --> Kyoto Sta", blurb:"Ride San-In Line back to Kyoto Sta (~20 mins, 7 stops).", badges:["~20 mins","¥240 pp (~$2)"]},   
@@ -374,7 +373,8 @@ const daysEl = document.getElementById('days');
 const sectionTabs = document.querySelectorAll('[data-section]');
 const contentSections = {
   prep: document.querySelector('.todo-panel').closest('.content-section'),
-  itinerary: document.querySelector('.itinerary-section')
+  itinerary: document.querySelector('.itinerary-section'),
+  'cost-tracking': document.querySelector('.cost-tracking-section')
 };
 const todoItems = document.querySelectorAll('[data-todo]');
 const todoCount = document.getElementById('todo-count');
@@ -409,6 +409,28 @@ sectionTabs.forEach(tab => {
       section.classList.toggle('active', name === selectedSection);
     });
     tabsEl.hidden = selectedSection !== 'itinerary';
+  });
+});
+
+const costTripTabs = document.querySelectorAll('[data-cost-trip]');
+const costTripPanels = document.querySelectorAll('[data-cost-trip-panel]');
+const costSettlements = document.querySelectorAll('[data-cost-settlement]');
+costTripTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const selectedTrip = tab.dataset.costTrip;
+    costTripTabs.forEach(item => {
+      const isSelected = item === tab;
+      item.classList.toggle('active', isSelected);
+      item.setAttribute('aria-pressed', String(isSelected));
+    });
+    costTripPanels.forEach(panel => {
+      const isSelected = panel.dataset.costTripPanel === selectedTrip;
+      panel.classList.toggle('active', isSelected);
+      panel.hidden = !isSelected;
+    });
+    costSettlements.forEach(settlement => {
+      settlement.hidden = settlement.dataset.costSettlement !== selectedTrip;
+    });
   });
 });
 

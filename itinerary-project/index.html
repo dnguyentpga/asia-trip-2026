@@ -43,6 +43,7 @@
 <nav class="section-tabs" aria-label="Trip sections">
   <button class="active" type="button" data-section="prep">Trip Prep</button>
   <button type="button" data-section="itinerary">Trip Itinerary</button>
+  <button type="button" data-section="cost-tracking">Cost Tracking</button>
 </nav>
 
 <div class="layout">
@@ -75,6 +76,104 @@
         <h2 id="itinerary-title"></h2>
       </div>
       <div id="days"></div>
+    </section>
+    <section class="content-section cost-tracking-section" aria-labelledby="cost-tracking-title">
+      <div class="section-heading">
+        <div class="section-kicker mono">Vietnam · Part A</div>
+        <h2 id="cost-tracking-title">Cost Tracking</h2>
+        <p class="cost-tracking-date">Updated October 18, 2026</p>
+      </div>
+      <nav class="cost-trip-tabs" aria-label="Cost tracking trips">
+        <button class="active" type="button" data-cost-trip="vietnam-a" aria-pressed="true">Vietnam · Part A</button>
+        <button type="button" data-cost-trip="japan-vietnam" aria-pressed="false">Japan &amp; Vietnam Trip 2026</button>
+      </nav>
+      <aside class="cost-summary" aria-label="Settlement">
+        <div class="cost-summary-label mono">Settlement</div>
+        <div data-cost-settlement="vietnam-a">
+          <p><strong>Giang</strong> owes <strong>Don</strong></p>
+          <div class="cost-summary-amount">$1,268.48</div>
+        </div>
+        <div data-cost-settlement="japan-vietnam" hidden>
+          <p><strong>Zack</strong> owes <strong>Don</strong></p>
+          <div class="cost-summary-amount">$388.82</div>
+          <p><strong>Zack</strong> owes <strong>Giang</strong></p>
+          <div class="cost-summary-amount">$91.03</div>
+        </div>
+      </aside>
+      <div class="cost-trip-panel active" data-cost-trip-panel="vietnam-a">
+      <div class="cost-tracking-layout">
+        <div class="cost-table-scroll" role="region" aria-label="Vietnam trip expenses" tabindex="0">
+          <table class="cost-table">
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Expense</th>
+              <th scope="col" rowspan="2">Amount</th>
+              <th scope="col" rowspan="2">Currency</th>
+              <th scope="col" rowspan="2">By</th>
+              <th scope="col" rowspan="2">Date</th>
+              <th scope="col" rowspan="2">Created on</th>
+              <th scope="col" rowspan="2">Category</th>
+              <th scope="colgroup" colspan="2">Don</th>
+              <th scope="colgroup" colspan="2">Giang</th>
+            </tr>
+            <tr><th scope="col">Paid (+)</th><th scope="col">Owed (−)</th><th scope="col">Paid (+)</th><th scope="col">Owed (−)</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">IAH - SGN Airfare</th><td>1341.60</td><td>USD</td><td>Don</td><td>7/20/2026</td><td>8/4/2026</td><td>Airfare</td><td>1341.60</td><td>-670.80</td><td></td><td>-670.80</td></tr>
+            <tr><th scope="row">Thanh Long Hotel Dec 6 - 7</th><td>35.00</td><td>USD</td><td>Don</td><td>12/6/2026</td><td>9/20/2026</td><td>Accommodation</td><td>35.00</td><td>-17.50</td><td></td><td>-17.50</td></tr>
+            <tr><th scope="row">Masteri Thao Dien Apartment Dec 7 - 11</th><td>200.00</td><td>USD</td><td>Don</td><td>12/7/2026</td><td>9/20/2026</td><td>Accommodation</td><td>200.00</td><td>-100.00</td><td></td><td>-100.00</td></tr>
+            <tr><th scope="row">SGN --&gt; PQC Airfare</th><td>156.49</td><td>USD</td><td>Don</td><td>12/14/2026</td><td>10/15/2026</td><td>Airfare</td><td>156.49</td><td>-78.25</td><td></td><td>-78.25</td></tr>
+            <tr><th scope="row">Labe Phu Quoc Hotel Dec 14 - 16</th><td>4864000.00</td><td>VND</td><td>Don</td><td>12/14/2026</td><td>10/15/2026</td><td>Accommodation</td><td>185.08</td><td>-92.54</td><td></td><td>-92.54</td></tr>
+            <tr><th scope="row">Da Nang --&gt; Hue train</th><td>1185000.00</td><td>VND</td><td>Don</td><td>12/16/2026</td><td>10/15/2026</td><td>Transport</td><td>45.09</td><td>-22.54</td><td></td><td>-22.54</td></tr>
+            <tr><th scope="row">Sky Boutique Hue Hotel Dec 16 - 17</th><td>779999.00</td><td>VND</td><td>Don</td><td>12/16/2026</td><td>10/18/2026</td><td>Accommodation</td><td>29.68</td><td>-14.84</td><td></td><td>-14.84</td></tr>
+            <tr><th scope="row">DAD - NRT Airfare</th><td>515.02</td><td>USD</td><td>Don</td><td>12/19/2026</td><td>10/18/2026</td><td>Airfare</td><td>515.02</td><td>-257.51</td><td></td><td>-257.51</td></tr>
+            <tr><th scope="row">Hanoi Boutique Hotel Dec 19 - 20</th><td>29.00</td><td>USD</td><td>Don</td><td>12/19/2026</td><td>10/18/2026</td><td>Accommodation</td><td>29.00</td><td>-14.50</td><td></td><td>-14.50</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row" colspan="7" aria-label="Net subtotal"></th><td class="paid-amount" colspan="2">+$1,268.48</td><td class="owed-amount" colspan="2">−$1,268.48</td></tr>
+          </tfoot>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div class="cost-trip-panel" data-cost-trip-panel="japan-vietnam" hidden>
+        <div class="cost-tracking-layout">
+          <div class="cost-table-scroll" role="region" aria-label="Japan and Vietnam trip expenses" tabindex="0">
+            <table class="cost-table">
+              <thead>
+                <tr>
+                  <th scope="col" rowspan="2">Expense</th>
+                  <th scope="col" rowspan="2">Amount</th>
+                  <th scope="col" rowspan="2">Currency</th>
+                  <th scope="col" rowspan="2">By</th>
+                  <th scope="col" rowspan="2">Date</th>
+                  <th scope="col" rowspan="2">Created on</th>
+                  <th scope="col" rowspan="2">Category</th>
+                  <th scope="colgroup" colspan="2">Don</th>
+                  <th scope="colgroup" colspan="2">Giang</th>
+                  <th scope="colgroup" colspan="2">Zack</th>
+                </tr>
+                <tr>
+                  <th scope="col">Paid (+)</th><th scope="col">Owed (−)</th>
+                  <th scope="col">Paid (+)</th><th scope="col">Owed (−)</th>
+                  <th scope="col">Paid (+)</th><th scope="col">Owed (−)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Payment</th><td>571.06</td><td>USD</td><td>Zack</td><td>10/16/2026</td><td>10/16/2026</td><td>—</td><td></td><td></td><td></td><td>-571.06</td><td>571.06</td><td></td></tr>
+                <tr><th scope="row">Mitsui Tokyo Dec 20 - 24</th><td>143298.00</td><td>JPY</td><td>Don</td><td>12/20/2026</td><td>9/20/2026</td><td>Accommodation</td><td>913.44</td><td>-304.48</td><td></td><td>-304.48</td><td></td><td>-304.48</td></tr>
+                <tr><th scope="row">APA Osaka Hotel Dec 24 - 26</th><td>46200.00</td><td>JPY</td><td>Don</td><td>12/24/2026</td><td>10/15/2026</td><td>Accommodation</td><td>294.50</td><td>-98.17</td><td></td><td>-98.17</td><td></td><td>-98.17</td></tr>
+                <tr><th scope="row">KIX --&gt; HAN Airfare</th><td>1713.00</td><td>USD</td><td>Giang</td><td>12/26/2026</td><td>10/15/2026</td><td>Transport</td><td></td><td>-571.00</td><td>1713.00</td><td>-571.00</td><td></td><td>-571.00</td></tr>
+                <tr><th scope="row">La Sante Hanoi Hotel Dec 26 - 28</th><td>137.00</td><td>USD</td><td>Don</td><td>12/26/2026</td><td>10/15/2026</td><td>Accommodation</td><td>137.00</td><td>-45.67</td><td></td><td>-45.67</td><td></td><td>-45.67</td></tr>
+                <tr><th scope="row">La Sante Hanoi Hotel Dec 31 - Jan 1</th><td>94.80</td><td>USD</td><td>Don</td><td>12/31/2026</td><td>10/15/2026</td><td>Accommodation</td><td>94.80</td><td>-31.60</td><td></td><td>-31.60</td><td></td><td>-31.60</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><th scope="row" colspan="7" aria-label="Net subtotal"></th><td class="paid-amount" colspan="2">+$388.82</td><td class="paid-amount" colspan="2">+$91.03</td><td class="owed-amount" colspan="2">−$479.85</td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </div>

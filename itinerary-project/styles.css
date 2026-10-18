@@ -126,6 +126,7 @@
     gap:20px;
     padding:0 18px;
   }
+  .layout:has(.cost-tracking-section.active){max-width:1600px;}
 
   .section-tabs{
     max-width:960px;
@@ -216,11 +217,36 @@
   }
 
   main{flex:1; min-width:0; max-width:700px; margin:0; padding:28px 0 36px;}
+  main:has(.cost-tracking-section.active){max-width:none;}
 
   .content-section{display:none;}
   .content-section.active{display:block;}
   .itinerary-section{max-width:600px;}
+  .cost-tracking-section{max-width:100%;}
   .section-heading{margin:0 0 12px;}
+  .cost-trip-tabs{
+    display:flex;
+    gap:8px;
+    margin:0 0 14px;
+    border-bottom:1px solid var(--line);
+  }
+  .cost-trip-tabs button{
+    padding:9px 13px;
+    border:1px solid transparent;
+    border-bottom:0;
+    border-radius:8px 8px 0 0;
+    background:transparent;
+    color:var(--ink-soft);
+    font:500 13px 'JetBrains Mono', monospace;
+    cursor:pointer;
+  }
+  .cost-trip-tabs button.active{
+    background:var(--card);
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .cost-trip-panel[hidden]{display:none;}
+  .cost-trip-panel.active{display:block;}
   .section-kicker{
     color:var(--accent-red);
     font-size:11px;
@@ -228,6 +254,96 @@
     text-transform:uppercase;
   }
   .section-heading h2{font-family:'Shippori Mincho', serif; font-size:30px; margin:2px 0 0;}
+  .cost-tracking-date{margin:4px 0 0; color:var(--ink-soft); font-size:14px;}
+  .cost-tracking-layout{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr);
+    align-items:start;
+    gap:14px;
+  }
+  .cost-table-scroll{
+    min-width:0;
+    max-width:100%;
+    overflow-x:auto;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 1px 0 rgba(30,42,68,0.04);
+    margin-bottom:14px;
+  }
+  .cost-summary{
+    padding:16px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:3px solid var(--accent-gold);
+    border-radius:10px;
+    box-shadow:0 1px 0 rgba(30,42,68,0.04);
+  }
+  .cost-summary-label{
+    color:var(--accent-red);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+  }
+  .cost-summary p{margin:10px 0 6px; color:var(--ink-soft); font-size:14px;}
+  .cost-summary p strong{color:var(--ink);}
+  .cost-summary-amount{
+    color:var(--accent-red);
+    font-family:'JetBrains Mono', monospace;
+    font-size:22px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .cost-table{
+    width:100%;
+    min-width:1100px;
+    border-collapse:collapse;
+    font-size:13px;
+    white-space:nowrap;
+  }
+  .cost-table th,
+  .cost-table td{
+    padding:9px 10px;
+    border-bottom:1px solid var(--line);
+    text-align:left;
+  }
+  .cost-table thead th{
+    position:sticky;
+    top:0;
+    background:var(--ink);
+    color:var(--card);
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    font-weight:500;
+  }
+  .cost-table thead tr:nth-child(2) th:nth-child(odd),
+  .cost-table tbody td:nth-child(8),
+  .cost-table tbody td:nth-child(10),
+  .cost-table tbody td:nth-child(12),
+  .cost-table tfoot td.paid-amount{
+    color:#267447;
+  }
+  .cost-table thead tr:nth-child(2) th:nth-child(even),
+  .cost-table tbody td:nth-child(9),
+  .cost-table tbody td:nth-child(11),
+  .cost-table tbody td:nth-child(13),
+  .cost-table tfoot td.owed-amount{
+    color:#ae3b34;
+  }
+  .cost-table tbody th{font-weight:600;}
+  .cost-table tbody td:nth-child(2),
+  .cost-table tbody td:nth-child(n+8){font-variant-numeric:tabular-nums; text-align:right;}
+  .cost-table tbody tr:last-child th,
+  .cost-table tbody tr:last-child td{border-bottom:0;}
+  .cost-table tbody tr:hover{background:rgba(140,151,174,0.1);}
+  .cost-table tfoot th,
+  .cost-table tfoot td{
+    border-top:2px solid var(--ink);
+    border-bottom:0;
+    background:rgba(166,132,42,0.12);
+    font-weight:700;
+  }
+  .cost-table tfoot td{text-align:right; font-variant-numeric:tabular-nums;}
   .todo-panel{
     background:var(--card);
     border:1px solid var(--line);
@@ -274,6 +390,7 @@
     nav.tabs button .tab-city{font-size:11px;}
     main{min-width:0; padding:10px 0 24px;}
     .todo-panel{padding:16px 14px 13px;}
+    .cost-tracking-layout{grid-template-columns:1fr;}
   }
 
   .day{display:none;}
