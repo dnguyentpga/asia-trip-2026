@@ -353,6 +353,37 @@
   }
   .cost-legend-swatch{width:9px; height:9px; border-radius:50%; background:var(--swatch);}
   .cost-legend-name{overflow-wrap:anywhere; color:var(--ink);}
+  .cost-person-summary{
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid var(--line);
+  }
+  .cost-person-summary h4{
+    margin:0 0 8px;
+    color:var(--ink);
+    font-family:'Shippori Mincho', serif;
+    font-size:17px;
+  }
+  .cost-person-summary ul{
+    display:grid;
+    gap:7px;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .cost-person-summary li{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    color:var(--ink-soft);
+    font-size:13px;
+  }
+  .cost-person-summary strong{
+    color:var(--ink);
+    font-family:'JetBrains Mono', monospace;
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
   .cost-chart-empty{margin:16px 0; color:var(--ink-soft); font-size:14px;}
   .cost-daily-scroll{overflow-x:auto;}
   .cost-daily-svg{

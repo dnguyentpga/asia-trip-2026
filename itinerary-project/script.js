@@ -459,15 +459,34 @@ function getCostEntries(panel) {
 function renderCategoryChart(panel, entries) {
   const chart = panel.querySelector('.cost-category-chart');
   const totalElement = panel.querySelector('[data-cost-category-total]');
+  const table = panel.querySelector('.cost-table');
+  const participantHeaders = Array.from(table.querySelector('thead tr:first-child').cells)
+    .slice(7)
+    .map(header => header.textContent.trim());
+  const personCosts = participantHeaders.map((person, index) => ({
+    person,
+    amount: Array.from(table.querySelectorAll('.cost-table tbody tr')).reduce((sum, row) => {
+      const category = row.cells[6]?.textContent.trim();
+      const date = row.cells[4]?.textContent.trim();
+      if (!category || category === '—' || !date) return sum;
+      const owed = Number.parseFloat(row.cells[8 + index * 2]?.textContent.replace(/,/g, '').trim());
+      return sum + (Number.isFinite(owed) ? Math.max(0, -owed) : 0);
+    }, 0)
+  }));
   const totals = new Map();
   entries.forEach(({ category, amount }) => totals.set(category, (totals.get(category) || 0) + amount));
   const categories = Array.from(totals, ([category, amount]) => ({ category, amount }))
     .sort((left, right) => right.amount - left.amount);
   const total = categories.reduce((sum, item) => sum + item.amount, 0);
   totalElement.textContent = costCurrency.format(total);
+  const personSummary = `
+    <section class="cost-person-summary" aria-label="Net cost by person">
+      <h4>Net cost by person</h4>
+      <ul>${personCosts.map(({ person, amount }) => `<li><span>${escapeChartText(person)}</span><strong>${costCurrency.format(amount)}</strong></li>`).join('')}</ul>
+    </section>`;
 
   if (total <= 0) {
-    chart.innerHTML = '<p class="cost-chart-empty">No categorized expenses to chart yet.</p>';
+    chart.innerHTML = `<p class="cost-chart-empty">No categorized expenses to chart yet.</p>${personSummary}`;
     return;
   }
 
@@ -501,7 +520,8 @@ function renderCategoryChart(panel, entries) {
         <title>Expense share by category</title>${slices}
       </svg>
       <ul class="cost-chart-legend">${legend}</ul>
-    </div>`;
+    </div>
+    ${personSummary}`;
 }
 
 function renderDailyChart(panel, entries) {
