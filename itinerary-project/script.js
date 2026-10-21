@@ -415,6 +415,172 @@ sectionTabs.forEach(tab => {
 const costTripTabs = document.querySelectorAll('[data-cost-trip]');
 const costTripPanels = document.querySelectorAll('[data-cost-trip-panel]');
 const costSettlements = document.querySelectorAll('[data-cost-settlement]');
+
+const costCurrency = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 2
+});
+const costChartColors = ['#AE3B34', '#A6842A', '#267447', '#526A9C', '#B66B2C', '#805A91', '#4C8587'];
+
+function escapeChartText(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[character]);
+}
+
+function getCostEntries(panel) {
+  return Array.from(panel.querySelectorAll('.cost-table tbody tr')).flatMap(row => {
+    const cells = row.cells;
+    const category = cells[6]?.textContent.trim();
+    const dateMatch = cells[4]?.textContent.trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+    if (!category || category === '—' || !dateMatch) return [];
+
+    let usdAmount = 0;
+    for (let index = 7; index < cells.length; index += 2) {
+      const paidAmount = Number.parseFloat(cells[index].textContent.replace(/,/g, '').trim());
+      if (Number.isFinite(paidAmount) && paidAmount > 0) usdAmount += paidAmount;
+    }
+    if (usdAmount <= 0) return [];
+
+    const [, month, day, year] = dateMatch;
+    return [{
+      category,
+      amount: usdAmount,
+      date: new Date(Number(year), Number(month) - 1, Number(day))
+    }];
+  });
+}
+
+function renderCategoryChart(panel, entries) {
+  const chart = panel.querySelector('.cost-category-chart');
+  const totalElement = panel.querySelector('[data-cost-category-total]');
+  const totals = new Map();
+  entries.forEach(({ category, amount }) => totals.set(category, (totals.get(category) || 0) + amount));
+  const categories = Array.from(totals, ([category, amount]) => ({ category, amount }))
+    .sort((left, right) => right.amount - left.amount);
+  const total = categories.reduce((sum, item) => sum + item.amount, 0);
+  totalElement.textContent = costCurrency.format(total);
+
+  if (total <= 0) {
+    chart.innerHTML = '<p class="cost-chart-empty">No categorized expenses to chart yet.</p>';
+    return;
+  }
+
+  let angle = -Math.PI / 2;
+  const slices = categories.map(({ category, amount }, index) => {
+    const portion = amount / total;
+    const color = costChartColors[index % costChartColors.length];
+    let path;
+    if (portion >= 0.9999) {
+      path = 'M 160 30 A 130 130 0 1 1 160 290 A 130 130 0 1 1 160 30 Z';
+    } else {
+      const endAngle = angle + portion * Math.PI * 2;
+      const startX = 160 + 130 * Math.cos(angle);
+      const startY = 160 + 130 * Math.sin(angle);
+      const endX = 160 + 130 * Math.cos(endAngle);
+      const endY = 160 + 130 * Math.sin(endAngle);
+      const largeArc = portion > 0.5 ? 1 : 0;
+      path = `M 160 160 L ${startX} ${startY} A 130 130 0 ${largeArc} 1 ${endX} ${endY} Z`;
+      angle = endAngle;
+    }
+    return `<path d="${path}" fill="${color}"><title>${escapeChartText(category)}: ${costCurrency.format(amount)} (${(portion * 100).toFixed(1)}%)</title></path>`;
+  }).join('');
+  const legend = categories.map(({ category, amount }, index) => {
+    const percent = (amount / total * 100).toFixed(1);
+    return `<li><span class="cost-legend-swatch" style="--swatch:${costChartColors[index % costChartColors.length]}"></span><span class="cost-legend-name">${escapeChartText(category)}</span><span>${costCurrency.format(amount)} · ${percent}%</span></li>`;
+  }).join('');
+
+  chart.innerHTML = `
+    <div class="cost-category-content">
+      <svg class="cost-pie-svg" viewBox="0 0 320 320" role="img" aria-label="Expense share by category, total ${costCurrency.format(total)}">
+        <title>Expense share by category</title>${slices}
+      </svg>
+      <ul class="cost-chart-legend">${legend}</ul>
+    </div>`;
+}
+
+function renderDailyChart(panel, entries) {
+  const chart = panel.querySelector('.cost-daily-chart');
+  const totalElement = panel.querySelector('[data-cost-daily-total]');
+  const totals = new Map();
+  entries.forEach(({ date, amount }) => {
+    const key = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+    const current = totals.get(key) || { date, amount: 0 };
+    current.amount += amount;
+    totals.set(key, current);
+  });
+  const days = Array.from(totals.values()).sort((left, right) => left.date - right.date);
+  const total = days.reduce((sum, item) => sum + item.amount, 0);
+  totalElement.textContent = costCurrency.format(total);
+
+  if (!days.length) {
+    chart.innerHTML = '<p class="cost-chart-empty">No dated expenses to chart yet.</p>';
+    return;
+  }
+
+  const width = Math.max(720, days.length * 82 + 120);
+  const height = 330;
+  const left = 108;
+  const right = width - 108;
+  const top = 30;
+  const bottom = 264;
+  const plotHeight = bottom - top;
+  const step = (right - left) / days.length;
+  const dailyMaximum = Math.max(...days.map(day => day.amount));
+  const runningMaximum = total;
+  let runningTotal = 0;
+  const linePoints = [];
+  const bars = [];
+  const labels = [];
+
+  days.forEach(({ date, amount }, index) => {
+    const center = left + step * (index + 0.5);
+    const barHeight = amount / dailyMaximum * plotHeight;
+    const barY = bottom - barHeight;
+    runningTotal += amount;
+    const lineY = bottom - runningTotal / runningMaximum * plotHeight;
+    const dateLabel = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    linePoints.push(`${center},${lineY}`);
+    bars.push(`<g><title>${dateLabel}: daily ${costCurrency.format(amount)}, running total ${costCurrency.format(runningTotal)}</title><rect x="${center - Math.min(40, step * 0.28)}" y="${barY}" width="${Math.min(80, step * 0.56)}" height="${barHeight}" rx="3" fill="#A6842A" opacity="0.82"/></g>`);
+    labels.push(`<text x="${center}" y="${bottom + 22}" text-anchor="middle">${dateLabel}</text>`);
+  });
+
+  const dailyTicks = [0, dailyMaximum / 2, dailyMaximum];
+  const dailyGrid = dailyTicks.map((value, index) => {
+    const y = bottom - index / 2 * plotHeight;
+    return `<line x1="${left}" y1="${y}" x2="${right}" y2="${y}" class="cost-chart-grid"/><text x="${left - 8}" y="${y + 4}" text-anchor="end">${costCurrency.format(value)}</text><text x="${right + 8}" y="${y + 4}">${costCurrency.format(total * index / 2)}</text>`;
+  }).join('');
+  chart.innerHTML = `
+    <div class="cost-daily-scroll">
+      <svg class="cost-daily-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Daily expenses as bars and running total as a line">
+        <title>Daily spend and running total in USD</title>
+        <text x="${left}" y="16" class="cost-chart-axis-title">Daily spend</text>
+        <text x="${right}" y="16" text-anchor="end" class="cost-chart-axis-title">Running total</text>
+        ${dailyGrid}
+        ${bars.join('')}
+        <polyline points="${linePoints.join(' ')}" fill="none" stroke="#AE3B34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        ${linePoints.map(point => {
+          const [x, y] = point.split(',');
+          return `<circle cx="${x}" cy="${y}" r="4" fill="#AE3B34"/>`;
+        }).join('')}
+        ${labels.join('')}
+      </svg>
+    </div>
+    <div class="cost-chart-key"><span><i class="cost-bar-key"></i>Daily spend</span><span><i class="cost-line-key"></i>Running total</span></div>`;
+}
+
+function renderCostCharts(panel) {
+  const entries = getCostEntries(panel);
+  renderCategoryChart(panel, entries);
+  renderDailyChart(panel, entries);
+}
+
+costTripPanels.forEach(renderCostCharts);
 costTripTabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const selectedTrip = tab.dataset.costTrip;
@@ -431,6 +597,8 @@ costTripTabs.forEach(tab => {
     costSettlements.forEach(settlement => {
       settlement.hidden = settlement.dataset.costSettlement !== selectedTrip;
     });
+    const selectedPanel = Array.from(costTripPanels).find(panel => panel.dataset.costTripPanel === selectedTrip);
+    if (selectedPanel) renderCostCharts(selectedPanel);
   });
 });
 

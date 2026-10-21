@@ -101,6 +101,22 @@
         </div>
       </aside>
       <div class="cost-trip-panel active" data-cost-trip-panel="vietnam-a">
+      <div class="cost-insights" aria-label="Expense charts">
+        <article class="cost-chart-card">
+          <div class="cost-chart-heading">
+            <div><div class="cost-summary-label mono">By category</div><h3>Cost breakdown</h3></div>
+            <div class="cost-chart-total" data-cost-category-total></div>
+          </div>
+          <div class="cost-category-chart"></div>
+        </article>
+        <article class="cost-chart-card">
+          <div class="cost-chart-heading">
+            <div><div class="cost-summary-label mono">By date</div><h3>Daily spend</h3></div>
+            <div class="cost-chart-total" data-cost-daily-total></div>
+          </div>
+          <div class="cost-daily-chart"></div>
+        </article>
+      </div>
       <div class="cost-tracking-layout">
         <div class="cost-table-scroll" role="region" aria-label="Vietnam trip expenses" tabindex="0">
           <table class="cost-table">
@@ -119,6 +135,7 @@
             <tr><th scope="col">Paid (+)</th><th scope="col">Owed (−)</th><th scope="col">Paid (+)</th><th scope="col">Owed (−)</th></tr>
           </thead>
           <tbody>
+            <tr><th scope="row">PVD --&gt; HOU Airfare Giang</th><td>120.00</td><td>USD</td><td>Giang</td><td>12/4/2026</td><td>9/19/2026</td><td>Airfare</td><td></td><td></td><td>120.00</td><td>-120.00</td></tr>
             <tr><th scope="row">IAH - SGN Airfare</th><td>1341.60</td><td>USD</td><td>Don</td><td>12/5/2026</td><td>8/4/2026</td><td>Airfare</td><td>1341.60</td><td>-670.80</td><td></td><td>-670.80</td></tr>
             <tr><th scope="row">Thanh Long Hotel Dec 6 - 7</th><td>35.00</td><td>USD</td><td>Don</td><td>12/6/2026</td><td>9/20/2026</td><td>Accommodation</td><td>35.00</td><td>-17.50</td><td></td><td>-17.50</td></tr>
             <tr><th scope="row">Masteri Thao Dien Apartment Dec 7 - 11</th><td>200.00</td><td>USD</td><td>Don</td><td>12/7/2026</td><td>9/20/2026</td><td>Accommodation</td><td>200.00</td><td>-100.00</td><td></td><td>-100.00</td></tr>
@@ -128,6 +145,9 @@
             <tr><th scope="row">Sky Boutique Hue Hotel Dec 16 - 17</th><td>779999.00</td><td>VND</td><td>Don</td><td>12/16/2026</td><td>10/18/2026</td><td>Accommodation</td><td>29.68</td><td>-14.84</td><td></td><td>-14.84</td></tr>
             <tr><th scope="row">DAD - NRT Airfare</th><td>515.02</td><td>USD</td><td>Don</td><td>12/19/2026</td><td>10/18/2026</td><td>Airfare</td><td>515.02</td><td>-257.51</td><td></td><td>-257.51</td></tr>
             <tr><th scope="row">Hanoi Boutique Hotel Dec 19 - 20</th><td>29.00</td><td>USD</td><td>Don</td><td>12/19/2026</td><td>10/18/2026</td><td>Accommodation</td><td>29.00</td><td>-14.50</td><td></td><td>-14.50</td></tr>
+            <tr><th scope="row">SGN --&gt; IAH Airfare Don</th><td>716.53</td><td>USD</td><td>Don</td><td>1/15/2027</td><td>9/23/2026</td><td>Airfare</td><td>716.53</td><td>-716.53</td><td></td><td></td></tr>
+            <tr><th scope="row">SGN --&gt; IAH Airfare Giang</th><td>716.53</td><td>USD</td><td>Giang</td><td>1/15/2027</td><td>9/19/2026</td><td>Airfare</td><td></td><td></td><td>716.53</td><td>-716.53</td></tr>
+            <tr><th scope="row">HOU --&gt; PVD Airfare Giang</th><td>120.00</td><td>USD</td><td>Giang</td><td>1/16/2027</td><td>9/26/2026</td><td>Airfare</td><td></td><td></td><td>120.00</td><td>-120.00</td></tr>
           </tbody>
           <tfoot>
             <tr><th scope="row" colspan="7" aria-label="Net subtotal"></th><td class="paid-amount" colspan="2">+$1,268.48</td><td class="owed-amount" colspan="2">−$1,268.48</td></tr>
@@ -137,6 +157,22 @@
       </div>
       </div>
       <div class="cost-trip-panel" data-cost-trip-panel="japan-vietnam" hidden>
+        <div class="cost-insights" aria-label="Expense charts">
+          <article class="cost-chart-card">
+            <div class="cost-chart-heading">
+              <div><div class="cost-summary-label mono">By category</div><h3>Cost breakdown</h3></div>
+              <div class="cost-chart-total" data-cost-category-total></div>
+            </div>
+            <div class="cost-category-chart"></div>
+          </article>
+          <article class="cost-chart-card">
+            <div class="cost-chart-heading">
+              <div><div class="cost-summary-label mono">By date</div><h3>Daily spend</h3></div>
+              <div class="cost-chart-total" data-cost-daily-total></div>
+            </div>
+            <div class="cost-daily-chart"></div>
+          </article>
+        </div>
         <div class="cost-tracking-layout">
           <div class="cost-table-scroll" role="region" aria-label="Japan and Vietnam trip expenses" tabindex="0">
             <table class="cost-table">
@@ -163,7 +199,7 @@
                 <tr><th scope="row">Payment</th><td>571.06</td><td>USD</td><td>Zack</td><td>10/16/2026</td><td>10/16/2026</td><td>—</td><td></td><td></td><td></td><td>-571.06</td><td>571.06</td><td></td></tr>
                 <tr><th scope="row">Mitsui Tokyo Dec 20 - 24</th><td>143298.00</td><td>JPY</td><td>Don</td><td>12/20/2026</td><td>9/20/2026</td><td>Accommodation</td><td>913.44</td><td>-304.48</td><td></td><td>-304.48</td><td></td><td>-304.48</td></tr>
                 <tr><th scope="row">APA Osaka Hotel Dec 24 - 26</th><td>46200.00</td><td>JPY</td><td>Don</td><td>12/24/2026</td><td>10/15/2026</td><td>Accommodation</td><td>294.50</td><td>-98.17</td><td></td><td>-98.17</td><td></td><td>-98.17</td></tr>
-                <tr><th scope="row">KIX --&gt; HAN Airfare</th><td>1713.00</td><td>USD</td><td>Giang</td><td>12/26/2026</td><td>10/15/2026</td><td>Transport</td><td></td><td>-571.00</td><td>1713.00</td><td>-571.00</td><td></td><td>-571.00</td></tr>
+                <tr><th scope="row">KIX --&gt; HAN Airfare</th><td>1713.00</td><td>USD</td><td>Giang</td><td>12/26/2026</td><td>10/15/2026</td><td>Airfare</td><td></td><td>-571.00</td><td>1713.00</td><td>-571.00</td><td></td><td>-571.00</td></tr>
                 <tr><th scope="row">La Sante Hanoi Hotel Dec 26 - 28</th><td>137.00</td><td>USD</td><td>Don</td><td>12/26/2026</td><td>10/15/2026</td><td>Accommodation</td><td>137.00</td><td>-45.67</td><td></td><td>-45.67</td><td></td><td>-45.67</td></tr>
                 <tr><th scope="row">La Sante Hanoi Hotel Dec 31 - Jan 1</th><td>94.80</td><td>USD</td><td>Don</td><td>12/31/2026</td><td>10/15/2026</td><td>Accommodation</td><td>94.80</td><td>-31.60</td><td></td><td>-31.60</td><td></td><td>-31.60</td></tr>
               </tbody>
