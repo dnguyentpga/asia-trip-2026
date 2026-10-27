@@ -77,20 +77,21 @@ const DATA = [
     ]
   },
   {
-    label: "Wed Dec 16", sub: "Phu Quoc → Hue", city: "Hue", stamp: "HUE",
+    label: "Wed Dec 16", sub: "Phu Quoc --> Hue", city: "Hue", stamp: "HUE",
     stops: [
       {t:"8:30 AM", type:"activity", name:"Check out Hotel", blurb:""},
-      {t:"12:10 PM", type:"transit", name:"PQC → DAD", blurb:"Danang International Airport."},
+      {t:"11:10 AM", type:"transit", name:"PQC --> DAD", blurb:"Sun Phu Quoc Airways 9G 2962. Confirm # 7AYQHY. Arriving 12:55PM."},
+      {t:"1:45 PM", type:"activity", name:"Lunch at Bánh tráng thịt heo Cô Huế", blurb:"", mapLink:"https://maps.app.goo.gl/iUXMJrfVqpL55PJh7", mapLabel:"Bánh tráng thịt heo Cô Huế"},          
       {t:"3:20 PM", type:"transit", name:"Da Nang --> Hue on Train", blurb:"Heritage Train HD4. Arriving 6:30PM. Booked, confirm # EQZ951.", photo:["images/trainhue.jpg"], badges:["3 hrs, $15 pp"]},
       {t:"7:00 PM", type:"activity", name:"Check in Hotel Hue & Dinner", blurb:"", mapLink:"https://maps.app.goo.gl/45KG26wvCAMge8ZGA", mapLabel:"Stay at Kly Boutique Hue (Expedia Confirm #: 73565481234639)"},
       {t:"9:00 PM", type:"activity", name:"Truong Tien - Phu Xuan Walk & Rest", blurb:"", photo:["images/truongtien.webp"]}
     ]
   },
   {
-    label: "Thu Dec 17", sub: "Hue → Quang Tri", city: "Hue / Quang Tri", stamp: "HUE",
+    label: "Thu Dec 17", sub: "Hue --> Quang Tri", city: "Hue / Quang Tri", stamp: "HUE",
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour (Full Day, Dong Ba Market included).", mapLink:"https://www.klook.com/en-US/activity/1560-hue-discovery-half-full-day-tour-hue/", mapLabel:"Hue City Tour", note:"Luggage storage service at hotel after checking out."},
-      {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue → Quang Tri (Dong Ha) by car", blurb:"", note:"Contracted Transportation Service"},
+      {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue --> Quang Tri (Dong Ha) by car", blurb:"", note:"Contracted Transportation Service"},
       {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:""}
     ]
   },
@@ -262,37 +263,43 @@ const DATA = [
     ]
   },
   {
-    label: "Fri Jan 1", sub: "Hanoi → Quang Ninh", city: "Halong Bay", stamp: "HALONG\nBAY",
+    label: "Fri Jan 1", sub: "Hanoi --> Quang Ninh", city: "Halong Bay", stamp: "HALONG\nBAY",
     stops: [
-      {t:"6:00 AM", type:"activity", name:"Check out hotel Hanoi, Lan Ha Bay Cruise ", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi → Quảng Ninh.", photo:["images/lanha.webp"]}
+      {t:"6:00 AM", type:"activity", name:"Full Day Lan Ha Bay Cruise", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi -> Quảng Ninh.", photo:["images/lanha.webp"]},
+      {t:"9:30 PM", type:"activity", name:"Walk West Lake, Dinner and Rest", blurb:""}
     ]
   },
   {
-    label: "Sat Jan 2", sub: "Halong Bay → Hanoi", city: "Halong Bay / Hanoi", stamp: "HANOI",
+    label: "Sat Jan 2", sub: "Ha Noi --> Da Nang", city: "Da Nang", stamp: "DA NANG",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Lan Ha Bay Cruise", blurb:"Dropped off by cruise shuttle, Quảng Ninh → Hanoi."},
-      {t:"4:30 PM", type:"activity", name:"Coffee & Relax in train station", blurb:"Tonkin Lounge."},
-      {t:"7:20 PM", type:"transit", name:"Hanoi → Da Nang Train", blurb:"Tonkin Heritage Train. Arrives Sun Jan 3, 11:35 AM."}
+      {t:"10:00 AM", type:"activity", name:"Check out Ha Noi hotel", blurb:""},
+      {t:"1:55 PM", type:"transit", name:"HAN --> DAD", blurb:"Sun PhuQuoc Airways 9G 925. Arriving 3:15 PM.", badges:["$65 pp"]},      
+      {t:"4:30 PM", type:"activity", name:"Check in Da Nang hotel", blurb:"My Khe beach ocean view", photo:["images/mykhe.jpg"]},
+      {t:"6:00 PM", type:"activity", name:"Walk My Khe beach, night market & dinner", blurb:"", },
+      {t:"8:30 PM", type:"activity", name:"Dragon Bridge show & Rest", blurb:"Dragon Bridge fire show starts at 9:00 PM for 15 mins", photo:["images/dragon.jpg"]}
     ]
   },
   {
     label: "Sun Jan 3", sub: "Da Nang · Hoi An", city: "Da Nang", stamp: "DA NANG",
     stops: [
-      {t:"12:00 PM", type:"transit", name:"Da Nange strain station --> hotel", blurb:""},
-      {t:"1:00 PM", type:"activity", name:"Check in hotel Da Nang & Lunch", blurb:"Contact hotel for early check in", photo:["images/danang.webp"]},
-      {t:"2:30 PM", type:"transit", name:"Da Nang → Hoi An (grab or taxi)", blurb:"", badges:["~1hr"]},
-      {t:"3:30 PM", type:"activity", name:"Visit Hoi An Ancient Town, Dinner", blurb:"yellow merchant houses, Japanese Covered Bridge, iconic silk lanterns (6:00-6:30 PM)", photo:["images/hoian.jpg"]},
-      {t:"7:30 PM", type:"transit", name:"Hoi An → Da Nang", blurb:""},
-      {t:"8:30 PM", type:"activity", name:"Dragon Bridge & Night Market, Rest", blurb:"Dragon Bridge fire show starts at 9:00 PM for 15 mins", photo:["images/dragon.jpg"]}
+      {t:"8:30 AM", type:"activity", name:"Hai Van pass trail & Sơn Trà Peninsula", blurb:"", photo:["images/haivan.jpg"]},
+      {t:"3:30 PM", type:"transit", name:"Da Nang --> Hoi An (grab or taxi)", blurb:"", badges:["~1hr"]},
+      {t:"4:30 PM", type:"activity", name:"Visit Hoi An Ancient Town, Dinner", blurb:"yellow merchant houses, Japanese Covered Bridge, iconic silk lanterns (6:00-6:30 PM)", photo:["images/hoian.jpg"]},
+      {t:"8:30 PM", type:"transit", name:"Hoi An --> Da Nang", blurb:""},
+      {t:"9:30 PM", type:"activity", name:"Walk Da Nang beach and rest", blurb:""},
     ]
   },
   {
-    label: "Mon Jan 4", sub: "Da Nang → Saigon", city: "Da Nang / Saigon", stamp: "SAIGON",
+    label: "Mon Jan 4", sub: "Da Nang --> Saigon", city: "Da Nang / Saigon", stamp: "SAIGON",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Check out hotel, visit Mỹ Sơn Sanctuary (optional)", blurb:"", note:"Hotel luggage storage."},
-      {t:"1:00 PM", type:"activity", name:"Sơn Trà Peninsula (Linh Ứng Pagoda)", blurb:""},
-      {t:"5:10 PM", type:"transit", name:"Pick up luggage, DAD → SGN", blurb:"Vietnam Airlines VN 135."},
-      {t:"8:00 PM", type:"activity", name:"Dinner, City Bus, Rest", blurb:""}
+      {t:"8:00 AM", type:"activity", name:"Check out hotel", blurb:"", note:"Use hotel luggage strorage service. Leave heavy luggage at hotel, take only light daypack for My Son."},   
+      {t:"8:30 AM", type:"transit", name:"Da Nang --> My Son Sanctuary (grab or taxi). Arriving ~9:30 AM", blurb:"", badges:["~1hr"]},      
+      {t:"10:00 AM", type:"activity", name:"Visit My Son Sanctuary", blurb:"Remarkable ruined Champa temples in Central Vietnam", badges:["~2.5hr"], photo:["images/myson.jpg"]},  
+      {t:"12:30 PM", type:"transit", name:"My Son Sanctuary --> Da Nang (grab or taxi). Arriving ~1:30 PM", blurb:"", badges:["~1hr"]},   
+      {t:"2:00 PM", type:"transit", name:"Lunch & Pick up luggage from hotel, DAD --> SGN", blurb:""},
+      {t:"6:15 PM", type:"transit", name:"DAD --> SGN. Arriving ~7:40 PM", blurb:"Vietjet VJ 633", badges:["~1.5hr", "$35 pp"]},  
+      {t:"8:30 PM", type:"transit", name:"SGN --> HCM City District 1", blurb:"", badges:["30mins"]},  
+      {t:"9:30 PM", type:"activity", name:"Walk Nguyen Hue street, Dinner & Rest", blurb:""}
     ]
   },
   {
@@ -302,7 +309,7 @@ const DATA = [
     ]
   },
   {
-    label: "Wed Jan 6", sub: "Saigon → Singapore", city: "Saigon / Singapore", stamp: "SIN\nARR",
+    label: "Wed Jan 6", sub: "Saigon --> Singapore", city: "Saigon / Singapore", stamp: "SIN\nARR",
     stops: [
       {t:"8:00 AM", type:"activity", name:"Check out hotel, shopping and relax HCM City", blurb:""},
       {t:"5:10 PM", type:"transit", name:"SGN → SIN, uber to hotel", blurb:"Vietnam Airlines VN 657."},
@@ -320,8 +327,8 @@ const DATA = [
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"10:10 AM", type:"transit", name:"Zack: SIN --> SFO --> DFW", blurb:"UA2/UA2842", note:"Zack leaves early to catch the flight home. Don and Giang check out hotel and head to the airport later."},
-      {t:"1:15 PM", type:"transit", name:"Don and Giang: SIN → SGN", blurb:"Vietnam Airlines VN 650. Lands 2:30 PM.", badges:["Flies home"]},
-      {t:"2:30 PM", type:"transit", name:"Don and Giang: SGN → Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."}
+      {t:"1:15 PM", type:"transit", name:"Don and Giang: SIN --> SGN", blurb:"Vietnam Airlines VN 650. Lands 2:30 PM.", badges:["Flies home"]},
+      {t:"2:30 PM", type:"transit", name:"Don and Giang: SGN --> Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."}
     ]
   },
   {
