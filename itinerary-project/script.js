@@ -134,37 +134,40 @@ const DATA = [
       {t:"9:00 AM", type:"activity", name:"Visit Meiji Jingu", blurb:"", photo:["images/meiji-shrine1.jpg"]},
       {t:"11:00 AM", type:"transit", name:"Meiji Jingu --> Zauo Shinjuku", blurb:"Walk from Meiji Jingu to Zauo Shinjuku.", badges:["~22 min, ~1 mile"]},
       {t:"11:30 AM", type:"activity", name:"Lunch at Zauo Shinjuku", blurb:"", photo:["images/zauo.jpg"]},
-      {t:"1:30 PM", type:"activity", name:"Shinjuku Samurai Museum + Shopping (optional)", blurb:"Walk ~1 mile from Zauo Shinjuku to Samurai Museum. Shopping at Hard Off Shinjuku Marui", photo:["images/samurai.jpg"], mapLink:"https://maps.app.goo.gl/QAEw2kYzWXfZ5j8Q8", mapLabel:"Samurai Museum Shinjuku"},
-      {t:"4:45 PM", type:"transit", name:"Shinjuku --> Shibuya Sky", blurb:"Ride JR Yamanote Line from Shinjuku Sta --> Shibuya Sta", badges:["~7 min","2 stops"]},
+      {t:"1:30 PM", type:"activity", name:"Explore & Shopping in Shinjuku", blurb:"Don Quijote, Loft, Hard-off"},
+      {t:"4:00 PM", type:"transit", name:"Shinjuku --> Shibuya Sky", blurb:"Ride JR Yamanote Line from Shinjuku Sta --> Shibuya Sta", badges:["~7 min","2 stops"]},
       {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top.", photo:["images/shibuyasky.jpg"]},
       {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit.", photo:["images/crossing.avif"]},
       {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here.", photo:["images/yokocho.jpg"]},
-      {t:"8:00 PM", type:"transit", name:"Shibuya → Shiodome, rest early", blurb:"Ginza Line direct.", badges:["~17 min","¥210 (~$1)"]}
+      {t:"8:00 PM", type:"transit", name:"Shibuya --> Shiodome, rest early", blurb:"Ginza Line direct.", badges:["~17 min","¥210 (~$1)"]}
     ]
   },
   {
-    label: "Tue Dec 22", sub: "Toyosu · Skytree · Bay Cruise", city: "Toyosu / Akasuka", stamp: "TOKYO", 
+    label: "Tue Dec 22", sub: "Toyosu · Skytree", city: "Toyosu / Akasuka", stamp: "TOKYO", 
     stops: [
-      {t:"4:15 AM", type:"transit", name:"→ Toyosu Market", blurb:"Too early for trains — taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
+      {t:"4:15 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
       {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
-      {t:"8:00 AM", type:"transit", name:"→ Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
+      {t:"8:00 AM", type:"transit", name:"--> Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
-      {t:"11:40 AM", type:"transit", name:"→ Skytree", blurb:"Exit Imperial palace via Ōte-mon Gate. Walk to Otemachi Station. Ride Hanzomon Line from Otemachi Sta --> Oshiage Sta.", badges:["~20 min","¥210–240 (~$1–2)"]},
+      {t:"11:40 AM", type:"transit", name:"--> Skytree", blurb:"Exit Imperial palace via Ōte-mon Gate. Walk to Otemachi Station. Ride Hanzomon Line from Otemachi Sta --> Oshiage Sta.", badges:["~20 min","¥210–240 (~$1–2)"]},
       {t:"12:00 PM", type:"activity", name:"Lunch near Tokyo Skytree", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Tokyo Skytree Observation", blurb:"", photo:"images/skytree.jpg"},
-      {t:"3:45 PM", type:"transit", name:"→ Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
+      {t:"3:45 PM", type:"transit", name:"--> Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
       {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:"", photo:"images/sensoji.jpg"},
-      {t:"5:30 PM", type:"transit", name:"→ Cruise Pier", blurb:"Toei Asakusa Line direct from Asakusa Sta --> Daimon Sta. Cruise pier is near by Daimon Station.", badges:["~15 min","¥210 (~$1)"]},
-      {t:"5:45 PM", type:"activity", name:"Tokyo Bay Cruise (optional) + Dinner", blurb:"", photo:"images/nightcruise.jpg"},
-      {t:"9:45 PM", type:"transit", name:"Back to Shiodome, rest early", blurb:"Short walk — Daimon Sta. is right by the hotel.", badges:["~5 min"]}
+      {t:"5:30 PM", type:"transit", name:"Sensō-ji Temple --> Samurai Museum", blurb:"Walk ~10 min from Sensō-ji Temple to Samurai Museum", badges:["~10 mins"]},
+      {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum + Dinner", blurb:"Last Museum entry at 6:00 PM", photo:"images/samurai.jpg"},
+      {t:"8:00 PM", type:"transit", name:"Samurai Museum --> Tokyo Tower", blurb:"• Walk ~15mins from museum to Kuramae Sta.\n• Ride Oedo Line from Kuramae Sta --> Akabanebashi Sta (~23 mins, 10 stops). Walk ~10 mins to Tokyo Tower", badges:["~45 min", "¥220"]},
+      {t:"9:00 PM", type:"activity", name:"Visit Tokyo Tower", blurb:"", photo:"images/tokyotower.jpg"},
+      {t:"10:00 PM", type:"transit", name:"Tokyo Tower --> Hotel, Rest", blurb:"Walk ~20 mins back to hotel", badges:["~20 mins"]},
     ]
   },
   {
     label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Mt. Fuji", stamp: "TOKYO",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Pickup & drop-off included in tour price. Select Small Group Tour (Max 9) option on Klook.", mapLink:"https://www.klook.com/en-US/activity/100747-mount-fuji-arakurayama-park-oshino-hakkai-kawaguchiko-bus-tour-tokyo/", mapLabel:"Mt Fuji Full Day Tour", photo:["images/fuji.jpg"], badges:["$70 pp"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner & Shopping in Akihabara", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]},
-      {t:"9:45 PM", type:"transit", name:"Akihabara → Shiodome, rest", blurb:"Hibiya Line direct.", badges:["~12 min","¥180–200 (~$1)"]}
+      {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Klook Tour Booked. Confirm #KKB009572. Picked up & Dropped off at hotel. Back to hotel ~6:30PM.", mapLink:"https://www.klook.com/en-US/activity/100747-mount-fuji-arakurayama-park-oshino-hakkai-kawaguchiko-bus-tour-tokyo/", mapLabel:"Mt Fuji Full Day Tour", photo:["images/fuji.jpg"], badges:["$60 pp"]},
+      {t:"7:00 PM", type:"transit", name:"Hotel --> Akihabara", blurb:"Ride JR Yamanote Line from Hamamatsuchō Sta --> Akihabara Sta.", badges:["~22 min","¥200 (~$1)"]},
+      {t:"7:30 PM", type:"activity", name:"Dinner, Shopping in Akihabara and visit Ameyoko market (optional)", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]},
+      {t:"9:45 PM", type:"transit", name:"Akihabara --> hotel, rest", blurb:"Ride JR Yamanote Line from Akihabara Sta --> Hamamatsuchō Sta.", badges:["~20 min","¥200 (~$1)"]}
     ]
   },
 
