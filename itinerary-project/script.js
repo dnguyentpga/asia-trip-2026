@@ -122,9 +122,15 @@ const DATA = [
       {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Confirm # ZE3PB2. Arriving 3:25 PM JST", badges:["$250 pp"]},
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
-      {t:"5:00 PM", type:"transit", name:"NRT --> Shimbashi (hotel)", blurb:"• Limited Express Skyliner --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
+      {t:"5:00 PM", type:"transit", name:"NRT --> Hotel", blurb:"• Ride Limited Express Skyliner from NRT --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
       {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner, walk Shinjuku (Kabukicho) & rest", blurb:"Walk to Shiodome Sta., Oedo Line direct to Shinjuku.", photo:["images/kabukicho.jpg"], badges:["~12–15 min","¥180–210 (~$1)"]}
+      {t:"7:30 PM", type:"transit", name:"Hotel --> Akihabara", blurb:"Walk ~10min to Hamamatsuchō Sta. Ride JR Yamanote Line from Hamamatsuchō Sta --> Akihabara Sta.", badges:["~20 min","¥200 (~$1)"]},
+      {t:"8:00 PM", type:"activity", name:"Shopping at Akihabara", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]}, 
+      {t:"9:30 PM", type:"activity", name:"Dinner near Akihabara Station", blurb:""},  
+      {t:"10:30 PM", type:"transit", name:"Akihabara --> Kabukicho", blurb:"Ride Chūō-Sōbu Line from Akihabara Sta --> Shinjuku Sta. Walk ~10 min to Kabukicho.", badges:["~30 min","¥210 (~$2)"]},
+      {t:"11:00 PM", type:"activity", name:"Walk Kabukicho", blurb:"Tokyo nightlife district", photo:["images/kabukicho.jpg"]},
+      {t:"11:59 PM", type:"transit", name:"Kabukicho --> Hotel", blurb:"Ride Oedo Line from Shinjuku Sta --> Shiodome Sta. Walk ~10 min to hotel.", badges:["~30 min","¥210 (~$2)"], note:"Last Oedo Line departs Shinjuku Sta at 12:30AM. Make sure to catch the last train."}, 
+      {t:"12:30 AM", type:"activity", name:"Rest at hotel", blurb:""}    
     ]
   },
   {
@@ -139,13 +145,14 @@ const DATA = [
       {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top.", photo:["images/shibuyasky.jpg"]},
       {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit.", photo:["images/crossing.avif"]},
       {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here.", photo:["images/yokocho.jpg"]},
-      {t:"8:00 PM", type:"transit", name:"Shibuya --> Shiodome, rest early", blurb:"Ginza Line direct.", badges:["~17 min","¥210 (~$1)"]}
+      {t:"8:00 PM", type:"transit", name:"Shibuya --> Roppongi Hills (3 miles) --> Tokyo Tower (2 miles) --> Hotel (2 miles)", blurb:"Ride bike sharing rental. Docomo or LUUP.", photo:["images/towerlight.jpg"]},
+      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
     label: "Tue Dec 22", sub: "Toyosu · Skytree", city: "Toyosu / Akasuka", stamp: "TOKYO", 
     stops: [
-      {t:"4:15 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
+      {t:"4:30 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — ride taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
       {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
       {t:"8:00 AM", type:"transit", name:"--> Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
@@ -155,33 +162,34 @@ const DATA = [
       {t:"3:45 PM", type:"transit", name:"--> Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
       {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:"", photo:"images/sensoji.jpg"},
       {t:"5:30 PM", type:"transit", name:"Sensō-ji Temple --> Samurai Museum", blurb:"Walk ~10 min from Sensō-ji Temple to Samurai Museum", badges:["~10 mins"]},
-      {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum + Dinner", blurb:"Last Museum entry at 6:00 PM", photo:"images/samurai.jpg"},
-      {t:"8:00 PM", type:"transit", name:"Samurai Museum --> Tokyo Tower", blurb:"• Walk ~15mins from museum to Kuramae Sta.\n• Ride Oedo Line from Kuramae Sta --> Akabanebashi Sta (~23 mins, 10 stops). Walk ~10 mins to Tokyo Tower", badges:["~45 min", "¥220"]},
-      {t:"9:00 PM", type:"activity", name:"Visit Tokyo Tower", blurb:"", photo:"images/tokyotower.jpg"},
-      {t:"10:00 PM", type:"transit", name:"Tokyo Tower --> Hotel, Rest", blurb:"Walk ~20 mins back to hotel", badges:["~20 mins"]},
+      {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum", blurb:"Last Museum entry at 6:00 PM", photo:"images/samurai.jpg"},
+      {t:"7:30 PM", type:"transit", name:"Museum --> Ameyoko market", blurb:"• Walk ~5mins from museum to Tawaramachi Sta. \n• Ride Ginza Line from Tawaramachi Sta --> Ueno Sta (~5 mins, 2 stops). Walk ~5mins to Ameyoko market", badges:["~15 min","¥170"]},     
+      {t:"7:45 PM", type:"activity", name:"Ameyoko market & Dinner", blurb:"Vibrant, neon-lit streetfood alleyway", photo:["images/ameyoko.webp"]},         
+      {t:"10:00 PM", type:"transit", name:"Ameyoko market --> Hotel", blurb:"Ride JR Yamanote Line (clockwise) from Ueno Sta --> Hamamatsuchō Sta. Walk ~10 mins to hotel.", badges:["~30 mins"]},
+      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
     label: "Wed Dec 23", sub: "Mt. Fuji · Akihabara", city: "Mt. Fuji", stamp: "TOKYO",
     stops: [
-      {t:"7:00 AM", type:"activity", name:"Mt Fuji Private Tour", blurb:"Klook Tour Booked. Confirm #KKB009572. Picked up & Dropped off at hotel. Back to hotel ~6:30PM.", mapLink:"https://www.klook.com/en-US/activity/100747-mount-fuji-arakurayama-park-oshino-hakkai-kawaguchiko-bus-tour-tokyo/", mapLabel:"Mt Fuji Full Day Tour", photo:["images/fuji.jpg"], badges:["$60 pp"]},
-      {t:"7:00 PM", type:"transit", name:"Hotel --> Akihabara", blurb:"Ride JR Yamanote Line from Hamamatsuchō Sta --> Akihabara Sta.", badges:["~22 min","¥200 (~$1)"]},
-      {t:"7:30 PM", type:"activity", name:"Dinner, Shopping in Akihabara and visit Ameyoko market (optional)", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]},
-      {t:"9:45 PM", type:"transit", name:"Akihabara --> hotel, rest", blurb:"Ride JR Yamanote Line from Akihabara Sta --> Hamamatsuchō Sta.", badges:["~20 min","¥200 (~$1)"]}
+      {t:"7:00 AM", type:"activity", name:"Check out hotel & Mt Fuji Private Tour", blurb:"Klook Tour Booked. Confirm #KKB009572. Picked up & Dropped off at hotel. Back to hotel ~7:00PM.", mapLink:"https://www.klook.com/en-US/activity/100747-mount-fuji-arakurayama-park-oshino-hakkai-kawaguchiko-bus-tour-tokyo/", mapLabel:"Mt Fuji Full Day Tour", photo:["images/fuji.jpg"], badges:["$60 pp"], note:"Use luggage storage service at hotel"},
+      {t:"7:30 PM", type:"activity", name:"Dinner near hotel, then pick up luggage", blurb:""},
+      {t:"8:30 PM", type:"transit", name:"Hotel --> Shinagawa Station", blurb:"Walk ~10 mins from hotel to Hamamatsuchō Sta. Ride JR Yamanote Line from Hamamatsuchō Sta --> Shinagawa Sta.", badges:["~15 min","3 stops"]},
+      {t:"9:28 PM", type:"transit", name:"Shinagawa Station --> Kyoto Station", blurb:"Nozomi Shinkansen 291 — Arriving Kyoto Station ~11:30 PM.", photo:["images/bullet.jpg"], badges:["~2hr","¥19,000 pp (~$120)"], note:"To-the-minute exact departure time. Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
+      {t:"11:59 PM", type:"activity", name:"Check in hotel near Kyoto Station and rest", blurb:""}
+
     ]
   },
 
   {
     label: "Thu Dec 24", sub: "Kyoto", city: "Kyoto / Osaka", stamp: "KYOTO",
     stops: [
-      {t:"6:00 AM", type:"activity", name:"Check out Tokyo hotel", blurb:""},
-      {t:"7:00 AM", type:"transit", name:"Hotel --> Shinagawa Station", blurb:"Ride JR Yamanote Line (clockwise) from Hamamatsuchō Sta --> Shinagawa Sta. Shinagawa Sta is much easier to navigate than Tokyo Sta.", badges:["~15 min","3 stops"]},
-      {t:"7:30 AM", type:"transit", name:"Bullet Train to Kyoto Sta", photo:["images/bullet.jpg"], blurb:"Nozomi Shinkansen — sit right side, Mt. Fuji appears ~40–50 min in. Arriving Kyoto Station ~10:00 AM.", badges:["~2hr","¥19,000 pp (~$120)"], note:"Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
-      {t:"10:00 AM", type:"transit", name:"Kyoto Sta --> Kameoka Sta", blurb:"Ride JR San-In Line From Kyoto Sta --> Kameoka Sta. Arriving ~10:30 AM", badges:["~20 min","¥410 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luuggage to APA Namba Hotel in Osaka. Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"11:30 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
-      {t:"1:30 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area (bamboo forest) / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},
-      {t:"3:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Stat --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~4:15PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
-      {t:"4:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo Forest --> Senbon Torii --> Kojingamine Observation Deck.\n• Light dinner near Inari station after hike.", badges:["~2hrs RT hike"]},
+      {t:"8:30 AM", type:"activity", name:"Check out Kyoto hotel", blurb:""},
+      {t:"9:00 AM", type:"transit", name:"Kyoto Sta --> Kameoka Sta", blurb:"Ride JR San-In Line From Kyoto Sta --> Kameoka Sta. Arriving ~9:30 AM", badges:["~20 min","¥410 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luuggage to APA Namba Hotel in Osaka. Bring flashlight for Fushimi Inari Taisha hike later evening."},
+      {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
+      {t:"12:15 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area (bamboo forest) / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},
+      {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Stat --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
+      {t:"4:00 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo Forest --> Senbon Torii --> Kojingamine Observation Deck.\n• Light dinner near Inari station after hike.", badges:["~2hrs RT hike"]},
       {t:"7:00 PM", type:"transit", name:"Fushimi Inari Shrine --> Umeda Sky Building", blurb:"• Ride Nara Line from Inari Sta --> Kyoto Sta (~5mins, 2 stops)\n• Ride Special Rapid JR Kyoto line from Kyoto Sta --> Osaka Sta. Arriving ~9:00PM.\n• Walk ~15 mins to Umeda Sky Building", badges:["~1hr","¥840 pp (~$6)"]},
       {t:"9:30 PM", type:"activity", name:"Umeda Sky Building", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
       {t:"11:00 PM", type:"transit", name:"Umeda --> Namba", blurb:"• Ride Midosuji Line from Osaka Sta (via Umeda Sta) --> Namba Subway Sta. Walk ~10min to hotel\n• Receive luggage, check in hotel and rest", badges:["~20 min"], photo:["images/apa.jpg"]}
@@ -208,9 +216,9 @@ const DATA = [
   {
     label: "Sat Dec 26", sub: "Osaka --> Hanoi", city: "Hanoi", stamp: "HANOI\nARR",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
-      {t:"10:00 AM", type:"transit", name:"Hotel --> Kansai Airport", blurb:"• Walk to Kintetsu Nambaekinishiguchi bus stop.\n• Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
-      {t:"11:30 AM", type:"activity", name:"Arrive at KIX Airport, complete tax refund, check in flight.", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"], note:"Make sure to complete tax refund BEFORE checking in luggage."},
+      {t:"10:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
+      {t:"11:00 AM", type:"transit", name:"Hotel --> Kansai Airport", blurb:"• Walk to Kintetsu Nambaekinishiguchi bus stop.\n• Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
+      {t:"12:30 AM", type:"activity", name:"Arrive at KIX Airport, complete tax refund, check in flight. Lunch", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"], note:"Make sure to complete tax refund BEFORE checking in luggage."},
       {t:"3:30 PM", type:"transit", name:"KIX --> HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
       {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service.", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)"},
       {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
