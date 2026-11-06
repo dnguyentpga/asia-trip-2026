@@ -145,8 +145,8 @@ const DATA = [
       {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top.", photo:["images/shibuyasky.jpg"]},
       {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit.", photo:["images/crossing.avif"]},
       {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here.", photo:["images/yokocho.jpg"]},
-      {t:"8:00 PM", type:"transit", name:"Shibuya --> Roppongi Hills (3 miles) --> Tokyo Tower (2 miles) --> Hotel (2 miles)", blurb:"Ride bike sharing rental. Docomo or LUUP.", photo:["images/towerlight.jpg"]},
-      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""}
+      {t:"8:00 PM", type:"transit", name:"Shibuya --> Roppongi Hills (taxi ride) --> Tokyo Tower (bicycle: 2 miles) --> Hotel (bicycle: 2 miles)", blurb:"Ride bike sharing rental. Docomo or LUUP.", photo:["images/towerlight.jpg"]},
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
@@ -176,7 +176,7 @@ const DATA = [
       {t:"7:30 PM", type:"activity", name:"Dinner near hotel, then pick up luggage", blurb:""},
       {t:"8:30 PM", type:"transit", name:"Hotel --> Shinagawa Station", blurb:"Walk ~10 mins from hotel to Hamamatsuchō Sta. Ride JR Yamanote Line from Hamamatsuchō Sta --> Shinagawa Sta.", badges:["~15 min","3 stops"]},
       {t:"9:28 PM", type:"transit", name:"Shinagawa Station --> Kyoto Station", blurb:"Nozomi Shinkansen 291 — Arriving Kyoto Station ~11:30 PM.", photo:["images/bullet.jpg"], badges:["~2hr","¥19,000 pp (~$120)"], note:"To-the-minute exact departure time. Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
-      {t:"11:59 PM", type:"activity", name:"Check in hotel near Kyoto Station and rest", blurb:""}
+      {t:"11:59 PM", type:"activity", name:"Check in hotel near Kyoto Station and rest", blurb:"", mapLink:"https://maps.app.goo.gl/AXJG1jCYEXBQKasW8", mapLabel:"Rest at APA Hotel Kyoto Ekihigashi (Expedia Confirm #: 73582049899066)",photo:["images/apakyoto.jpg"]}
 
     ]
   },
@@ -185,7 +185,7 @@ const DATA = [
     label: "Thu Dec 24", sub: "Kyoto", city: "Kyoto / Osaka", stamp: "KYOTO",
     stops: [
       {t:"8:30 AM", type:"activity", name:"Check out Kyoto hotel", blurb:""},
-      {t:"9:00 AM", type:"transit", name:"Kyoto Sta --> Kameoka Sta", blurb:"Ride JR San-In Line From Kyoto Sta --> Kameoka Sta. Arriving ~9:30 AM", badges:["~20 min","¥410 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luuggage to APA Namba Hotel in Osaka. Bring flashlight for Fushimi Inari Taisha hike later evening."},
+      {t:"9:00 AM", type:"transit", name:"Kyoto Sta --> Kameoka Sta", blurb:"Ride JR San-In Line From Kyoto Sta --> Kameoka Sta. Arriving ~9:30 AM", badges:["~20 min","¥410 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luggage to APA Namba Hotel in Osaka. Bring flashlight for Fushimi Inari Taisha hike later evening."},
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"Adventure on a charming, traditional boat downstream", badges:["~2 hr","$40 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
       {t:"12:15 PM", type:"activity", name:"Arashiyama Park Nakanoshima Area (bamboo forest) / Togetsukyō Bridge", blurb:"Lunch", photo:["images/saganobridge.jpg"]},
       {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Stat --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
