@@ -24,14 +24,14 @@ const DATA = [
   {
     label: "Wed Dec 9", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"War Remnants Museum & Cu Chi Tunnels", blurb:"", photo:["images/warrem.jpg", "images/cuchi.jpg"], badges:["6 hrs"]},
+      {t:"10:00 AM", type:"activity", name:"War Remnants Museum", blurb:"", photo:["images/warrem.jpg"], badges:["6 hrs"]},
       {t:"5:00 PM", type:"activity", name:"Don works remote & Pho Di Bo & City Bus", blurb:"Online to 1:00 AM Thu.", photo:"images/phodibohcmc.jpg"}
     ]
   },
   {
     label: "Thu Dec 10", sub: "Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"7:30 AM", type:"activity", name:"Mekong Delta Full Day Tour", blurb:"Need to be at pick-up point by 7:30 AM. Back to Saigon ~5:00 PM", photo:["images/mekong.jpg"], mapLink:"https://www.klook.com/en-US/activity/29887-mekong-river-day-tour-ho-chi-minh/", mapLabel:"Mekong Delta Day Tour Klook", badges:["~9 hrs"]},
+      {t:"7:30 AM", type:"activity", name:"Cu Chi Tunnels & Mekong Delta Full Day Tour", blurb:"Klook Tour Booked. Confirm #FPK615086. Picked up at Liberty Central Saigon Citypoint Hotel. Back to hotel ~7:30PM.", photo:["images/cuchi.jpg","images/mekong.jpg"], mapLink:"https://maps.app.goo.gl/og1xpTpoJsapUsrj9", mapLabel:"Pick up Point", badges:["~12 hrs"]},
       {t:"7:00 PM", type:"activity", name:"Don works remote", blurb:"Online to 1:00 AM Fri."}
     ]
   },
@@ -54,15 +54,16 @@ const DATA = [
     label: "Sun Dec 13", sub: "Trị An — Family Visit", city: "Trị An", stamp: "TRI AN",
     stops: [
       {t:"10:00 AM", type:"activity", name:"Visit Family", blurb:"Trị An", photo:"images/caosu.jpg"},
-      {t:"7:00 PM", type:"activity",  name:"Tri An → Saigon (with Uncle Luc), check in hotel", blurb:"Rest in Saigon for early flight to Phu Quoc on Mon Dec 14", note:"Pack luggage, bring all necessary items. Wont return till Jan 9, 2027."}
+      {t:"7:00 PM", type:"activity",  name:"Tri An --> Saigon (with Uncle Luc), check in hotel", blurb:"Rest in Saigon for early flight to Phu Quoc on Mon Dec 14", note:"Pack luggage, bring all necessary items. Wont return till Jan 9, 2027.", mapLink:"https://maps.app.goo.gl/gyoGWZiCLuiA3nBTA", mapLabel:"Stay at Red Sun Airport Saigon Hotel (Expedia Confirm #: 73585111383825)"}
     ]
   },
   {
-    label: "Mon Dec 14", sub: "Saigon → Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
+    label: "Mon Dec 14", sub: "Saigon --> Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
-      {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:""},
-      {t:"6:50 AM", type:"transit", name:"SGN → PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
+      {t:"4:45 AM", type:"activity", name:"Check out hotel, head to airport", blurb:""},
+      {t:"6:50 AM", type:"transit", name:"SGN --> PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
       {t:"9:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
+      {t:"10:00 AM", type:"transit", name:"Thanh Nga Center --> Hotel", blurb:"Stop by hotel to drop off luggage using luggage storage service. Check in later. Head to Hon Thom Island Cable Car."},
       {t:"11:00 AM", type:"activity", name:"Hon Thom Island Cable Car, Lunch buffet", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg", note:"Cable car midday break 11:30 AM - 1:30 PM. Buffet Hours: 11:00 AM – 02:30 PM."},
       {t:"4:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)"},
       {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
@@ -92,7 +93,7 @@ const DATA = [
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour (Full Day, Dong Ba Market included).", mapLink:"https://www.klook.com/en-US/activity/1560-hue-discovery-half-full-day-tour-hue/", mapLabel:"Hue City Tour", note:"Luggage storage service at hotel after checking out."},
       {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue --> Quang Tri (Dong Ha) by car", blurb:"", note:"Contracted Transportation Service"},
-      {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:""}
+      {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:"", mapLink:"https://maps.app.goo.gl/KM7RgDcSFiY5Z3c48", mapLabel:"Stay at Mỹ Hương Hotel (Agoda Confirm #: 1076309570)"}
     ]
   },
   {
@@ -142,7 +143,7 @@ const DATA = [
       {t:"11:30 AM", type:"activity", name:"Lunch at Zauo Shinjuku", blurb:"", photo:["images/zauo.jpg"]},
       {t:"1:30 PM", type:"activity", name:"Explore & Shopping in Shinjuku", blurb:"Don Quijote, Loft, Hard-off"},
       {t:"4:00 PM", type:"transit", name:"Shinjuku --> Shibuya Sky", blurb:"Ride JR Yamanote Line from Shinjuku Sta --> Shibuya Sta", badges:["~7 min","2 stops"]},
-      {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top.", photo:["images/shibuyasky.jpg"]},
+      {t:"5:00 PM", type:"activity", name:"Shibuya Sky", blurb:"Book a timed ticket ahead — last entry is 9 PM. Catch sunset/dusk from the top. Ticket sale opens exactly 14 days before the date of visit (Dec 7 2026 @ 9:00 AM CST). Tickets sell out quickly !!!.", photo:["images/shibuyasky.jpg"]},
       {t:"6:15 PM", type:"activity", name:"Shibuya Crossing & Hachiko Statue", blurb:"Walk the Scramble Crossing after dark for the classic neon-lit view, then visit the Hachiko statue right outside Shibuya Station's Hachiko Exit.", photo:["images/crossing.avif"]},
       {t:"6:45 PM", type:"activity", name:"Center-Gai & Yokocho Food Court", blurb:"Dinner here.", photo:["images/yokocho.jpg"]},
       {t:"8:00 PM", type:"transit", name:"Shibuya --> Roppongi Hills (taxi ride) --> Tokyo Tower (bicycle: 2 miles) --> Hotel (bicycle: 2 miles)", blurb:"Ride bike sharing rental. Docomo or LUUP.", photo:["images/towerlight.jpg"]},
@@ -158,11 +159,11 @@ const DATA = [
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
       {t:"11:40 AM", type:"transit", name:"--> Skytree", blurb:"Exit Imperial palace via Ōte-mon Gate. Walk to Otemachi Station. Ride Hanzomon Line from Otemachi Sta --> Oshiage Sta.", badges:["~20 min","¥210–240 (~$1–2)"]},
       {t:"12:00 PM", type:"activity", name:"Lunch near Tokyo Skytree", blurb:""},
-      {t:"1:30 PM", type:"activity", name:"Tokyo Skytree Observation", blurb:"", photo:"images/skytree.jpg"},
+      {t:"1:30 PM", type:"activity", name:"Tokyo Skytree Observation", blurb:"Admission tickets booked", photo:"images/skytree.jpg", badges:["¥3,500 pp"]},
       {t:"3:45 PM", type:"transit", name:"--> Sensō-ji", blurb:"Tobu Skytree Line.", badges:["~3 min","¥180 (~$1)"]},
       {t:"4:00 PM", type:"activity", name:"Visit Sensō-ji Temple", blurb:"", photo:"images/sensoji.jpg"},
       {t:"5:30 PM", type:"transit", name:"Sensō-ji Temple --> Samurai Museum", blurb:"Walk ~10 min from Sensō-ji Temple to Samurai Museum", badges:["~10 mins"]},
-      {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum", blurb:"Last Museum entry at 6:00 PM", photo:"images/samurai.jpg"},
+      {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum", blurb:"Last Museum entry at 6:00 PM. Admission tickets booked.", photo:"images/samurai.jpg", badges:["¥3,300 pp"]},
       {t:"7:30 PM", type:"transit", name:"Museum --> Ameyoko market", blurb:"• Walk ~5mins from museum to Tawaramachi Sta. \n• Ride Ginza Line from Tawaramachi Sta --> Ueno Sta (~5 mins, 2 stops). Walk ~5mins to Ameyoko market", badges:["~15 min","¥170"]},     
       {t:"7:45 PM", type:"activity", name:"Ameyoko market & Dinner", blurb:"Vibrant, neon-lit streetfood alleyway", photo:["images/ameyoko.webp"]},         
       {t:"10:00 PM", type:"transit", name:"Ameyoko market --> Hotel", blurb:"Ride JR Yamanote Line (clockwise) from Ueno Sta --> Hamamatsuchō Sta. Walk ~10 mins to hotel.", badges:["~30 mins"]},
