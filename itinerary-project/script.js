@@ -99,10 +99,10 @@ const DATA = [
   {
     label: "Fri Dec 18", sub: "Quang Tri", city: "Quang Tri", stamp: "QUANG\nTRI",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Hien Luong Bridge and Vinh Moc Tunnel (if time permits)", blurb:"17th Parallel — Historic Hiền Lương Bridge", photo:["images/hienluong.webp"], note:"Contracted Transportation Service"},
-      {t:"12:00 PM", type:"transit", name:"Vinh Moc → Dong Ha & Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Quang Tri Citadel", blurb:"", photo:["images/citadel.jpg"]},
-      {t:"5:30 PM", type:"activity", name:"Back to Dong Ha & Rest", blurb:"", note:"Contracted Transportation Service"}
+      {t:"9:00 AM", type:"activity", name:"Truong Son National Cementary, Hien Luong Bridge and Vinh Moc Tunnel", blurb:"17th Parallel — Historic Hiền Lương Bridge", photo:["images/hienluong.webp"], note:"Quang Tri Day Tour", badges:["$50 pp"]},
+      {t:"12:00 PM", type:"transit", name:"Vinh Moc --> Dong Ha & Lunch", blurb:""},
+      {t:"2:30 PM", type:"activity", name:"Le Duan House & Quang Tri Citadel", blurb:"", photo:["images/citadel.jpg"]},
+      {t:"7:00 PM", type:"activity", name:"Thach Han River Rituals", blurb:"", note:"Quang Tri Day Tour", photo:["images/quangtri.jpg"]}
     ]
   },
   {
@@ -133,9 +133,6 @@ const DATA = [
       {t:"11:59 PM", type:"transit", name:"Tokyo Station --> Hotel", blurb:"Ride JR Yamanote line from Tokyo Sta --> Hamamatsuchō Sta. Walk ~10 min to hotel.", badges:["~5 min","¥200 (~$1)"]},  
       {t:"12:30 AM", type:"activity", name:"Rest at hotel", blurb:""}  
 
-  
-   
-  
     ]
   },
   {
@@ -174,7 +171,6 @@ const DATA = [
       {t:"10:30 PM", type:"activity", name:"Walk Kabukicho", blurb:"Tokyo nightlife district. ~15mins walk from train station.", photo:["images/kabukicho.jpg"]},
       {t:"11:59 PM", type:"transit", name:"Kabukicho --> Hotel", blurb:"• Walk ~15 mins to from Kabukicho to Shinjuku Sta\n• Ride Oedo Line from Shinjuku Sta --> Shiodome Sta. Walk ~10 min to hotel.", badges:["~30 min","¥210 (~$2)"], note:"Last Oedo Line departs Shinjuku Sta at 12:30AM. Make sure to catch the last train."}      
       
-
     ]
   },
   {
@@ -201,7 +197,7 @@ const DATA = [
       {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Stat --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
       {t:"3:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo forest --> Senbon Torii --> Kojingamine Observation Deck.", badges:["~3hrs RT hike"]},
       {t:"6:30 PM", type:"transit", name:"Fushimi Inari Shrine --> Umeda Sky Building", blurb:"• Ride Nara Line from Inari Sta --> Kyoto Sta (~5mins, 2 stops)\n• Ride Special Rapid JR Kyoto line from Kyoto Sta --> Osaka Sta. Arriving ~7:30 PM.\n• Walk ~15 mins to Umeda Sky Building", badges:["~1hr","¥840 pp (~$6)"]},
-      {t:"7:30 PM", type:"activity", name:"Umeda Sky Building & Dinner", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM."},
+      {t:"7:30 PM", type:"activity", name:"Umeda Sky Building & Dinner", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM. Ticket booked. Klook Confirm #5604592535.", badges:["$14 pp"]},
       {t:"9:30 PM", type:"transit", name:"Umeda Sky Building --> Osaka Castle", blurb:"Take a taxi ride to Osaka Castle. Walk ~15mins to castle rounds.", badges:["~15 min"]},   
       {t:"10:00 PM", type:"activity", name:"Visit Osaka Castle", blurb:"Osaka Castle Night Illumination", photo:["images/osakasunset.jpeg"]},      
       {t:"11:30 PM", type:"transit", name:"Osaka Castle --> hotel", blurb:"• Take a taxi ride to hotel\n• Receive luggage, check in hotel", badges:["~15 min"], photo:["images/apa.jpg"]},
@@ -256,7 +252,7 @@ const DATA = [
       {t:"10:30 AM", type:"activity", name:"Check out Hanoi hotel and lunch", note:"Use luggage storage service (most hotels offer) in Hanoi, avoid carrying heavy to Sapa."},
       {t:"2:00 PM", type:"activity", name:"Visit Hoa Lo Prison relic and shopping", blurb:"", photo:["images/hoalo.jpg"]},
       {t:"7:00 PM", type:"activity", name:"Dinner, head to rail station for Sapa", blurb:"", note:"Pick up light baggage for overnight train. Leave heavy luggage at storage service."},      
-      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi → Lao Cai", blurb:"Tonkin Heritage Train. Arrives Tue Dec 29, 6:00 AM.", photo:["images/tonkin.jpg"], note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Arrives Sapa Town ~7:30 AM."}
+      {t:"10:15 PM", type:"transit", name:"Sleeper Train Hanoi --> Lao Cai", blurb:"Vic Sapa Train. Arrives Tue Dec 29, 6:00 AM.", photo:["images/tonkin.jpg"], note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Arrives Sapa Town ~7:30 AM."}
     ]
   },
   {
@@ -273,39 +269,46 @@ const DATA = [
     stops: [
       {t:"8:00 AM", type:"activity", name:"Cat Cat Village & Fansipan Summit 1-Day Tour", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"], note:"Leave backpack at homestay, take only light daypack for the tour."},
       {t:"5:00 PM", type:"activity", name:"Shopping & Dinner at homestay", blurb:"", note:"Taxi from homestay to Lao Cai station. Ride shuttle (booked with train tickets) from Sapa town to Lao Cai station."},
-      {t:"9:30 PM", type:"transit", name:"Lao Cai → Hanoi Train", blurb:"Tonkin Heritage Train. Arrives Thu Dec 31, 5:30 AM.", photo:["images/tonkin.jpg"]}
+      {t:"9:30 PM", type:"transit", name:"Lao Cai --> Hanoi Train", blurb:"Vic Sapa Train. Arrives Thu Dec 31, 5:30 AM.", photo:["images/tonkin.jpg"]}
     ]
   },
   {
     label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
-      {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Tonkin Heritage Train."},
-      {t:"6:00 AM", type:"activity", name:"Check in La Santé Hotel hotel early, leave bags (if needed) and breakfast", blurb:"", note:"Book same hotel as before for convenient luggage storage. Need to contact for early check in."},
-      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour or Paragliding in Tam Dao", blurb:"", photo:["images/trangan.webp", "images/tamdao.jpg"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Trang An Youtube"},{url:"https://duluontamdao.vn/", label:"Tam Dao Paragliding"}]},     
+      {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Vic Sapa Train"},
+      {t:"6:00 AM", type:"activity", name:"Drop Luggage (if needed)", blurb:"", note:"Stop by La Santé Hotel, do not check in, just store luggage"},
+      {t:"8:00 AM", type:"activity", name:"Tràng An Ninh Binh Tour", blurb:"", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Trang An Youtube"}]},     
+      {t:"8:30 PM", type:"activity", name:"Check in La Santé Hotel", blurb:""},
       {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
   {
-    label: "Fri Jan 1", sub: "Hanoi --> Quang Ninh", city: "Halong Bay", stamp: "HALONG\nBAY",
+    label: "Fri Jan 1", sub: "Hanoi --> Quang Ninh", city: "Lan Ha Bay", stamp: "LAN HA\nBAY",
     stops: [
-      {t:"6:00 AM", type:"activity", name:"Full Day Lan Ha Bay Cruise", blurb:"Ride Grab to Opera House and get picked up by cruise shuttle, Hanoi -> Quảng Ninh.", photo:["images/lanha.webp"]},
-      {t:"9:30 PM", type:"activity", name:"Walk West Lake, Dinner and Rest", blurb:""}
+      {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:"Ride taxi to Opera House and get picked up by cruise shuttle at 7:30AM, Hanoi -> Quảng Ninh"},
+      {t:"7:00 AM", type:"activity", name:"Full Day Lan Ha Bay Cruise", blurb:"• Klook tour booked. Confirm # 5605697139\n• Back to Hanoi ~8:30PM", photo:["images/lanha.webp"], badges:["$65 pp"]},
+      {t:"9:30 PM", type:"activity", name:"Dinner, Walk West Lake & Rest", blurb:""}
     ]
   },
   {
     label: "Sat Jan 2", sub: "Ha Noi --> Da Nang", city: "Da Nang", stamp: "DA NANG",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Check out Ha Noi hotel", blurb:""},
-      {t:"1:55 PM", type:"transit", name:"HAN --> DAD", blurb:"Sun PhuQuoc Airways 9G 925. Arriving 3:15 PM.", badges:["$65 pp"]},      
-      {t:"4:30 PM", type:"activity", name:"Check in Da Nang hotel", blurb:"My Khe beach ocean view", photo:["images/mykhe.jpg"]},
-      {t:"6:00 PM", type:"activity", name:"Walk My Khe beach, night market & dinner", blurb:"", },
+      {t:"6:30 AM", type:"activity", name:"Check out La Santé Hotel", blurb:""},
+      {t:"10:15 AM", type:"transit", name:"HAN --> DAD", blurb:"Vietnam Airlines VN 159. Arriving 11:40 AM. Booked, Confirm # 5MTAD3", badges:["$71 pp"]},
+      {t:"12:30 PM", type:"activity", name:"Drop Luggage and Lunch", blurb:"", note:"Stop by Da Nang hotel, do not check in, just store luggage"},
+      {t:"2:30 PM", type:"activity", name:"Hai Van pass trail & Sơn Trà Peninsula", blurb:"", photo:["images/haivan.jpg"]},  
+      {t:"4:30 PM", type:"activity", name:"Check in Da Nang hotel", blurb:""},
+      {t:"6:00 PM", type:"activity", name:"Walk My Khe beach, night market & dinner", blurb:"", photo:["images/mykhe.jpg"]},
       {t:"8:30 PM", type:"activity", name:"Dragon Bridge show & Rest", blurb:"Dragon Bridge fire show starts at 9:00 PM for 15 mins", photo:["images/dragon.jpg"]}
     ]
   },
   {
     label: "Sun Jan 3", sub: "Da Nang · Hoi An", city: "Da Nang", stamp: "DA NANG",
     stops: [
-      {t:"8:30 AM", type:"activity", name:"Hai Van pass trail & Sơn Trà Peninsula", blurb:"", photo:["images/haivan.jpg"]},
+
+      {t:"8:30 AM", type:"transit", name:"Da Nang --> My Son Sanctuary (grab or taxi). Arriving ~9:30 AM", blurb:"", badges:["~1hr"]},      
+      {t:"10:00 AM", type:"activity", name:"Visit My Son Sanctuary", blurb:"Remarkable ruined Champa temples in Central Vietnam", badges:["~2.5hr"], photo:["images/myson.jpg"]},  
+      {t:"12:30 PM", type:"transit", name:"My Son Sanctuary --> Da Nang (grab or taxi). Arriving ~1:30 PM", blurb:"", badges:["~1hr"]}, 
       {t:"3:30 PM", type:"transit", name:"Da Nang --> Hoi An (grab or taxi)", blurb:"", badges:["~1hr"]},
       {t:"4:30 PM", type:"activity", name:"Visit Hoi An Ancient Town, Dinner", blurb:"yellow merchant houses, Japanese Covered Bridge, iconic silk lanterns (6:00-6:30 PM)", photo:["images/hoian.jpg"]},
       {t:"8:30 PM", type:"transit", name:"Hoi An --> Da Nang", blurb:""},
@@ -313,30 +316,37 @@ const DATA = [
     ]
   },
   {
-    label: "Mon Jan 4", sub: "Da Nang --> Saigon", city: "Da Nang / Saigon", stamp: "SAIGON",
+    label: "Mon Jan 4", sub: "Da Nang --> Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Check out hotel", blurb:"", note:"Use hotel luggage strorage service. Leave heavy luggage at hotel, take only light daypack for My Son."},   
-      {t:"8:30 AM", type:"transit", name:"Da Nang --> My Son Sanctuary (grab or taxi). Arriving ~9:30 AM", blurb:"", badges:["~1hr"]},      
-      {t:"10:00 AM", type:"activity", name:"Visit My Son Sanctuary", blurb:"Remarkable ruined Champa temples in Central Vietnam", badges:["~2.5hr"], photo:["images/myson.jpg"]},  
-      {t:"12:30 PM", type:"transit", name:"My Son Sanctuary --> Da Nang (grab or taxi). Arriving ~1:30 PM", blurb:"", badges:["~1hr"]},   
-      {t:"2:00 PM", type:"transit", name:"Lunch & Pick up luggage from hotel, DAD --> SGN", blurb:""},
-      {t:"6:15 PM", type:"transit", name:"DAD --> SGN. Arriving ~7:40 PM", blurb:"Vietjet VJ 633", badges:["~1.5hr", "$35 pp"]},  
-      {t:"8:30 PM", type:"transit", name:"SGN --> HCM City District 1", blurb:"", badges:["30mins"]},  
-      {t:"9:30 PM", type:"activity", name:"Walk Nguyen Hue street, Dinner & Rest", blurb:""}
+      {t:"6:30 AM", type:"activity", name:"Check out hotel", blurb:"", note:""},   
+      {t:"9:45 AM", type:"transit", name:"DAD --> SGN. Arriving ~11:15 AM", blurb:"Sun PhuQuoc Air. 9G 967. Booked, Confirm # 7JCLZV", badges:["$50 pp"]},  
+      {t:"11:59 AM", type:"transit", name:"SGN --> HCM City District 1", blurb:"", badges:["30mins"], note:"Drop Luggage at Hotel, do not check in."},  
+      {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
+      {t:"2:30 PM", type:"activity", name:"HCM City Central District: War Museum, Independence Palace, Central Post, etc", blurb:""},
+      {t:"4:00 PM", type:"activity", name:"Check in Hotel", blurb:""},
+      {t:"4:30 PM", type:"activity", name:"Saigon River Sunset Cruise", blurb:"", badges:["$20 pp"], photo:["images/saigonsunset.jpg"]},
+      {t:"7:00 PM", type:"activity", name:"Saigon Night Sightseeing Bus", blurb:"", badges:["$10 pp"], photo:["images/saigonbus.jpg"]},
+      {t:"9:00 PM", type:"activity", name:"Night market & Nguyen Hue Street", blurb:"", photo:"images/phodibohcmc.jpg"},
+      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""},
     ]
   },
   {
     label: "Tue Jan 5", sub: "Ho Chi Minh City", city: "Saigon", stamp: "SAIGON",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"HCM City", blurb:""}
+      {t:"8:00 AM", type:"activity", name:"Cu Chi Tunnel Half Day Tour", blurb:""},
+      {t:"4:00 PM", type:"activity", name:"Relax & Shopping", blurb:""}
     ]
   },
   {
     label: "Wed Jan 6", sub: "Saigon --> Singapore", city: "Saigon / Singapore", stamp: "SIN\nARR",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Check out hotel, shopping and relax HCM City", blurb:""},
-      {t:"5:10 PM", type:"transit", name:"SGN → SIN, uber to hotel", blurb:"Vietnam Airlines VN 657."},
-      {t:"8:00 PM", type:"activity", name:"Check in hotel, Dinner, Rest", blurb:""}
+      {t:"4:00 AM", type:"activity", name:"Check out hotel, Taxi ride to airport", blurb:""},
+      {t:"6:50 AM", type:"transit", name:"SGN --> SIN, uber to hotel", blurb:"VietJet Air VJ 813. Arriving ~10:15 AM. Booked, Confirm # FX5WDF", badges:["$74 pp"]},
+      {t:"12:00 PM", type:"activity", name:"Drop off Luggage and Lunch", blurb:"", note:"Stop by Singapore hotel, do not check in, just store luggage"},
+      {t:"2:30 PM", type:"activity", name:"Explore Singapore", blurb:""},
+      {t:"4:30 PM", type:"activity", name:"Check in hotel", blurb:""},
+      {t:"6:30 PM", type:"activity", name:"Explore Singapore at Night, Dinner", blurb:""},
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
