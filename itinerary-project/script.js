@@ -294,7 +294,7 @@ const DATA = [
     label: "Sat Jan 2", sub: "Ha Noi --> Da Nang", city: "Da Nang", stamp: "DA NANG",
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out La Santé Hotel", blurb:""},
-      {t:"10:15 AM", type:"transit", name:"HAN --> DAD", blurb:"Vietnam Airlines VN 159. Arriving 11:40 AM. Booked, Confirm # 5MTAD3", badges:["$71 pp"]},
+      {t:"10:15 AM", type:"transit", name:"HAN --> DAD", blurb:"Vietnam Airlines VN 159. Arriving 11:40 AM. Booked, Confirm # 5MTAD3", badges:["$97 pp"]},
       {t:"12:30 PM", type:"activity", name:"Drop Luggage and Lunch", blurb:"", note:"Stop by Da Nang hotel, do not check in, just store luggage"},
       {t:"2:30 PM", type:"activity", name:"Hai Van pass trail & Sơn Trà Peninsula", blurb:"", photo:["images/haivan.jpg"]},  
       {t:"4:30 PM", type:"activity", name:"Check in Da Nang hotel", blurb:""},
@@ -319,7 +319,7 @@ const DATA = [
     label: "Mon Jan 4", sub: "Da Nang --> Saigon", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out hotel", blurb:"", note:""},   
-      {t:"9:45 AM", type:"transit", name:"DAD --> SGN. Arriving ~11:15 AM", blurb:"Sun PhuQuoc Air. 9G 967. Booked, Confirm # 7JCLZV", badges:["$50 pp"]},  
+      {t:"9:45 AM", type:"transit", name:"DAD --> SGN. Arriving ~11:15 AM", blurb:"Sun PhuQuoc Air. 9G 967. Booked, Confirm # 7JCLZV", badges:["$108 pp"]},  
       {t:"11:59 AM", type:"transit", name:"SGN --> HCM City District 1", blurb:"", badges:["30mins"], note:"Drop Luggage at Hotel, do not check in."},  
       {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
       {t:"2:30 PM", type:"activity", name:"HCM City Central District: War Museum, Independence Palace, Central Post, etc", blurb:""},
