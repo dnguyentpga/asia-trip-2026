@@ -124,7 +124,7 @@ const DATA = [
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
       {t:"5:00 PM", type:"transit", name:"NRT --> Hotel", blurb:"• Ride Limited Express Skyliner from NRT --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
-      {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥143,298 (~$896)"]},
+      {t:"7:00 PM", type:"activity", name:"Check in hotel Tokyo", blurb:"Mitsui Garden Hotel Shiodome Italia-gai · Conf# 3788-8853-7416", photo:["images/mitsui.jpg"], badges:["¥100,263 (~$650)"]},
       {t:"7:30 PM", type:"transit", name:"Hotel --> Akihabara", blurb:"Walk ~10min to Hamamatsuchō Sta. Ride JR Yamanote Line from Hamamatsuchō Sta --> Akihabara Sta.", badges:["~20 min","¥200 (~$1)"]},
       {t:"8:00 PM", type:"activity", name:"Shopping at Akihabara", blurb:"Yodobashi Akiba", photo:["images/akihabara.jpg"]}, 
       {t:"10:00 PM", type:"activity", name:"Dinner near Akihabara Station", blurb:""},  
@@ -180,7 +180,7 @@ const DATA = [
       {t:"7:30 PM", type:"activity", name:"Dinner near hotel, then pick up luggage", blurb:""},
       {t:"8:30 PM", type:"transit", name:"Hotel --> Shinagawa Station", blurb:"Walk ~10 mins from hotel to Hamamatsuchō Sta. Ride JR Yamanote Line from Hamamatsuchō Sta --> Shinagawa Sta.", badges:["~15 min","3 stops"]},
       {t:"9:28 PM", type:"transit", name:"Shinagawa Station --> Kyoto Station", blurb:"Nozomi Shinkansen 291 — Arriving Kyoto Station ~11:30 PM.", photo:["images/bullet.jpg"], badges:["~2hr","¥19,000 pp (~$120)"], note:"To-the-minute exact departure time. Reserve free oversized-luggage seat if bags exceed 160cm combined dimensions."},
-      {t:"11:59 PM", type:"activity", name:"Check in hotel near Kyoto Station and rest", blurb:"", mapLink:"https://maps.app.goo.gl/AXJG1jCYEXBQKasW8", mapLabel:"Rest at APA Hotel Kyoto Ekihigashi (Expedia Confirm #: 73582049899066)",photo:["images/apakyoto.jpg"]}
+      {t:"11:59 PM", type:"activity", name:"Check in hotel near Kyoto Station and rest", blurb:"", mapLink:"https://maps.app.goo.gl/AXJG1jCYEXBQKasW8", mapLabel:"Rest at APA Hotel Kyoto Ekihigashi (Expedia Confirm #: 73582049899066)",photo:["images/apakyoto.jpg"], badges:["$115"]}
 
     ]
   },
@@ -200,7 +200,7 @@ const DATA = [
       {t:"7:30 PM", type:"activity", name:"Umeda Sky Building & Dinner", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM. Ticket booked. Klook Confirm #5604592535.", badges:["$14 pp"]},
       {t:"9:30 PM", type:"transit", name:"Umeda Sky Building --> Osaka Castle", blurb:"Take a taxi ride to Osaka Castle. Walk ~15mins to castle rounds.", badges:["~15 min"]},   
       {t:"10:00 PM", type:"activity", name:"Visit Osaka Castle", blurb:"Osaka Castle Night Illumination", photo:["images/osakasunset.jpeg"]},      
-      {t:"11:30 PM", type:"transit", name:"Osaka Castle --> hotel", blurb:"• Take a taxi ride to hotel\n• Receive luggage, check in hotel", badges:["~15 min"], photo:["images/apa.jpg"]},
+      {t:"11:30 PM", type:"transit", name:"Osaka Castle --> hotel", blurb:"• Take a taxi ride to hotel\n• Receive luggage, check in hotel", badges:["~15 min"], photo:["images/apa.jpg"], badges:["$295"]},
       {t:"11:59 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
