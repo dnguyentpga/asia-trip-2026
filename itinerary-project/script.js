@@ -199,12 +199,12 @@ const DATA = [
     stops: [
       {t:"6:45 AM", type:"activity", name:"Check out Kyoto hotel", blurb:""},
       {t:"7:30 AM", type:"transit", name:"Kyoto Sta --> Arashiyama", blurb:"Ride JR San-In Line From Kyoto Sta --> Saga-Arashiyama Sta. Arriving ~8:00 AM", badges:["~20 min","¥200 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luggage to APA Namba Hotel in Osaka. Crosta Service is located on B1 Floor, in front of the JR Central Gate on the north side of Kyoto Station. Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"8:00 AM", type:"activity", name:"Arashiyama Bamboo Forest (if not crowded) & Tenryu-ji Temple", blurb:"15mins walk from train station.", photo:["images/tenryu-ji.jpg"], badges:["~1 hr"]},      
-      {t:"9:15 AM", type:"transit", name:"Saga-Arashiyama Sta --> Kameoka Sta", blurb:"Walk back to Saga-Arashiyama Sta. Ride JR Sagano Line from Saga-Arashiyama Sta --> Kameoka Sta. Arriving ~9:30AM. Hop off/on at Hozukyō Sta for sightseeing, if time permitted.", badges:["~10 min","¥200 pp"]},      
+      {t:"8:00 AM", type:"activity", name:"Tenryu-ji Temple", blurb:"Ride taxi from station and explore the temple (get Goshuin stamp).", photo:["images/tenryu-ji.jpg"], badges:["~1 hr"]},      
+      {t:"9:15 AM", type:"transit", name:"Saga-Arashiyama Sta --> Kameoka Sta", blurb:"Ride taxi back to Saga-Arashiyama Sta. Ride JR Sagano Line from Saga-Arashiyama Sta --> Kameoka Sta. Arriving ~9:30AM. Hop off/on at Hozukyō Sta for sightseeing, if time permitted.", badges:["~10 min","¥200 pp"]},      
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"• 2hr Adventure on a charming, traditional boat downstream\n• Klook Tour Booked. Confirm #MRH426946", badges:["~2 hr","$38 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
       {t:"12:15 PM", type:"activity", name:"Togetsukyō Bridge", blurb:"Lunch near Saga-Arashiyama Sta", photo:["images/saganobridge.jpg"]},
-      {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Stat --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
-      {t:"3:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo forest --> Senbon Torii --> Kojingamine Observation Deck.", badges:["~3hrs RT hike"]},
+      {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Sta --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
+      {t:"3:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo forest --> Senbon Torii --> Kojingamine Observation Deck.", badges:["~3hrs RT hike"], note:"Inari bamboo forest is on a dirt trail, hidden on right side of the main paved path."},
       {t:"6:30 PM", type:"transit", name:"Fushimi Inari Shrine --> Umeda Sky Building", blurb:"• Ride Nara Line from Inari Sta --> Kyoto Sta (~5mins, 2 stops)\n• Ride Special Rapid JR Kyoto line from Kyoto Sta --> Osaka Sta. Arriving ~7:30 PM.\n• Walk ~15 mins to Umeda Sky Building", badges:["~1hr","¥840 pp (~$6)"]},
       {t:"7:30 PM", type:"activity", name:"Umeda Sky Building & Dinner", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM. Ticket booked. Klook Confirm #5604592535.", badges:["$14 pp"]},
       {t:"9:30 PM", type:"transit", name:"Umeda Sky Building --> Osaka Castle", blurb:"Take a taxi ride to Osaka Castle. Walk ~15mins to castle rounds.", badges:["~15 min"]},   
@@ -221,7 +221,7 @@ const DATA = [
       {t:"10:00 AM", type:"activity", name:"Visit Mizuno Tanrenjo & Lunch in Sakai (cheaper than Namba)", photo:["images/knife.webp"], note:"Small family-run shops, forging takes place between 9:30 AM and 11:30 AM. Contact Instagram @mizunotanrenjo to confirm hours."},
       {t:"1:00 PM", type:"transit", name:"Sakai --> Namba", blurb:"Back to Nankai Namba Train Station via Nankai Main Line (~12 mins, 7 stops). Transfer to Osaka Namba Station.", badges:["~35mins","¥300 pp"]}, 
       {t:"1:30 PM", type:"transit", name:"Namba --> Nara", blurb:"Ride Kintetsu-Nara line from Osaka-Namba Sta --> Kintetsu-Nara Sta. Arriving ~2:15PM. Head directly to Great Buddha Hall to get goshuin stamp.", badges:["~40mins","¥700 pp"]},  
-      {t:"2:30 PM", type:"activity", name:"Todai-Ji & Nara Park", blurb:"Visit Todai-ji, Nara Deer Park and Wakakusayama Hill.", photo:["images/nara.jpg"]},    
+      {t:"2:30 PM", type:"activity", name:"Todai-Ji & Nara Park", blurb:"Visit Todai-ji (get Goshuin stamp), Nara Deer Park and Wakakusayama Hill.", photo:["images/nara.jpg"]},    
       {t:"5:30 PM", type:"transit", name:"Nara --> Namba", blurb:"Ride Ltd.Exp.AONIYOSHI sighseeing train from Kintetsu-Nara Sta --> Osaka-Namba Sta. Arriving ~18:20PM.", badges:["~1hr","¥2500 pp"], note:"Ltd.Exp.AONIYOSHI departs from Kintetsu-Nara Sta at 5:36PM sharp. Make sure to reserve seats 30 days in advance at Kintetsu counter or online due to popularity."},            
       {t:"6:45 PM", type:"activity", name:"Shopping at Amerikamura Free Market B.B GARAGE", blurb:"Vintage thrift store", photo:["images/osakathrift.jpeg"], mapLink:"https://maps.app.goo.gl/e6URuRsKWpQPttRg9", mapLabel:"Amerikamura Free Market B.B GARAGE"},            
       {t:"8:30 PM", type:"activity", name:"Tombori River Cruise", blurb:"• 20-min Tombori River Cruise\n• Boarding at Tazaemon Bridge Pier\n• Tickets booked. Check in 15mins before departure.", photo:["images/dotonbori.jpg"], badges:["¥2000 pp"]},      
@@ -236,9 +236,10 @@ const DATA = [
       {t:"10:00 AM", type:"activity", name:"Check out hotel Osaka", blurb:""},
       {t:"11:00 AM", type:"transit", name:"Hotel --> Kansai Airport", blurb:"• Walk to Kintetsu Nambaekinishiguchi bus stop.\n• Ride Kansai Airport Limousine Bus.", badges:["~1hr bus ride"], note:"Depart from the 2nd floor of the OCAT (Osaka City Air Terminal) building, located on Platform 9."},
       {t:"12:30 AM", type:"activity", name:"Arrive at KIX Airport, complete tax refund, check in flight. Lunch", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"], note:"Make sure to complete tax refund BEFORE checking in luggage."},
-      {t:"3:30 PM", type:"transit", name:"KIX --> HAN VJ 931. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
-      {t:"7:15 PM", type:"activity", name:"Arrive in HAN, clear customs and immigration", blurb:" Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service.", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)"},
-      {t:"10:30 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
+      {t:"3:30 PM", type:"transit", name:"KIX --> HAN VJ 931. Arriving 7:15 PM. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"]},
+      {t:"9:00 PM", type:"transit", name:"HAN airport --> hotel", blurb:"Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service.", badges:["~1 hr"]},
+      {t:"10:15 PM", type:"activity", name:"Check in La Santé Hotel", blurb:" ", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)"}, 
+      {t:"10:30 PM", type:"activity", name:"Dinner, Walk West Lake and Rest", blurb:""}
     ]
   },
 
@@ -250,7 +251,7 @@ const DATA = [
       {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:"", photo:["images/qtg.jpg"]},
       {t:"5:20 PM", type:"activity", name:"Water puppet show", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]},        
       {t:"7:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:"", photo:["images/traincoffee.jpg"]},
-      {t:"8:00 PM", type:"activity", name:"City Walk (stop by Opera House) and Rest", blurb:""}
+      {t:"8:00 PM", type:"activity", name:"City Walk (Hoan Kiem lake, Opera House) and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
       
     ]
   },
