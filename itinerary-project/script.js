@@ -61,30 +61,39 @@ const DATA = [
     label: "Mon Dec 14", sub: "Saigon --> Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
       {t:"4:45 AM", type:"activity", name:"Check out hotel, head to airport", blurb:""},
-      {t:"6:50 AM", type:"transit", name:"SGN --> PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM. Pick up rental car.", mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC"},
-      {t:"9:00 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},
-      {t:"10:00 AM", type:"transit", name:"Thanh Nga Center --> Hotel", blurb:"Stop by hotel to drop off luggage using luggage storage service. Check in later. Head to Hon Thom Island Cable Car."},
-      {t:"11:00 AM", type:"activity", name:"Hon Thom Island Cable Car, Lunch buffet", blurb:"Ga Ánh Dương.", photo:"images/honthom.jpg", note:"Cable car midday break 11:30 AM - 1:30 PM. Buffet Hours: 11:00 AM – 02:30 PM."},
-      {t:"4:00 PM", type:"activity", name:"Check in hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)"},
-      {t:"6:30 PM", type:"activity", name:"Sunset Town Show & Night Market & Rest", blurb:"Sunset Town.", photo:"images/sunsettownshow.jpg"}
+      {t:"6:50 AM", type:"transit", name:"SGN --> PQC (with Uncle Luc). VietJet VJ 329. Confirm # YKH7RA", blurb:"Arriving 7:50 AM", badges:["$52 pp"]},
+      {t:"9:00 AM", type:"activity", name:"Pick up rental car", blurb:"",mapLink:"https://kiengiangtravel.vn/thue-xe-o-to-tu-lai-phu-quoc/", mapLabel:"THUÊ XE Ô TÔ TỰ LÁI PHÚ QUỐC", badges:["$95"]},      
+      {t:"9:45 AM", type:"activity", name:"Thanh Nga Center (Phu Quoc Dog)", blurb:"Trung tâm bảo tồn chó xoáy Phú Quốc trang trại Thanh Nga.", photo:"images/chophuquoc.jpg"},      
+      {t:"11:30 AM", type:"transit", name:"Thanh Nga Center --> Labe Phú Quốc Hotel", blurb:"Stop by local restaurants for lunch. Drop off luggage at hotel using luggage storage service. Check in later. Park car and walk ~15 mins to Sunset Town cable car station"},
+      {t:"2:30 PM", type:"activity", name:"Hon Thom Island Cable Car", blurb:"Ga Ánh Dương. Tickets booked.", photo:"images/honthom.jpg", note:"Cable car midday break 11:30 AM - 1:30 PM.", badges:["$32 pp"]},    
+      {t:"4:30 PM", type:"activity", name:"Ride cable car back to Sunset Town.", blurb:""},      
+      {t:"5:30 PM", type:"activity", name:"Check in Labe Phú Quốc Hotel", blurb:"", mapLink:"https://maps.app.goo.gl/KiaMRZm5YrGEErdx9", mapLabel:"Stay at Labe Phú Quốc Hotel (Expedia Confirm #: 73560227782042)", badges:["$73"]}, 
+      {t:"6:00 PM", type:"activity", name:"Walk Sunset town and Night Market, Dinner", blurb:"VuiFest Night Market"},
+      {t:"8:45 PM", type:"activity", name:"Sunset Town show: Kiss of the Sea", blurb:"Outdoor night show performed over the ocean in Sunset Town. Tickets booked.", photo:"images/sunsettownshow.jpg", badges:["$32 pp"]},    
+      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""}    
     ]
   },
   {
     label: "Tue Dec 15", sub: "Phu Quoc", city: "Phu Quoc", stamp: "PHU\nQUOC",
     stops: [
-      {t:"10:00 AM", type:"activity", name:"Private Coral Snorkel Trip", blurb:"", photo:["images/phuquoccoral.jpg"], mapLink:"https://kiengiangtravel.vn/bang-gia-thue-cano-phu-quoc/", mapLabel:"Thuê Cano Phú Quốc", badges:["$100"]},
+      {t:"8:00 AM", type:"activity", name:"Check out Labe Phú Quốc Hotel", blurb:"Use luggage storage service at hotel"},      
+      {t:"9:00 AM", type:"activity", name:"Private Coral Snorkel Trip + Meals", blurb:"Depart from An Thoi port", photo:["images/cano.jpeg"], mapLink:"https://kiengiangtravel.vn/bang-gia-thue-cano-phu-quoc/", mapLabel:"Thuê Cano Phú Quốc", badges:["6hrs","$146"]},
+      {t:"4:00 PM", type:"activity", name:"Stop by hotel, pick up luggage", blurb:""},   
       {t:"5:00 PM", type:"activity", name:"Khai Hoan Fish Sauce Barrel House", blurb:"Doanh Nghiệp Tư Nhân Hải Sản Khải Hoàn.", photo:["images/fishsauce.jpg"]},
-      {t:"7:30 PM", type:"activity", name:"Grand World Show (Optional) & Night Market & Rest", blurb:""}
+      {t:"7:30 PM", type:"activity", name:"Check in SUN & SEA Hotel & Dinner", blurb:"", mapLink:"https://maps.app.goo.gl/8rdzHHBmdjPnUfwaA", mapLabel:"Stay at SUN & SEA Hotel (Agoda Confirm #: 1079034718)", badges:["$42"]},
+      {t:"8:15 PM", type:"activity", name:"Dinner in Duong Dong area", blurb:""},
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
+      
     ]
   },
   {
     label: "Wed Dec 16", sub: "Phu Quoc --> Hue", city: "Hue", stamp: "HUE",
     stops: [
-      {t:"8:30 AM", type:"activity", name:"Check out Hotel", blurb:""},
+      {t:"8:30 AM", type:"activity", name:"Check out SUN & SEA hotel Hotel", blurb:""},
       {t:"11:10 AM", type:"transit", name:"PQC --> DAD", blurb:"Sun Phu Quoc Airways 9G 2962. Confirm # 7AYQHY. Arriving 12:55PM."},
       {t:"1:45 PM", type:"activity", name:"Lunch at Bánh tráng thịt heo Cô Huế", blurb:"", mapLink:"https://maps.app.goo.gl/iUXMJrfVqpL55PJh7", mapLabel:"Bánh tráng thịt heo Cô Huế"},          
       {t:"3:20 PM", type:"transit", name:"Da Nang --> Hue on Train", blurb:"Heritage Train HD4. Arriving 6:30PM. Booked, confirm # EQZ951.", photo:["images/trainhue.jpg"], badges:["3 hrs, $15 pp"]},
-      {t:"7:00 PM", type:"activity", name:"Check in Hotel Hue & Dinner", blurb:"", mapLink:"https://maps.app.goo.gl/45KG26wvCAMge8ZGA", mapLabel:"Stay at Kly Boutique Hue (Expedia Confirm #: 73565481234639)"},
+      {t:"7:00 PM", type:"activity", name:"Check in Kly Boutique Hue & Dinner", blurb:"", mapLink:"https://maps.app.goo.gl/45KG26wvCAMge8ZGA", mapLabel:"Stay at Kly Boutique Hue (Expedia Confirm #: 73565481234639)", badges:["$30"]},
       {t:"9:00 PM", type:"activity", name:"Truong Tien - Phu Xuan Walk & Rest", blurb:"", photo:["images/truongtien.webp"]}
     ]
   },
@@ -92,16 +101,16 @@ const DATA = [
     label: "Thu Dec 17", sub: "Hue --> Quang Tri", city: "Hue / Quang Tri", stamp: "HUE",
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out hotel and Hue City Tour", blurb:"Hue Discovery Tour (Full Day, Dong Ba Market included).", mapLink:"https://www.klook.com/en-US/activity/1560-hue-discovery-half-full-day-tour-hue/", mapLabel:"Hue City Tour", note:"Luggage storage service at hotel after checking out."},
-      {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue --> Quang Tri (Dong Ha) by car", blurb:"", note:"Contracted Transportation Service"},
-      {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:"", mapLink:"https://maps.app.goo.gl/KM7RgDcSFiY5Z3c48", mapLabel:"Stay at Mỹ Hương Hotel (Agoda Confirm #: 1076309570)"}
+      {t:"7:30 PM", type:"transit", name:"Pick up luggage from hotel, Hue --> Quang Tri (Dong Ha) by car", blurb:"", note:"Thuan Phat Transportation Service. Private 7-seater.", badges:["$35"]},
+      {t:"10:00 PM", type:"activity", name:"Check in Hotel Dong Ha & Rest", blurb:"", mapLink:"https://maps.app.goo.gl/KM7RgDcSFiY5Z3c48", mapLabel:"Stay at Mỹ Hương Hotel (Agoda Confirm #: 1076309570)", badges:["$55"]}
     ]
   },
   {
     label: "Fri Dec 18", sub: "Quang Tri", city: "Quang Tri", stamp: "QUANG\nTRI",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Truong Son National Cementary, Hien Luong Bridge and Vinh Moc Tunnel", blurb:"17th Parallel — Historic Hiền Lương Bridge", photo:["images/hienluong.webp"], note:"Quang Tri Day Tour", badges:["$50 pp"]},
+      {t:"9:00 AM", type:"activity", name:"Truong Son National Cementary, Hien Luong Bridge and Vinh Moc Tunnel", blurb:"17th Parallel — Historic Hiền Lương Bridge", photo:["images/hienluong.webp"], note:"Quang Tri Day Tour", badges:["$60 pp"]},
       {t:"12:00 PM", type:"transit", name:"Vinh Moc --> Dong Ha & Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Le Duan House & Quang Tri Citadel", blurb:"", photo:["images/citadel.jpg"]},
+      {t:"2:30 PM", type:"activity", name:"Le Duan Residence & Quang Tri Citadel", blurb:"", photo:["images/citadel.jpg"]},
       {t:"7:00 PM", type:"activity", name:"Thach Han River Rituals", blurb:"", note:"Quang Tri Day Tour", photo:["images/quangtri.jpg"]}
     ]
   },
@@ -111,16 +120,16 @@ const DATA = [
       {t:"7:00 AM", type:"activity", name:"Check out hotel & Dai Hao Village (Uncle Tho)", blurb:"", note:"Contracted Transportation Service. Keep luggage at Uncle Tho."},
       {t:"11:30 AM", type:"activity", name:"Lunch", blurb:""},
       {t:"1:30 PM", type:"activity", name:"Dai Hao Village (Family Cemetery)", blurb:""},
-      {t:"3:30 PM", type:"transit", name:"Pick up luggage, Quang Tri → Da Nang. Arrives Da Nang ~7:30 PM", blurb:"Dinner, drop off Uncle Luc at train station first, then proceed to airport", note:"Contracted Transportation Service."},
+      {t:"3:30 PM", type:"transit", name:"Pick up luggage, Dai Hao --> Da Nang. Arrives Da Nang ~7:30 PM", blurb:"Dinner, drop off Uncle Luc at train station first, then proceed to airport", note:"Thuan Phat Transportation Service. Private 4-seater.", badges:["$35"]},
       {t:"10:30 PM", type:"transit", name:"Uncle Luc Da Nang --> Bien Hoa on SE7 train", blurb:"Arriving Dec 20 at 4:00 PM"},
-      {t:"11:30 PM", type:"transit", name:"Don & Giang DAD --> HAN", blurb:"Vietjet VJ 506. Confirm # ZE3PB2. Arriving Dec 20 at 12:50 AM. Rest at Noi Bai Boutique Hotel.", note:"No need to pick up checked bags at Hanoi airport. Contact hotel in advance for free shuttle pick up", mapLink:"https://maps.app.goo.gl/jeWmDH92fjpL3DRf6", mapLabel:"Noi Bai Boutique Hotel. Expedia Confirm #: 73568148766613"}
+      {t:"11:30 PM", type:"transit", name:"Don & Giang DAD --> HAN", blurb:"Vietjet VJ 506. Confirm # ZE3PB2. Arriving Dec 20 at 12:50 AM. Rest at Noi Bai Boutique Hotel.", note:"No need to pick up checked bags at Hanoi airport. Contact hotel in advance for free shuttle pick up", mapLink:"https://maps.app.goo.gl/jeWmDH92fjpL3DRf6", mapLabel:"Noi Bai Boutique Hotel. Expedia Confirm #: 73568148766613", badges:["$30"]}
     ]
   },
   {
     label: "Sun Dec 20", sub: "Tokyo Arrival Day", city: "Tokyo", stamp: "TOKYO\nARR",
     stops: [
       {t:"6:00 AM", type:"activity", name:"Check out hotel", blurb:"", note:"Collect all belongings, make sure all travel documents are ready and accurate, head to airport."},
-      {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Confirm # ZE3PB2. Arriving 3:25 PM JST", badges:["$250 pp"]},
+      {t:"8:20 AM", type:"transit", name:"Don & Giang HAN --> NRT", blurb:"Vietjet VJ 934. Confirm # ZE3PB2. Arriving 3:25 PM JST", badges:["$250"]},
       {t:"Sat 8:37 AM", type:"transit", name:"DFW --> DEN --> NRT (Zack)", blurb:"UA 143. Arriving 3:35 PM JST", photo:["images/tokyo.jpg"]},
       {t:"4:00 PM", type:"activity", name:"Clear customs and immigration", blurb:""},      
       {t:"5:00 PM", type:"transit", name:"NRT --> Hotel", blurb:"• Ride Limited Express Skyliner from NRT --> Nippori Sta. (suica + limited express fare)\n• Ride JR Yamanote (for Ueno / Tokyo) to Hamamatsuchō Sta, ~10 min walk to hotel.", badges:["~75 min","¥2,780 (~$17)"]},
@@ -168,7 +177,7 @@ const DATA = [
       {t:"7:30 PM", type:"transit", name:"Museum --> Ameyoko market", blurb:"• Walk ~5mins from museum to Tawaramachi Sta. \n• Ride Ginza Line from Tawaramachi Sta --> Ueno Sta (~5 mins, 2 stops). Walk ~5mins to Ameyoko market", badges:["~15 min","¥170"]},     
       {t:"7:45 PM", type:"activity", name:"Ameyoko market & Dinner", blurb:"Vibrant, neon-lit streetfood alleyway", photo:["images/ameyoko.webp"]},         
       {t:"9:45 PM", type:"transit", name:"Ameyoko market --> Kabukicho", blurb:"• Walk ~7mins from Ameyoko market to Ueno-okachimachi Sta.\n• Ride Oedo Line from Ueno-okachimachi Sta --> Shinjuku-nishiguchi Sta. Walk ~10 mins to Kabukicho", badges:["~35 mins","¥210 (~$2)"]},      
-      {t:"10:30 PM", type:"activity", name:"Walk Kabukicho", blurb:"Tokyo nightlife district. ~15mins walk from train station.", photo:["images/kabukicho.jpg"]},
+      {t:"10:30 PM", type:"activity", name:"Walk Kabukicho (Optional)", blurb:"Tokyo nightlife district. ~15mins walk from train station.", photo:["images/kabukicho.jpg"]},
       {t:"11:59 PM", type:"transit", name:"Kabukicho --> Hotel", blurb:"• Walk ~15 mins to from Kabukicho to Shinjuku Sta\n• Ride Oedo Line from Shinjuku Sta --> Shiodome Sta. Walk ~10 min to hotel.", badges:["~30 min","¥210 (~$2)"], note:"Last Oedo Line departs Shinjuku Sta at 12:30AM. Make sure to catch the last train."}      
       
     ]
@@ -190,7 +199,7 @@ const DATA = [
     stops: [
       {t:"6:45 AM", type:"activity", name:"Check out Kyoto hotel", blurb:""},
       {t:"7:30 AM", type:"transit", name:"Kyoto Sta --> Arashiyama", blurb:"Ride JR San-In Line From Kyoto Sta --> Saga-Arashiyama Sta. Arriving ~8:00 AM", badges:["~20 min","¥200 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luggage to APA Namba Hotel in Osaka. Crosta Service is located on B1 Floor, in front of the JR Central Gate on the north side of Kyoto Station. Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"8:00 AM", type:"activity", name:"Tenryu-ji Temple & Arashiyama Bamboo Forest (if not crowded)", blurb:"15mins walk from train station. Explore the temple and bamboo forest.", photo:["images/bamboo.jpg"], badges:["~1 hr"]},      
+      {t:"8:00 AM", type:"activity", name:"Arashiyama Bamboo Forest (if not crowded) & Tenryu-ji Temple", blurb:"15mins walk from train station.", photo:["images/tenryu-ji.jpg"], badges:["~1 hr"]},      
       {t:"9:15 AM", type:"transit", name:"Saga-Arashiyama Sta --> Kameoka Sta", blurb:"Walk back to Saga-Arashiyama Sta. Ride JR Sagano Line from Saga-Arashiyama Sta --> Kameoka Sta. Arriving ~9:30AM. Hop off/on at Hozukyō Sta for sightseeing, if time permitted.", badges:["~10 min","¥200 pp"]},      
       {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"• 2hr Adventure on a charming, traditional boat downstream\n• Klook Tour Booked. Confirm #MRH426946", badges:["~2 hr","$38 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
       {t:"12:15 PM", type:"activity", name:"Togetsukyō Bridge", blurb:"Lunch near Saga-Arashiyama Sta", photo:["images/saganobridge.jpg"]},
@@ -295,9 +304,9 @@ const DATA = [
     stops: [
       {t:"6:30 AM", type:"activity", name:"Check out La Santé Hotel", blurb:""},
       {t:"10:15 AM", type:"transit", name:"HAN --> DAD", blurb:"Vietnam Airlines VN 159. Arriving 11:40 AM. Booked, Confirm # 5MTAD3", badges:["$97 pp"]},
-      {t:"12:30 PM", type:"activity", name:"Drop Luggage and Lunch", blurb:"", note:"Stop by Da Nang hotel, do not check in, just store luggage"},
+      {t:"12:30 PM", type:"activity", name:"Drop Luggage and Lunch", blurb:"", note:"Stop by 7 Seven Sea Hotel, do not check in, just store luggage"},
       {t:"2:30 PM", type:"activity", name:"Hai Van pass trail & Sơn Trà Peninsula", blurb:"", photo:["images/haivan.jpg"]},  
-      {t:"4:30 PM", type:"activity", name:"Check in Da Nang hotel", blurb:""},
+      {t:"4:30 PM", type:"activity", name:"Check in 7 Seven Sea Hotel", blurb:"", mapLink:"https://maps.app.goo.gl/niQaDWB4Pkjv5FhT6", mapLabel:"Stay at 7 Seven Sea Hotel (Expedia Confirm #: 73589749337003)", photo:["images/77sea.avif"], badges:["$150"]},
       {t:"6:00 PM", type:"activity", name:"Walk My Khe beach, night market & dinner", blurb:"", photo:["images/mykhe.jpg"]},
       {t:"8:30 PM", type:"activity", name:"Dragon Bridge show & Rest", blurb:"Dragon Bridge fire show starts at 9:00 PM for 15 mins", photo:["images/dragon.jpg"]}
     ]
@@ -322,19 +331,20 @@ const DATA = [
       {t:"9:45 AM", type:"transit", name:"DAD --> SGN. Arriving ~11:15 AM", blurb:"Sun PhuQuoc Air. 9G 967. Booked, Confirm # 7JCLZV", badges:["$108 pp"]},  
       {t:"11:59 AM", type:"transit", name:"SGN --> HCM City District 1", blurb:"", badges:["30mins"], note:"Drop Luggage at Hotel, do not check in."},  
       {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"HCM City Central District: War Museum, Independence Palace, Central Post, etc", blurb:""},
+      {t:"2:30 PM", type:"activity", name:"HCM City Central District: War Museum, Independence Palace", blurb:""},
       {t:"4:00 PM", type:"activity", name:"Check in Hotel", blurb:""},
-      {t:"4:30 PM", type:"activity", name:"Saigon River Sunset Cruise", blurb:"", badges:["$20 pp"], photo:["images/saigonsunset.jpg"]},
-      {t:"7:00 PM", type:"activity", name:"Saigon Night Sightseeing Bus", blurb:"", badges:["$10 pp"], photo:["images/saigonbus.jpg"]},
-      {t:"9:00 PM", type:"activity", name:"Night market & Nguyen Hue Street", blurb:"", photo:"images/phodibohcmc.jpg"},
-      {t:"11:00 PM", type:"activity", name:"Rest at hotel", blurb:""},
+      {t:"5:30 PM", type:"activity", name:"Saigon River Night Cruise", blurb:"REVER Cruise: A Journey Along the Saigon River. Dinner not included. Tickets booked.", badges:["3hrs","$35 pp"], photo:["images/saigonsunset.jpg"], mapLink:"https://www.klook.com/en-US/activity/189329-rever-cruise-a-refined-dining-journey-along-the-saigon-river/", mapLabel:"Saigon River Night Cruise"},
+      {t:"9:30 PM", type:"activity", name:"Dinner & Nguyen Hue Street", blurb:"", photo:"images/phodibohcmc.jpg"},
+      {t:"11:59 PM", type:"activity", name:"Rest at hotel", blurb:""},
     ]
   },
   {
     label: "Tue Jan 5", sub: "Ho Chi Minh City", city: "Saigon", stamp: "SAIGON",
     stops: [
       {t:"8:00 AM", type:"activity", name:"Cu Chi Tunnel Half Day Tour", blurb:""},
-      {t:"4:00 PM", type:"activity", name:"Relax & Shopping", blurb:""}
+      {t:"4:00 PM", type:"activity", name:"Relax & Shopping", blurb:""},
+      {t:"6:30 PM", type:"activity", name:"Saigon Night Sightseeing Bus", blurb:"", badges:["$10 pp"], photo:["images/saigonbus.jpg"]},
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
@@ -352,16 +362,16 @@ const DATA = [
   {
     label: "Thu Jan 7", sub: "Singapore", city: "Singapore", stamp: "SINGA\nPORE",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Merlion, Marina Bay Sands, Gardens by the Bay, Chinatown, Bugis Street", blurb:""}
+      {t:"8:00 AM", type:"activity", name:"Explore Singapore, Relax & Shopping", blurb:""}
     ]
   },
   {
-    label: "Fri Jan 8", sub: "Zack flies home · Don & Giang → Saigon → Trị An Lake", city: "Singapore / Saigon / Trị An Lake", stamp: "TRI AN",
+    label: "Fri Jan 8", sub: "Zack flies home · Don & Giang → Saigon --> Trị An Lake", city: "Singapore / Saigon / Trị An Lake", stamp: "TRI AN",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"10:10 AM", type:"transit", name:"Zack: SIN --> SFO --> DFW", blurb:"UA2/UA2842", note:"Zack leaves early to catch the flight home. Don and Giang check out hotel and head to the airport later."},
-      {t:"1:15 PM", type:"transit", name:"Don and Giang: SIN --> SGN", blurb:"Vietnam Airlines VN 650. Lands 2:30 PM.", badges:["Flies home"]},
-      {t:"2:30 PM", type:"transit", name:"Don and Giang: SGN --> Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."}
+      {t:"4:15 PM", type:"transit", name:"Don and Giang: SIN --> SGN", blurb:"VietJet Air VJ 816. Arriving ~5:30 PM. Booked, Confirm # U39UU6", badges:["$112 pp"]},
+      {t:"6:30 PM", type:"transit", name:"Don and Giang: SGN --> Trị An Lake", blurb:"Head straight to Trị An Lake after landing, so Saturday is a full day with family."}
     ]
   },
   {
