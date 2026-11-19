@@ -354,10 +354,11 @@ const DATA = [
     label: "Wed Jan 6", sub: "Saigon --> Singapore", city: "Saigon / Singapore", stamp: "SIN\nARR",
     stops: [
       {t:"4:00 AM", type:"activity", name:"Check out hotel, Taxi ride to airport", blurb:""},
-      {t:"6:50 AM", type:"transit", name:"SGN --> SIN, uber to hotel", blurb:"VietJet Air VJ 813. Arriving ~10:15 AM. Booked, Confirm # FX5WDF", badges:["$74 pp"]},
-      {t:"12:00 PM", type:"activity", name:"Drop off Luggage and Lunch", blurb:"", note:"Stop by Singapore hotel, do not check in, just store luggage"},
+      {t:"6:50 AM", type:"transit", name:"SGN --> SIN", blurb:"VietJet Air VJ 813. Arriving ~10:15 AM. Booked, Confirm # FX5WDF", badges:["$74 pp"]},
+      {t:"11:30 AM", type:"transit", name:"SIN --> Days Inn Hotel", blurb:"• Ride MRT CG Line from Changi Airport --> Tanah Merah Sta\n• Ride MRT EW Line from Tanah Merah Sta --> City Hall Sta\n• Ride MRT NS Line from City Hall Sta --> Novena Sta. Walk ~15mins or taxi to hotel", badges:["~1hr"]},
+      {t:"12:45 PM", type:"activity", name:"Drop off Luggage and Lunch", blurb:"", note:"Stop by Days Inn Hotel, do not check in, just store luggage"},
       {t:"2:30 PM", type:"activity", name:"Explore Singapore", blurb:""},
-      {t:"4:30 PM", type:"activity", name:"Check in hotel", blurb:""},
+      {t:"4:30 PM", type:"activity", name:"Check in Days Inn", blurb:"", mapLink:"https://maps.app.goo.gl/ENUZYEXmy7fNkeDz8", mapLabel:"Stay at Days Inn by Wyndham Novena (Agoda Confirm #: 1079792514)", photo:["images/daysinn.jpg"], badges:["$245"]},
       {t:"6:30 PM", type:"activity", name:"Explore Singapore at Night, Dinner", blurb:""},
       {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
@@ -365,7 +366,7 @@ const DATA = [
   {
     label: "Thu Jan 7", sub: "Singapore", city: "Singapore", stamp: "SINGA\nPORE",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Explore Singapore, Relax & Shopping", blurb:""}
+      {t:"8:00 AM", type:"activity", name:"Explore Singapore, Night Safari, Relax & Shopping", blurb:""}
     ]
   },
   {
