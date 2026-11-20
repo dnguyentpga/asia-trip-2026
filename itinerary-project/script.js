@@ -147,7 +147,7 @@ const DATA = [
   {
     label: "Mon Dec 21", sub: "Harajuku · Shinjuku · Shibuya", city: "Shinjuku / Shibuya", stamp: "TOKYO",
     stops: [
-      {t:"8:30 AM", type:"transit", name:"Hotel → Meiji Jingu", blurb:"• Walk ~8 mins to Hamamatsuchō Sta.\n• Ride JR Yamanote from Hamamatsuchō Sta --> Harajuku Sta.\n• Using Harajuku Sta West Exit, walk to Meiji Jingu.", badges:["~13 min","¥180 (~$1)"]},
+      {t:"8:30 AM", type:"transit", name:"Hotel --> Meiji Jingu", blurb:"• Walk ~8 mins to Hamamatsuchō Sta.\n• Ride JR Yamanote from Hamamatsuchō Sta --> Harajuku Sta.\n• Using Harajuku Sta West Exit, walk to Meiji Jingu.", badges:["~13 min","¥180 (~$1)"]},
       {t:"9:00 AM", type:"activity", name:"Visit Meiji Jingu", blurb:"", photo:["images/meiji-shrine1.jpg"]},
       {t:"11:00 AM", type:"transit", name:"Meiji Jingu --> Zauo Shinjuku", blurb:"Walk from Meiji Jingu to Zauo Shinjuku.", badges:["~22 min, ~1 mile"]},
       {t:"11:30 AM", type:"activity", name:"Lunch at Zauo Shinjuku", blurb:"", photo:["images/zauo.jpg"]},
@@ -163,8 +163,9 @@ const DATA = [
   {
     label: "Tue Dec 22", sub: "Toyosu · Skytree", city: "Toyosu / Akasuka", stamp: "TOKYO", 
     stops: [
-      {t:"4:30 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — ride taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
-      {t:"5:00 AM", type:"activity", name:"Tuna Auction + Breakfast at Tsukiji", blurb:"Apply 30 days in advance for the close-up auction view; otherwise watch from the 2nd floor observation deck. After the auction, take Toei Bus 01, Toyosu-Shijō → Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji for breakfast.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
+      {t:"4:45 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — ride taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
+      {t:"5:30 AM", type:"activity", name:"Tuna Auction + Breakfast at Toyosu Market", blurb:"After the auction, take Toei Bus 01, Toyosu-Shijō --> Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji market.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
+      {t:"7:00 AM", type:"activity", name:"Tsukiji Market", blurb:""},
       {t:"8:00 AM", type:"transit", name:"--> Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
       {t:"11:40 AM", type:"transit", name:"--> Skytree", blurb:"Exit Imperial palace via Ōte-mon Gate. Walk to Otemachi Station. Ride Hanzomon Line from Otemachi Sta --> Oshiage Sta.", badges:["~20 min","¥210–240 (~$1–2)"]},
@@ -175,7 +176,7 @@ const DATA = [
       {t:"5:30 PM", type:"transit", name:"Sensō-ji Temple --> Samurai Museum", blurb:"Walk ~10 min from Sensō-ji Temple to Samurai Museum", badges:["~10 mins"]},
       {t:"5:45 PM", type:"activity", name:"Asakusa Samurai Museum", blurb:"Last Museum entry at 6:00 PM. Admission tickets booked.", photo:"images/samurai.jpg", badges:["¥3,300 pp"]},
       {t:"7:30 PM", type:"transit", name:"Museum --> Ameyoko market", blurb:"• Walk ~5mins from museum to Tawaramachi Sta. \n• Ride Ginza Line from Tawaramachi Sta --> Ueno Sta (~5 mins, 2 stops). Walk ~5mins to Ameyoko market", badges:["~15 min","¥170"]},     
-      {t:"7:45 PM", type:"activity", name:"Ameyoko market & Dinner", blurb:"Vibrant, neon-lit streetfood alleyway", photo:["images/ameyoko.webp"]},         
+      {t:"7:45 PM", type:"activity", name:"Ameyoko market & Dinner", blurb:"Vibrant, neon-lit street food alleyway", photo:["images/ameyoko.webp"]},         
       {t:"9:45 PM", type:"transit", name:"Ameyoko market --> Kabukicho", blurb:"• Walk ~7mins from Ameyoko market to Ueno-okachimachi Sta.\n• Ride Oedo Line from Ueno-okachimachi Sta --> Shinjuku-nishiguchi Sta. Walk ~10 mins to Kabukicho", badges:["~35 mins","¥210 (~$2)"]},      
       {t:"10:30 PM", type:"activity", name:"Walk Kabukicho (Optional)", blurb:"Tokyo nightlife district. ~15mins walk from train station.", photo:["images/kabukicho.jpg"]},
       {t:"11:59 PM", type:"transit", name:"Kabukicho --> Hotel", blurb:"• Walk ~15 mins to from Kabukicho to Shinjuku Sta\n• Ride Oedo Line from Shinjuku Sta --> Shiodome Sta. Walk ~10 min to hotel.", badges:["~30 min","¥210 (~$2)"], note:"Last Oedo Line departs Shinjuku Sta at 12:30AM. Make sure to catch the last train."}      
@@ -238,28 +239,30 @@ const DATA = [
       {t:"12:30 AM", type:"activity", name:"Arrive at KIX Airport, complete tax refund, check in flight. Lunch", blurb:"Stop by KIX Observation Hall Sky View", photo:["images/kix.jpg"], note:"Make sure to complete tax refund BEFORE checking in luggage."},
       {t:"3:30 PM", type:"transit", name:"KIX --> HAN VJ 931. Arriving 7:15 PM. Confirmed # DEFZUF", blurb:"", badges:["$571 pp"], note:"Zack needs to COMPLETE Vietnam pre-arrival form BEFORE arrival."},
       {t:"9:00 PM", type:"transit", name:"HAN airport --> hotel", blurb:"Take Bus 86 (Express Bus) to Cua Bac Intersection stop, walk 6 mins to La Santé Hotel, or contact hotel for aiprort shuttle service.", badges:["~1 hr"]},
-      {t:"10:15 PM", type:"activity", name:"Check in La Santé Hotel", blurb:" ", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)"}, 
+      {t:"10:15 PM", type:"activity", name:"Check in La Santé Hotel", blurb:" ", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563861527457)", badges:["$138"]}, 
       {t:"10:30 PM", type:"activity", name:"Dinner, Walk West Lake and Rest", blurb:""}
     ]
   },
-
   {
-    label: "Sun Dec 27", sub: "Hanoi", city: "Hanoi", stamp: "HANOI",
+    label: "Thu Dec 27", sub: "Trang An", city: "Ninh Binh", stamp: "NINH BINH",
     stops: [
-      {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:"", photo:["images/hcmmau.jpg"]},
-      {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
-      {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:"", photo:["images/qtg.jpg"]},
-      {t:"5:20 PM", type:"activity", name:"Water puppet show", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]},        
-      {t:"7:30 PM", type:"activity", name:"Train Track Coffee and Dinner", blurb:"", photo:["images/traincoffee.jpg"]},
-      {t:"8:00 PM", type:"activity", name:"City Walk (Hoan Kiem lake, Opera House) and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
-      
+      {t:"5:30 AM", type:"transit", name:"Ha Noi --> Trang An", blurb:"Ride taxi to Opera House, get picked up by shuttle van. Departs at 6:10AM. Arrives Trang An ~8:00 AM.", badges:["~2 hr","$10 pp"]},
+      {t:"8:30 AM", type:"activity", name:"Trang An boat ride", blurb:"Hand-rowed boat tour through a karst landscape. Select between 3 boat routes options.", badges:["~3 hr","$15 pp"], photo:["images/trangan.webp"], mapLink:"https://maps.app.goo.gl/GYSNDSYvMmkehA4G7", mapLabel:"Trang An Boat Tour"},       
+      {t:"11:30 AM", type:"transit", name:"--> Hoa Lu Ancient Capital", blurb:"Ride taxi from Trang An --> Hoa Lu. Arrives ~11:45 AM.", badges:["~15 min","$1 pp"]},       
+      {t:"11:45 AM", type:"activity", name:"Visit Hoa Lu Ancient Capital", blurb:"First capital of a unified, independent Vietnam from 968 to 1010 AD", photo:["images/hoalu.webp"], mapLink:"https://maps.app.goo.gl/9rPJ9icVhoinhC3WA", mapLabel:"Hoa Lu Ancient Capital", badges:["$1 pp"]},
+      {t:"13:30 PM", type:"activity", name:"Lunch near Hoa Lu", blurb:"~1 mile walk from ancient capital site", mapLink:"https://maps.app.goo.gl/AHRZHyaz36Y4Khji6", mapLabel:"Ba Cửa Restaurant", badges:["$5 pp"]},            
+      {t:"14:30 PM", type:"transit", name:"--> Mua Cave", blurb:"Ride taxi from restaurant to Mua Cave. Arrives ~2:45 PM.", badges:["~20 min","$1 pp"]},       
+      {t:"15:00 PM", type:"activity", name:"Mua Cave", blurb:"Climb of 500 stone steps up, 360-degree panoramic views over towering limestone peaks of Tam Coc", photo:["images/muacave.webp"], mapLink:"https://maps.app.goo.gl/B4VQJXowFZTpLeMr8", mapLabel:"Mua Cave", badges:["1.5 hrs RT hike","$6 pp"]},
+      {t:"5:30 PM", type:"transit", name:"--> Hanoi", blurb:"Ride shuttle van from Mua Cave to Hanoi. Arriving ~8:00 PM.", badges:["~2 hr","$10 pp"]},
+      {t:"8:30 PM", type:"activity", name:"Dinner & Train Track Coffee", blurb:"", photo:["images/traincoffee.jpg"]},
+      {t:"10:00 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
     ]
   },
   {
     label: "Mon Dec 28", sub: "Hanoi --> Sapa (overnight train)", city: "Hanoi / Sapa", stamp: "SAPA",
     stops: [
       {t:"8:30 AM", type:"activity", name:"Tour Central Cathedral Interior", blurb:"", photo:["images/hanoicath.jpg"]},
-      {t:"10:30 AM", type:"activity", name:"Check out Hanoi hotel and lunch", note:"Keep luggage at hotel storage service."},
+      {t:"10:30 AM", type:"activity", name:"Check out La Santé Hotel hotel and lunch", note:"Keep luggage at hotel storage service."},
       {t:"2:00 PM", type:"activity", name:"Visit Hoa Lo Prison relic and shopping", blurb:"", photo:["images/hoalo.jpg"]},
       {t:"7:00 PM", type:"activity", name:"Dinner, head to rail station for Sapa", blurb:"", note:"Pick up luggage and all belongings from hotel storage service."},      
       {t:"9:45 PM", type:"transit", name:"Sleeper Train Hanoi --> Lao Cai", blurb:"Vic Sapa Train. Arrives Lao Cai Station Tue Dec 29, 6:05 AM.", photo:["images/vicsapa.jpg"], note:"Ride shuttle (booked with train tickets) from Lao Cai station to Sapa town. Arrives Sapa Town ~7:30 AM.", badges:["$143 pp"]}
@@ -288,11 +291,15 @@ const DATA = [
   {
     label: "Thu Dec 31", sub: "Ninh Binh · NYE Hanoi", city: "Hanoi", stamp: "HANOI",
     stops: [
-      {t:"5:30 AM", type:"transit", name:"Arrive Hanoi (overnight train from Lao Cai)", blurb:"Vic Sapa Train"},
-      {t:"6:00 AM", type:"activity", name:"Drop Luggage", blurb:"", note:"Stop by La Santé Hotel, do not check in, just drop luggage"},
-      {t:"8:00 AM", type:"activity", name:"Ninh Binh Tour or Relax/Shopping in Hanoi", blurb:"", photo:["images/trangan.webp"], links:[{url:"https://www.klook.com/en-US/activity/203987-custom-private-ninh-binh-tour-hoa-lu-bai-dinh-trang-an-tam-coc-hang-mua-english-vietnamese-driver/?source_channel=googlettd&_language=en&_currency=USD&_activity_id=203987&package_id=672444&google_surface=&google_ads_click_source=tpa&google_funnel=&feed_product_id=203987&kl_package_id=672444&aid=26991&campaignid=24175408517&adgroupid=196813861662&targetid=kwl-2496495353726&matchtype=a&device=c&creative=822508711641&extensionid=&keyword=&loc_interest_ms=&loc_physical_ms=9027725&network=g&utm_content=campaignid_24175408517_adgroupid_196813861662&clk_src=%28GOOGLE-ADS-CLICK-SOURCE%29&gad_source=1&gad_campaignid=24175408517&gbraid=0AAAAACa_CWwBQj8DSyfEP0aq1XsriYwMR&gclid=CjwKCAjw25fWBhAVEiwAMopNjjhNku_nD_gN4NDPuRU4IXXDIqiysmfCjMLetq9nshiE7ZSXm5wA_hoCGPQQAvD_BwE&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=26991&utm_term=", label:"Custom Private Ninh Binh Tour"},{url:"https://youtu.be/iztUFaqt0L4?si=B9E8w9iAwhHHcr-G", label:"Trang An Youtube"}]},     
-      {t:"8:30 PM", type:"activity", name:"Check in La Santé Hotel", blurb:""},
-      {t:"9:00 PM", type:"activity", name:"Dinner & NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
+      {t:"6:30 AM", type:"activity", name:"Drop luggage at La Santé Hotel", blurb:"Stop by hotel to drop luggage. Check in later in the day."},
+      {t:"8:00 AM", type:"activity", name:"Breakfast and walk", blurb:""},
+      {t:"9:00 AM", type:"activity", name:"Ho Chi Minh Museum & Mausoleum", blurb:"", photo:["images/hcmmau.jpg"]},
+      {t:"12:30 PM", type:"activity", name:"Lunch", blurb:""},
+      {t:"2:30 PM", type:"activity", name:"Military Museum, Quốc Tử Giám", blurb:"", photo:["images/qtg.jpg"]},
+      {t:"5:00 PM", type:"activity", name:"Check in La Santé Hotel", blurb:"", mapLink:"https://maps.app.goo.gl/2UaK5z1RSm7o6dS39", mapLabel:"Stay at La Santé Hotel (Expedia Confirm #: 73563866189458)", badges:["$183"]},
+      {t:"5:30 PM", type:"activity", name:"Water puppet show", blurb:"Last water puppet show is 8:00 PM.", photo:["images/waterpup.jpg"]},  
+      {t:"7:30 PM", type:"activity", name:"Dinner & Night Sightseeing Bus", blurb:""},            
+      {t:"9:30 PM", type:"activity", name:"NYE in Hanoi", blurb:"", photo:["images/nye.jpg"]}
     ]
   },
   {
