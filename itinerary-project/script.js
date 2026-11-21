@@ -246,14 +246,14 @@ const DATA = [
   {
     label: "Thu Dec 27", sub: "Trang An", city: "Ninh Binh", stamp: "NINH BINH",
     stops: [
-      {t:"5:30 AM", type:"transit", name:"Ha Noi --> Trang An", blurb:"Ride taxi to Opera House, get picked up by shuttle van. Departs at 6:10AM. Arrives Trang An ~8:00 AM.", badges:["~2 hr","$10 pp"]},
+      {t:"5:30 AM", type:"transit", name:"Ha Noi --> Trang An", blurb:"• Ride taxi to Opera House, get picked up by shuttle van.\n• Departs at 6:10AM. Arrives Trang An ~8:00 AM. \n• Klook Confirm # VGB276093", badges:["~2 hr","$10 pp"]},
       {t:"8:30 AM", type:"activity", name:"Trang An boat ride", blurb:"Hand-rowed boat tour through a karst landscape. Select between 3 boat routes options.", badges:["~3 hr","$15 pp"], photo:["images/trangan.webp"], mapLink:"https://maps.app.goo.gl/GYSNDSYvMmkehA4G7", mapLabel:"Trang An Boat Tour"},       
       {t:"11:30 AM", type:"transit", name:"--> Hoa Lu Ancient Capital", blurb:"Ride taxi from Trang An --> Hoa Lu. Arrives ~11:45 AM.", badges:["~15 min","$1 pp"]},       
       {t:"11:45 AM", type:"activity", name:"Visit Hoa Lu Ancient Capital", blurb:"First capital of a unified, independent Vietnam from 968 to 1010 AD", photo:["images/hoalu.webp"], mapLink:"https://maps.app.goo.gl/9rPJ9icVhoinhC3WA", mapLabel:"Hoa Lu Ancient Capital", badges:["$1 pp"]},
       {t:"13:30 PM", type:"activity", name:"Lunch near Hoa Lu", blurb:"Rent a bicycle right outside capital sites and ride to the restaurant.", mapLink:"https://maps.app.goo.gl/AHRZHyaz36Y4Khji6", mapLabel:"Ba Cửa Restaurant", badges:["$5 pp"]},            
       {t:"14:30 PM", type:"transit", name:"--> Mua Cave", blurb:"Return rental bicycle and ride taxi to Mua Cave. Arrives ~2:45 PM.", badges:["~20 min","$1 pp"]},       
       {t:"15:00 PM", type:"activity", name:"Mua Cave", blurb:"Climb of 500 stone steps up, 360-degree panoramic views over towering limestone peaks of Tam Coc", photo:["images/muacave.webp"], mapLink:"https://maps.app.goo.gl/B4VQJXowFZTpLeMr8", mapLabel:"Mua Cave", badges:["1.5 hrs RT hike","$6 pp"]},
-      {t:"5:30 PM", type:"transit", name:"--> Hanoi", blurb:"Ride shuttle van from Mua Cave to Hanoi. Arriving ~8:00 PM.", badges:["~2 hr","$10 pp"]},
+      {t:"5:30 PM", type:"transit", name:"--> Hanoi", blurb:"• Ride shuttle van from Mua Cave to Hanoi Opera House. Arriving ~8:00 PM.\n• Klook Confirm # JVN627361", badges:["~2 hr","$10 pp"]},
       {t:"8:30 PM", type:"activity", name:"Dinner & Train Track Coffee", blurb:"", photo:["images/traincoffee.jpg"]},
       {t:"10:00 PM", type:"activity", name:"Walk Hoan Kiem Lake and Rest", blurb:"", photo:["images/hoankiem.jpg"]}
     ]
@@ -281,7 +281,7 @@ const DATA = [
     label: "Wed Dec 30", sub: "Sapa --> Hanoi (overnight train)", city: "Sapa / Hanoi", stamp: "HANOI",
     stops: [
       {t:"7:00 AM", type:"transit", name:"Homestay --> Hoang Lien Station", blurb:"• Ride taxi to SunWorld Cable Car Station. First cable car departs at 8:00 AM\n• Take red Fansipan Peak Rail (funicular) from Do Quyen station\n• Get to summit ~8:30 AM for best chance of 'sea of clouds'", note:"Only carry light daypack for the day. Get to summit as early as possible. Wear layers."},
-      {t:"8:30 AM", type:"activity", name:"Fansipan Summit 1-Day Tour & Cat Cat Village or O Quy Ho Pass", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"]},
+      {t:"8:30 AM", type:"activity", name:"Fansipan Summit 1-Day Tour & Cat Cat Village or O Quy Ho Pass", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"], note:"Book tickets 1 day before depending on weather."},
       {t:"4:00 PM", type:"transit", name:"--> homestay", blurb:"Ride taxi back to homestay"},      
       {t:"5:00 PM", type:"activity", name:"Dinner at homestay", blurb:"Dinner with Shom Li, pick up luggage."},
       {t:"6:30 PM", type:"transit", name:"Homestay --> Lao Cai Station", blurb:"• Ride taxi from homestay to Sapa town\n• Ride shuttle (booked with train tickets) from Sapa town to Lao Cai station." , note:"Shuttle departs from Sapa town ~7:00PM"},      
