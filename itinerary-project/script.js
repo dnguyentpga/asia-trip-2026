@@ -280,7 +280,7 @@ const DATA = [
   {
     label: "Wed Dec 30", sub: "Sapa --> Hanoi (overnight train)", city: "Sapa / Hanoi", stamp: "HANOI",
     stops: [
-      {t:"7:00 AM", type:"transit", name:"Homestay --> Hoang Lien Station", blurb:"• Ride taxi to SunWorld Cable Car Station. First cable car departs at 8:00 AM\n• Take red Fansipan Peak Rail (funicular) from Do Quyen station\n• Get to summit ~8:30 AM for best chance of 'sea of clouds'", note:"Only carry light daypack for the day. Get to summit as early as possible. Wear layers."},
+      {t:"7:00 AM", type:"transit", name:"Homestay --> Hoang Lien Station", blurb:"• Ride taxi to SunWorld Cable Car Station. First cable car departs at 8:00 AM\n• Take red Fansipan Peak Rail (funicular) from Do Quyen station\n• Get to summit ~8:30 AM for best chance of 'sea of clouds'", note:"Only carry light daypack for the day. Get to summit as early as possible. Wear layers.", photo:["images/fansipantrain.avif"]},
       {t:"8:30 AM", type:"activity", name:"Fansipan Summit 1-Day Tour & Cat Cat Village or O Quy Ho Pass", blurb:"Lunch buffet combo. Cable Car Station – Sun World Fansipan Legend, via Sunworld Cable Car.", photo:["images/fansipancable.jpeg", "images/fansipan.jpg"], note:"Book tickets 1 day before depending on weather."},
       {t:"4:00 PM", type:"transit", name:"--> homestay", blurb:"Ride taxi back to homestay"},      
       {t:"5:00 PM", type:"activity", name:"Dinner at homestay", blurb:"Dinner with Shom Li, pick up luggage."},
