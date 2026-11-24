@@ -964,3 +964,139 @@ function selectDay(i){
   document.querySelectorAll('.day').forEach((d, idx) => d.classList.toggle('active', idx === i));
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+const intro = document.getElementById('intro-screen');
+const introSkip = document.getElementById('intro-skip');
+const introError = document.getElementById('intro-error');
+const introReplay = document.getElementById('intro-replay');
+const introImages = Array.from(document.querySelectorAll('.intro-image'));
+const introCarousel = document.getElementById('intro-carousel');
+const introTrack = document.getElementById('intro-track');
+const introPrevious = document.getElementById('intro-previous');
+const introNext = document.getElementById('intro-next');
+const introPageLabel = document.getElementById('intro-page-label');
+
+if (intro && introSkip && introError && introReplay && introImages.length && introCarousel && introTrack && introPrevious && introNext && introPageLabel) {
+  const backgroundElements = Array.from(document.body.children)
+    .filter(element => element !== intro && element !== document.currentScript);
+  const originalInertStates = backgroundElements.map(element => element.inert);
+  backgroundElements.forEach(element => { element.inert = true; });
+
+  let isOpen = true;
+  let currentIntroSlide = 0;
+  let swipeStart = null;
+  const introImageNames = ['Japan', 'Vietnam'];
+
+  const closeIntro = () => {
+    if (!isOpen) return;
+    isOpen = false;
+    intro.hidden = true;
+    backgroundElements.forEach((element, index) => {
+      element.inert = originalInertStates[index];
+    });
+    introReplay.focus();
+  };
+
+  const openIntro = () => {
+    if (isOpen) return;
+    isOpen = true;
+    currentIntroSlide = 0;
+    updateIntroSlide();
+    backgroundElements.forEach(element => { element.inert = true; });
+    intro.hidden = false;
+    intro.classList.remove('is-visible');
+    window.requestAnimationFrame(() => {
+      if (!isOpen) return;
+      showIntro();
+      introSkip.focus();
+    });
+  };
+
+  const showIntro = () => {
+    if (!isOpen || intro.classList.contains('is-visible')) return;
+    intro.classList.add('is-visible');
+  };
+
+  const handleImageError = (image, index) => {
+    console.error(`Unable to load the ${introImageNames[index]} intro image:`, image.src);
+    image.dataset.failed = 'true';
+    image.hidden = true;
+    if (index === currentIntroSlide) {
+      introError.textContent = `The ${introImageNames[index]} map couldn't be loaded.`;
+      introError.hidden = false;
+    }
+    showIntro();
+  };
+
+  const updateIntroSlide = () => {
+    introTrack.style.transform = `translateX(-${currentIntroSlide * 100}%)`;
+    introPrevious.disabled = currentIntroSlide === 0;
+    introNext.disabled = currentIntroSlide === introImages.length - 1;
+    introPrevious.textContent = currentIntroSlide === 0
+      ? 'Previous'
+      : `Previous: ${introImageNames[currentIntroSlide - 1]}`;
+    introNext.textContent = currentIntroSlide === introImages.length - 1
+      ? 'End'
+      : `Next: ${introImageNames[currentIntroSlide + 1]}`;
+    introPageLabel.textContent = `${introImageNames[currentIntroSlide]} · ${currentIntroSlide + 1} of ${introImages.length}`;
+    const currentImage = introImages[currentIntroSlide];
+    introError.hidden = !currentImage.dataset.failed;
+    if (currentImage.dataset.failed) {
+      introError.textContent = `The ${introImageNames[currentIntroSlide]} map couldn't be loaded.`;
+    }
+  };
+
+  const moveIntroSlide = (direction) => {
+    const nextSlide = currentIntroSlide + direction;
+    if (nextSlide < 0 || nextSlide >= introImages.length) return;
+    currentIntroSlide = nextSlide;
+    updateIntroSlide();
+  };
+
+  introImages.forEach((image, index) => {
+    image.addEventListener('load', () => {
+      showIntro();
+    }, { once: true });
+    image.addEventListener('error', () => handleImageError(image, index), { once: true });
+  });
+
+  introSkip.addEventListener('click', closeIntro);
+  introReplay.addEventListener('click', openIntro);
+  introPrevious.addEventListener('click', () => moveIntroSlide(-1));
+  introNext.addEventListener('click', () => moveIntroSlide(1));
+  introCarousel.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      moveIntroSlide(-1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveIntroSlide(1);
+    }
+  });
+  introCarousel.addEventListener('pointerdown', event => {
+    swipeStart = { x: event.clientX, y: event.clientY };
+  });
+  introCarousel.addEventListener('pointerup', event => {
+    if (!swipeStart) return;
+    const deltaX = event.clientX - swipeStart.x;
+    const deltaY = event.clientY - swipeStart.y;
+    swipeStart = null;
+    if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      moveIntroSlide(deltaX < 0 ? 1 : -1);
+    }
+  });
+  introCarousel.addEventListener('pointercancel', () => {
+    swipeStart = null;
+  });
+  updateIntroSlide();
+
+  introImages.forEach((image, index) => {
+    if (image && image.complete) {
+      if (image.naturalWidth > 0) {
+        showIntro();
+      } else {
+        handleImageError(image, index);
+      }
+    }
+  });
+}

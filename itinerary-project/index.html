@@ -12,6 +12,27 @@
 </head>
 <body>
 
+<div class="intro-screen" id="intro-screen" role="dialog" aria-modal="true" aria-label="Trip map introduction">
+  <div class="intro-carousel" id="intro-carousel" role="region" aria-label="Trip maps" tabindex="0">
+    <div class="intro-track" id="intro-track">
+      <section class="intro-page" role="group" aria-roledescription="slide" aria-label="Japan map">
+        <img class="intro-image" src="images/japan.jpg" alt="Illustrated map of Japan showing the trip route through Hokkaido, Tokyo, Nara, Osaka, and Kyoto" draggable="false">
+      </section>
+      <section class="intro-page" role="group" aria-roledescription="slide" aria-label="Vietnam map">
+        <img class="intro-image" src="images/vietnam.webp" alt="Illustrated map of Vietnam showing the trip route from Sapa to Phu Quoc" draggable="false">
+      </section>
+    </div>
+  </div>
+  <p class="intro-error" id="intro-error" role="alert" hidden>The map couldn't be loaded. Select Skip intro to continue.</p>
+  <nav class="intro-controls" aria-label="Intro map slides">
+    <button id="intro-previous" type="button" disabled>Previous</button>
+    <span id="intro-page-label" aria-live="polite">Japan · 1 of 2</span>
+    <button id="intro-next" type="button">Next: Vietnam</button>
+  </nav>
+  <button class="intro-skip" id="intro-skip" type="button">Skip intro</button>
+</div>
+<button class="intro-replay" id="intro-replay" type="button" aria-haspopup="dialog" aria-controls="intro-screen">View trip intro</button>
+
 <header class="hero">
   <div class="eyebrow">Travel Itinerary</div>
   <h1>Asia Trip 2026/2027</h1>
