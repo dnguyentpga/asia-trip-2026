@@ -164,7 +164,8 @@ const DATA = [
     label: "Tue Dec 22", sub: "Toyosu · Skytree", city: "Toyosu / Akasuka", stamp: "TOKYO", 
     stops: [
       {t:"4:45 AM", type:"transit", name:"--> Toyosu Market", blurb:"Too early for trains — ride taxi.", badges:["~15–20 min","¥2,500–3,500 (~$16–22)"]},
-      {t:"5:30 AM", type:"activity", name:"Tuna Auction + Breakfast at Toyosu Market", blurb:"After the auction, take Toei Bus 01, Toyosu-Shijō --> Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji market.", note:"Check the market schedule for closures before you go — Toyosu is closed on irregular days.", photo:"images/tuna.jpg"},
+      {t:"5:30 AM", type:"activity", name:"Tuna Auction (Optional) + Breakfast at Toyosu Market", blurb:"", note:"• View from behind the open-top glass wall\n•  If too early, skip auction -> depart hotel later -> grab breakfast -> explore Toyosu Market & waterfront", photo:"images/tuna.jpg", mapLink:"https://youtu.be/d6vXehPniI4?si=9PbUOYc4pFduXWQp&t=312", mapLabel:"Toyosu Tuna Auction Youtube"},
+      {t:"6:45 AM", type:"transit", name:"Toyosu --> Tsukiji", blurb:"After the auction, take Toei Bus 01, Toyosu-Shijō --> Tsukiji-Rokuchōme (Tsukiji 6), to reach Tsukiji market."}, 
       {t:"7:00 AM", type:"activity", name:"Tsukiji Market", blurb:""},
       {t:"8:00 AM", type:"transit", name:"--> Marunouchi", blurb:"From Tsukiji-Sanchōme (Tsukiji 3) bus stop, Toei Bus 05-1/05-2 bound for Tokyo Station, Marunouchi South Exit.", badges:["~35 min","¥420 (~$3)"]},
       {t:"9:00 AM", type:"activity", name:"Marunouchi Tokyo Station Square & Imperial Palace", blurb:"", photo:["images/tokyostation.jpg", "images/palace.jpg"]},
@@ -198,20 +199,19 @@ const DATA = [
   {
     label: "Thu Dec 24", sub: "Kyoto", city: "Kyoto / Osaka", stamp: "KYOTO",
     stops: [
-      {t:"6:45 AM", type:"activity", name:"Check out Kyoto hotel", blurb:""},
-      {t:"7:30 AM", type:"transit", name:"Kyoto Sta --> Arashiyama", blurb:"Ride JR San-In Line From Kyoto Sta --> Saga-Arashiyama Sta. Arriving ~8:00 AM", badges:["~20 min","¥200 pp (~$4)"], note:"Use luggage forwarding at Kyoto Station to deliver luggage to APA Namba Hotel in Osaka. Crosta Service is located on B1 Floor, in front of the JR Central Gate on the north side of Kyoto Station. Bring flashlight for Fushimi Inari Taisha hike later evening."},
-      {t:"8:00 AM", type:"activity", name:"Tenryu-ji Temple", blurb:"Ride taxi from station and explore the temple (get Goshuin stamp).", photo:["images/tenryu-ji.jpg"], badges:["~1 hr"]},      
-      {t:"9:15 AM", type:"transit", name:"Saga-Arashiyama Sta --> Kameoka Sta", blurb:"Ride taxi back to Saga-Arashiyama Sta. Ride JR Sagano Line from Saga-Arashiyama Sta --> Kameoka Sta. Arriving ~9:30AM. Hop off/on at Hozukyō Sta for sightseeing, if time permitted.", badges:["~10 min","¥200 pp"]},      
-      {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"• 2hr Adventure on a charming, traditional boat downstream\n• Klook Tour Booked. Confirm #MRH426946", badges:["~2 hr","$38 pp"], photo:["images/boat.avif"], mapLink:"https://www.klook.com/en-US/activity/74947-kyoto-arashiyama-hozugawa-river-boat-ride/", mapLabel:"Hozugawa River Boat Ride", badges:["$45 pp"]},
-      {t:"12:15 PM", type:"activity", name:"Togetsukyō Bridge", blurb:"Lunch near Saga-Arashiyama Sta", photo:["images/saganobridge.jpg"]},
-      {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Sta --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:30PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
+      {t:"7:15 AM", type:"activity", name:"Check out Kyoto hotel, head to Kyoto Station", blurb:"Aim to reach Crosta Kyoto (B1) right at 8:00 AM opening."},
+      {t:"8:00 AM", type:"activity", name:"Drop luggage at Crosta Kyoto", blurb:"• Location: Kyoto Sta B1F, directly below the JR conventional-line Central Gate (take escalators in front of Central Ticket Gates down to B1; counter is between/behind the escalators).\n• Send bags via same-day Carry Service to APA Namba Hotel in Osaka.", badges:["¥2,000/bag"], note:"• Make sure name on luggage reservation matches hotel reservation.\n• Verify APA Namba partner eligibility at counter (Yamato counter is also open at 8:00 AM as backup).\n• Bring flashlight for Fushimi Inari Taisha hike later evening.", mapLink:"https://engine.cargopass.jp/order/en?dept=crosta-kyoto", mapLabel:"Crosta Reservation Link"},
+      {t:"8:30 AM", type:"transit", name:"Kyoto Sta --> Kameoka Boat Dock", blurb:"• Ride JR Sagano Line direct from Kyoto Sta --> Kameoka Sta (~20–28 mins).\n• Walk ~10 mins from North Exit to boat dock to redeem voucher.", badges:["~45 min","¥410 pp (~$3)"]},      
+      {t:"10:00 AM", type:"activity", name:"Hozugawa River Boat Ride", blurb:"• 2hr Adventure on a charming, traditional heated winter boat downstream\n• Klook Tour Booked. Confirm #MRH426946", badges:["~2 hr","$38 pp"], photo:["images/boat.avif"], mapLink:"https://klook.com", mapLabel:"Hozugawa River Boat Ride"},    
+      {t:"12:15 PM", type:"activity", name:"Togetsukyō Bridge, Tenryu-ji Temple & Lunch", blurb:"• Boat drops off right upstream of Togetsukyō Bridge (~2 min walk) for quick photos.\n• Walk ~5 mins to Tenryu-ji Temple (14th century Rinzai Zen Buddhist temple & UNESCO World Heritage Site, ~35 mins), then grab lunch nearby.", photo:["images/saganobridge.jpg", "images/tenryu-ji.jpg"], badges:["~1 hr 10 mins","¥500–¥800 pp"]},
+      {t:"1:25 PM", type:"activity", name:"Adashino Nenbutsu-ji & Chikurin (Bamboo Path)", blurb:"• Take ~7–8 min taxi up to Adashino Nenbutsu-ji (~¥900).\n• Explore stone statues and the quiet bamboo grove at the back (~35–40 mins).\n• Take ~7–8 min taxi straight to JR Saga-Arashiyama Sta (~¥1,000).", photo:["images/bamboo.jpg"], badges:["~1 hr","¥500 pp"], note:"Call taxi via GO app for return to station."},
+      {t:"2:30 PM", type:"transit", name:"Arashiyama --> Fushimi Inari Shrine", blurb:"• Ride JR San-In line from Saga-Arashiyama Sta --> Kyoto Sta (~18mins, 7 stops)\n• Ride Nara Line from Kyoto Sta --> Inari Sta (~5mins, 2 stops). Arriving ~3:20 PM.", badges:["~50 mins","¥240 pp (~$2)"]},      
       {t:"3:30 PM", type:"activity", name:"Fushimi Inari Taisha", photo:["images/fushimi.jpg"], blurb:"• Walk 5 mins thru local houses and neighborhood to reach Fushimi foothills\n• Fushiminari Shrine --> Bamboo forest --> Senbon Torii --> Kojingamine Observation Deck.", badges:["~3hrs RT hike"], note:"Inari bamboo forest is on a dirt trail, hidden on right side of the main paved path."},
       {t:"6:30 PM", type:"transit", name:"Fushimi Inari Shrine --> Umeda Sky Building", blurb:"• Ride Nara Line from Inari Sta --> Kyoto Sta (~5mins, 2 stops)\n• Ride Special Rapid JR Kyoto line from Kyoto Sta --> Osaka Sta. Arriving ~7:30 PM.\n• Walk ~15 mins to Umeda Sky Building", badges:["~1hr","¥840 pp (~$6)"]},
       {t:"7:30 PM", type:"activity", name:"Umeda Sky Building & Dinner", photo:["images/umeda.avif"], blurb:"Observation deck typically open until ~10:30 PM. Ticket booked. Klook Confirm #FQW785914.", badges:["$14 pp"]},
-      {t:"9:30 PM", type:"transit", name:"Umeda Sky Building --> Osaka Castle", blurb:"Take a taxi ride to Osaka Castle. Walk ~15mins to castle rounds.", badges:["~15 min"]},   
-      {t:"10:00 PM", type:"activity", name:"Visit Osaka Castle", blurb:"Osaka Castle Night Illumination", photo:["images/osakasunset.jpeg"]},      
-      {t:"11:30 PM", type:"transit", name:"Osaka Castle --> hotel", blurb:"• Take a taxi ride to hotel\n• Receive luggage, check in hotel", badges:["~15 min"], photo:["images/apa.jpg"], badges:["$295"]},
-      {t:"11:59 PM", type:"activity", name:"Rest at hotel", blurb:""}
+      {t:"9:30 PM", type:"transit", name:"Umeda Sky Building --> hotel", blurb:"Take a taxi ride to hotel", badges:["~20 min"]},
+      {t:"10:00 PM", type:"activity", name:"Check in APA Namba hotel", blurb:"Receive luggage, check in hotel", badges:["$295"], photo:["images/apa.jpg"], mapLink:"https://maps.app.goo.gl/5nJDSTiBWFhZM9pXA", mapLabel:"APA HOTEL＆RESORT OSAKA NAMBA EKIMAE TOWER (APA Confirm #: 261003006936)"},
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
 
@@ -247,7 +247,7 @@ const DATA = [
     label: "Thu Dec 27", sub: "Trang An", city: "Ninh Binh", stamp: "NINH BINH",
     stops: [
       {t:"5:30 AM", type:"transit", name:"Ha Noi --> Trang An", blurb:"• Ride taxi to Opera House, get picked up by shuttle van.\n• Departs at 6:10AM. Arrives Trang An ~8:00 AM. \n• Klook Confirm # VGB276093", badges:["~2 hr","$10 pp"]},
-      {t:"8:30 AM", type:"activity", name:"Trang An boat ride", blurb:"Hand-rowed boat tour through a karst landscape. Select between 3 boat routes options.", badges:["~3 hr","$15 pp"], photo:["images/trangan.webp"], mapLink:"https://maps.app.goo.gl/GYSNDSYvMmkehA4G7", mapLabel:"Trang An Boat Tour"},       
+      {t:"8:30 AM", type:"activity", name:"Trang An boat ride", blurb:"Hand-rowed boat tour through a karst landscape. Select between 3 boat routes options.", badges:["~3 hr","$15 pp"], photo:["images/trangan.webp"], mapLink:"https://maps.app.goo.gl/GYSNDSYvMmkehA4G7", mapLabel:"Trang An Boat Dock"},       
       {t:"11:30 AM", type:"transit", name:"--> Hoa Lu Ancient Capital", blurb:"Ride taxi from Trang An --> Hoa Lu. Arrives ~11:45 AM.", badges:["~15 min","$1 pp"]},       
       {t:"11:45 AM", type:"activity", name:"Visit Hoa Lu Ancient Capital", blurb:"First capital of a unified, independent Vietnam from 968 to 1010 AD", photo:["images/hoalu.webp"], mapLink:"https://maps.app.goo.gl/9rPJ9icVhoinhC3WA", mapLabel:"Hoa Lu Ancient Capital", badges:["$1 pp"]},
       {t:"13:30 PM", type:"activity", name:"Lunch near Hoa Lu", blurb:"Rent a bicycle right outside capital sites and ride to the restaurant.", mapLink:"https://maps.app.goo.gl/AHRZHyaz36Y4Khji6", mapLabel:"Ba Cửa Restaurant", badges:["$5 pp"]},            
@@ -689,6 +689,31 @@ function renderPhotos(photo, alt, className) {
   return `<div class="${className}">${photos.map(src => `<img src="${src}" alt="${alt}">`).join('')}</div>`;
 }
 
+function renderNote(note) {
+  if (!note) return '';
+  const lines = note.split(/\r?\n/);
+  const hasBullets = lines.some(line => /^\s*[•*-]\s+/.test(line));
+  if (!hasBullets) return `<div class="note"><b>Note —</b> ${note}</div>`;
+
+  const content = [];
+  let bullets = [];
+  const flushBullets = () => {
+    if (bullets.length) content.push(`<ul>${bullets.map(item => `<li>${item}</li>`).join('')}</ul>`);
+    bullets = [];
+  };
+  lines.forEach(line => {
+    const bullet = line.match(/^\s*[•*-]\s+(.*)$/);
+    if (bullet) {
+      bullets.push(bullet[1]);
+    } else {
+      flushBullets();
+      if (line.trim()) content.push(`<p>${line}</p>`);
+    }
+  });
+  flushBullets();
+  return `<div class="note"><b>Note —</b> ${content.join('')}</div>`;
+}
+
 DATA.forEach((day, i) => {
   const btn = document.createElement('button');
   btn.innerHTML = `<span class="tab-date">${day.label}${day.icon ? ' ' + day.icon : ''}</span><span class="tab-city">${day.city || ''}</span>`;
@@ -704,7 +729,7 @@ DATA.forEach((day, i) => {
     const badgesHtml = (s.badges && s.badges.length)
       ? `<div class="badges">${s.badges.map(b => `<span class="badge${/min|hr/.test(b) ? ' time-badge':''}">${b}</span>`).join('')}</div>`
       : '';
-    const noteHtml = s.note ? `<div class="note"><b>Note —</b> ${s.note}</div>` : '';
+    const noteHtml = renderNote(s.note);
     const photoHtml = renderPhotos(s.photo, s.name, 'stop-photo');
     const links = s.links || (s.mapLink ? [{url: s.mapLink, label: s.mapLabel || 'Open in Google Maps'}] : []);
     const linksHtml = links.length

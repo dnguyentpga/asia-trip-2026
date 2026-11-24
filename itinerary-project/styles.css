@@ -692,7 +692,15 @@
     color:#7a2a25;
   }
   .note b{color:var(--accent-red);}
+  .note ul{
+    margin:6px 0 0;
+    padding-left:20px;
+  }
+  .note li + li{margin-top:3px;}
+  .note p{margin:6px 0 0;}
   .stop-photo{
+    display:grid;
+    gap:8px;
     margin-top:10px;
     border-radius:8px;
     overflow:hidden;
