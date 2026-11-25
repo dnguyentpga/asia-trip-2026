@@ -547,7 +547,7 @@ const DATA = [
       {t:"8:00 AM", type:"activity", name:"Cu Chi Tunnel Half Day Tour", blurb:""},
       {t:"4:00 PM", type:"activity", name:"Relax & Shopping", blurb:""},
       {t:"6:30 PM", type:"activity", name:"Saigon Night Sightseeing Bus", blurb:"", badges:["$10 pp"], photo:["images/saigonbus.jpg"]},
-      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
+      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:"", note:"Make sure to complete Singapore SG Arrival Card BEFORE arrival."}
     ]
   },
   {
@@ -555,22 +555,42 @@ const DATA = [
     stops: [
       {t:"4:00 AM", type:"activity", name:"Check out hotel, Taxi ride to airport", blurb:""},
       {t:"6:50 AM", type:"transit", name:"SGN --> SIN", blurb:"VietJet Air VJ 813. Arriving ~10:15 AM. Booked, Confirm # FX5WDF", badges:["$74 pp"]},
-      {t:"11:30 AM", type:"transit", name:"SIN --> Days Inn Hotel", blurb:"• Ride MRT CG Line from Changi Airport --> Tanah Merah Sta\n• Ride MRT EW Line from Tanah Merah Sta --> City Hall Sta\n• Ride MRT NS Line from City Hall Sta --> Novena Sta. Walk ~15mins or taxi to hotel", badges:["~1hr"]},
-      {t:"12:45 PM", type:"activity", name:"Drop off Luggage and Lunch", blurb:"", note:"Stop by Days Inn Hotel, do not check in, just store luggage"},
-      {t:"2:30 PM", type:"activity", name:"Explore Singapore", blurb:""},
+      {t:"11:30 AM", type:"activity", name:"Clear SIN Customs and Immigration", blurb:"Walk out to the T4 Arrival Hall (Door 1) and take the free Airport Shuttle Bus to Terminal 1 / Jewel", badges : ["10mins"]},
+      {t:"11:45 AM", type:"activity", name:"Store luggage at Terminal 1", blurb:"Head to Jewel Level 1 (Early Check-In Lounge), use storage at Changi Lounge or Smarte Carte"},
+      {t:"12:15 PM", type:"activity", name:"Explore Changi Airport", blurb:"• HSBC Rain Vortex & Shiseido Forest Valley\n• Mastercard Canopy Bridge\n• Manulife Sky Nets", photo:["images/changi.jpg"]},
+      {t:"2:00 PM", type:"activity", name:"Lunch & Pick up luggage", blurb:"Grab lunch in Terminal 1 and pick up luggages"},
+      {t:"3:30 PM", type:"transit", name:"SIN --> Days Inn Hotel", blurb:"• Ride MRT CG Line from Changi Airport --> Tanah Merah Sta\n• Ride MRT EW Line from Tanah Merah Sta --> City Hall Sta\n• Ride MRT NS Line from City Hall Sta --> Novena Sta. Exit station, take taxi to hotel", badges:["~1hr"]},
       {t:"4:30 PM", type:"activity", name:"Check in Days Inn", blurb:"", mapLink:"https://maps.app.goo.gl/ENUZYEXmy7fNkeDz8", mapLabel:"Stay at Days Inn by Wyndham Novena (Agoda Confirm #: 1079792514)", photo:["images/daysinn.jpg"], badges:["$245"]},
-      {t:"6:30 PM", type:"activity", name:"Explore Singapore at Night, Dinner", blurb:""},
-      {t:"10:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
+      {t:"5:00 PM", type:"transit", name:"Novena --> Mandai Wildlife", blurb:"• Walk from hotel to Novena MRT, light dinner at Velocity mall (connected to MRT)\n• Ride NS Line to Khatib MRT\n• Take Exit A, ride Mandai Khatib Shuttle"},
+      {t:"7:00 PM", type:"activity", name:"Mandai Wildlife Night Safari", blurb:"Wildlife encounter trails, feeding rhinos, animal presentations, and interaction with animal keepers", badges:["S$58 pp"], photo:["images/nightsafari.jpg"]},
+      {t:"10:30 PM", type:"transit", name:"Mandai Wildlife --> Novena", blurb:"Take ~20min taxi ride, grab some foods near hotel (if needed)"},
+      {t:"11:30 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
   {
-    label: "Thu Jan 7", sub: "Singapore", city: "Singapore", stamp: "SINGA\nPORE",
+    label: "Thu Jan 7", sub: "Singapore", city: "Singapore", stamp: "SINGAPORE",
     stops: [
-      {t:"8:00 AM", type:"activity", name:"Explore Singapore, Night Safari, Relax & Shopping", blurb:""}
+      {t:"8:15 AM", type:"transit", name:"Novena --> Mount Faber", blurb:"• Take taxi or walk to Novena MRT (NS20)\n• Ride NS Line to Dhoby Ghaut Sta --> Transfer to NE Line to HarbourFront Sta (Exit B)\n• Take 5-min Grab/taxi up to Mount Faber Peak (or hike 15-min Marang Trail)", badges:["~40mins"]},
+      {t:"9:00 AM", type:"activity", name:"Mount Faber Lookout Point", blurb:"• Walk to Faber Point for 360-degree harbor views, heritage mural wall, and mini Merlion statue\n• Morning visit beats the midday heat and sun", photo:["images/faber.webp"]},
+      {t:"11:15 AM", type:"transit", name:"Mount Faber --> Merlion Park", blurb:"• Ride NE Line from HarbourFront --> Outram Park Sta\n• Transfer to EW Line --> Raffles Place Sta (Exit H), 6-min walk to waterfront", badges:["~30mins"]},
+      {t:"11:45 AM", type:"activity", name:"Lunch near Raffles Place & Merlion Park", blurb:"Grab lunch near Raffles Place / One Fullerton before heading out to the waterfront"},
+      {t:"1:15 PM", type:"activity", name:"Merlion Park", blurb:"• Snap photos with the 8.6m water-spouting Merlion across the bay from Marina Bay Sands\n• Stroll 20 mins along the promenade and across the Helix Bridge toward MBS", photo:["images/merlion.webp"]},
+      {t:"2:15 PM", type:"activity", name:"Marina Bay Sands (MBS)", blurb:"The Shoppes at Marina Bay Sands\n• SkyPark Observation Deck (Level 56)", badges:["S$32–35"], photo:["images/mbs.avif"]},
+      {t:"4:30 PM", type:"activity", name:"Gardens by the Bay", blurb:"• Cross the Lions Bridge directly from MBS into Gardens by the Bay\n• Explore the air-conditioned Cloud Forest and Flower Dome", badges:["S$46 pp"], photo:["images/gardens.jpg"]},
+      {t:"7:45 PM", type:"activity", name:"Garden Rhapsody Light Show", blurb:"• Head to Supertree Grove by 7:30 PM for a good viewing spot\n• Watch the 15-min light-and-music show beneath the towering Supertrees"},
+      {t:"8:15 PM", type:"transit", name:"Gardens by the Bay --> MBS Event Plaza", blurb:"Walk back across Lions Bridge through The Shoppes to the waterfront Event Plaza (arrive by 8:45 PM for front-row railings)", badges:["~15mins"]},
+      {t:"9:00 PM", type:"activity", name:"Spectra – A Light & Water Show", blurb:"• Watch the 15-minute fountain, laser, and projection show over Marina Bay at the Event Plaza", badges:["Free"], photo:["images/spectra.webp"]},
+      {t:"9:20 PM", type:"transit", name:"MBS --> Lau Pa Sat", blurb:"• Enter Bayfront MRT (DT16) right beneath MBS\n• Ride DT Line (Blue Line, 1 stop) to Telok Ayer Sta (Exit A), 3-min walk to Lau Pa Sat", badges:["~10mins"]},
+      {t:"9:35 PM", type:"activity", name:"Dinner at Lau Pa Sat Night Market", blurb:"• Head straight to Boon Tat Street (Satay Street) for charcoal-grilled satay (open until 3:00 AM)", photo:["images/laupasat.webp"]},
+      {t:"10:45 PM", type:"transit", name:"Lau Pa Sat --> Novena", blurb:"• Walk 5 mins to Raffles Place MRT (NS26)\n• Ride NS Line (Red Line) northbound directly to Novena Sta (6 stops, no transfers)", badges:["~20mins"]},
+      {t:"11:15 PM", type:"activity", name:"Rest at hotel", blurb:""}
     ]
   },
+
+
+
   {
-    label: "Fri Jan 8", sub: "Zack flies home · Don & Giang → Saigon --> Trị An Lake", city: "Singapore / Saigon / Trị An Lake", stamp: "TRI AN",
+    label: "Fri Jan 8", sub: "Zack flies home · Don & Giang --> Saigon --> Trị An Lake", city: "Singapore / Saigon / Trị An Lake", stamp: "TRI AN",
     stops: [
       {t:"9:00 AM", type:"activity", name:"Check out hotel", blurb:""},
       {t:"10:10 AM", type:"transit", name:"Zack: SIN --> SFO --> DFW", blurb:"UA2/UA2842", note:"Zack leaves early to catch the flight home. Don and Giang check out hotel and head to the airport later."},
